@@ -15,7 +15,7 @@ export default function AteliersPage() {
   const ateliers = [
     {
       id: 'comprendre',
-      title: 'Comprendre l\'IA pour un usage lucide et efficient',
+      title: 'Comprendre l\'IA : pour un usage lucide et efficient',
       level: 'debutant' as const,
       duration: '2 heures',
       price: '120€ TTC',
