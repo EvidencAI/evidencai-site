@@ -3,10 +3,10 @@ import AtelierCard from '@/components/ateliers/AtelierCard';
 
 export const metadata: Metadata = {
   title: 'Ateliers IA - 2h pour maîtriser l\'intelligence artificielle',
-  description: 'Ateliers pratiques de 2h pour comprendre et maîtriser l\'IA. 4 modules : fondamentaux, Claude, outils IA, intégration entreprise. 120€ TTC par personne.',
+  description: 'Ateliers pratiques de 2h en visio pour comprendre et maîtriser l\'IA. 4 modules : fondamentaux, Claude, outils IA, intégration entreprise. 120€ TTC par personne, 5 participants max.',
   openGraph: {
     title: 'Ateliers IA - EvidencAI',
-    description: 'Ateliers pratiques de 2h pour comprendre et maîtriser l\'IA. Du premier contact à l\'intégration en entreprise.',
+    description: 'Ateliers pratiques de 2h en visio pour comprendre et maîtriser l\'IA. Du premier contact à l\'intégration en entreprise.',
     url: 'https://evidencai.com/ateliers',
   },
 };
@@ -25,7 +25,7 @@ export default function AteliersPage() {
         'Ce que l\'IA sait faire, ce qu\'elle ne sait pas, et ce qu\'elle fait semblant de savoir',
         'Démonstration live : la même question posée de deux façons, deux résultats radicalement différents',
         'Les 6 pièges que tout le monde fait (et comment les éviter)',
-        'Première prise en main de Claude : votre première conversation vraiment utile',
+        'Votre premier échange guidé avec Claude, en direct pendant l\'atelier',
       ],
     },
     {
@@ -38,9 +38,9 @@ export default function AteliersPage() {
       topics: [
         'La méthode C.R.T.F. : quatre réflexes pour un prompt qui produit',
         'Avant / après : le même sujet, un résultat médiocre puis un résultat exploitable',
-        'Atelier sur votre cas réel : rédaction, analyse, préparation de réunion',
-        'L\'art de l\'itération : transformer un premier jet en résultat professionnel',
-        'Configurer votre espace Claude pour retrouver vos contextes et continuer seul',
+        'Exercice guidé : transformer un cas concret avec la méthode, puis itérer ensemble',
+        'L\'art de l\'itération : passer d\'un premier jet à un résultat professionnel',
+        'Guide pratique offert : configurer votre espace Claude pour un usage durable',
       ],
     },
     {
@@ -55,7 +55,7 @@ export default function AteliersPage() {
         'Perplexity : rechercher avec des sources, pas des suppositions',
         'Claude, ChatGPT, Gemini : forces, limites et positionnements réels',
         'Les 4 piliers appliqués à chaque outil : même méthode, outils différents',
-        'Votre boîte à outils personnalisée : quel outil pour quel usage dans votre quotidien',
+        'Une grille de choix claire : quel outil pour quel usage dans votre quotidien',
       ],
     },
     {
@@ -69,8 +69,8 @@ export default function AteliersPage() {
         'Ce que change l\'IA connectée : démonstration avec des outils réels',
         'Plugins et intégrations : comment l\'IA accède à vos fichiers, votre agenda, vos données',
         'Sécurité et confidentialité : les vraies questions à se poser avant de connecter quoi que ce soit',
-        'Trois cas d\'usage concrets adaptés à votre secteur',
-        'Votre feuille de route : repartez avec vos priorités d\'intégration identifiées',
+        'Trois cas d\'usage concrets commentés et adaptables à votre secteur',
+        'Les questions clés pour construire votre feuille de route d\'intégration IA',
       ],
     },
   ];
@@ -86,7 +86,11 @@ export default function AteliersPage() {
     },
     {
       question: 'Les ateliers sont-ils en présentiel ou distanciel ?',
-      answer: 'Les deux formats sont possibles. Les ateliers en présentiel ont lieu dans la Drôme (26). Les ateliers en visio sont disponibles pour toute la France.',
+      answer: 'Les ateliers se déroulent en visio (Google Meet ou Zoom). Ce format permet un échange direct avec le formateur tout en restant confortable depuis votre bureau. Les ateliers en présentiel sont possibles sur demande dans la Drôme (26).',
+    },
+    {
+      question: 'Faut-il préparer quelque chose avant l\'atelier ?',
+      answer: 'Pour les ateliers qui utilisent Claude (modules 1 et 2), nous vous demandons de créer votre compte Claude gratuit avant la session. Un email avec les instructions vous est envoyé à l\'inscription.',
     },
     {
       question: 'Comment se passe le paiement ?',
@@ -98,11 +102,11 @@ export default function AteliersPage() {
     },
     {
       question: 'Combien de participants par atelier ?',
-      answer: 'Maximum 8 participants pour garantir un accompagnement personnalisé et des échanges de qualité.',
+      answer: 'Maximum 5 participants pour garantir un accompagnement personnalisé et des échanges de qualité, même en visio.',
     },
     {
       question: 'Recevrai-je des supports ?',
-      answer: 'Oui, chaque participant reçoit un support PDF récapitulatif et accès aux ressources partagées pendant l\'atelier.',
+      answer: 'Oui, chaque participant reçoit un support PDF récapitulatif, des ressources complémentaires et, selon les modules, des guides pratiques pour continuer en autonomie.',
     },
   ];
 
@@ -137,7 +141,7 @@ export default function AteliersPage() {
                 Ateliers IA
               </h1>
               <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
-                2 heures pour découvrir, comprendre et maîtriser l&apos;intelligence artificielle.
+                2 heures en visio, 5 participants max, un formateur praticien.
                 <br />
                 Quatre modules, une progression : lucidité, maîtrise, discernement, vision.
               </p>
