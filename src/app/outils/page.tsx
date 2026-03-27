@@ -166,6 +166,7 @@ const autresOutils = [
     href: 'https://codirai.com',
     external: true,
     cta: 'Découvrir',
+    betaCta: true,
     description: 'CodirAI transforme les réponses de l\'IA générative en conseils fiables et exploitables. Un comité de 15 experts virtuels analyse, challenge et structure l\'information pour vous donner des recommandations sourcées avec un score de confiance.',
     features: [
       'Analyse multi-angles par 15 modules d\'expertise',
@@ -329,7 +330,7 @@ export default function OutilsPage() {
                         <p className="text-sm text-gray-600">{outil.marche}</p>
                       </div>
 
-                      {outil.href && (
+                      {outil.href && !outil.betaCta && (
                         <a
                           href={outil.href}
                           target={outil.external ? '_blank' : undefined}
@@ -341,19 +342,31 @@ export default function OutilsPage() {
                         </a>
                       )}
 
-                      {outil.id === 'codirai' && (
-                        <div className="mt-6 p-5 bg-blue-50 border border-blue-200 rounded-lg">
-                          <p className="text-bleu-nuit font-semibold mb-2">Nous recherchons des beta-testeurs</p>
-                          <p className="text-sm text-gray-600 mb-4">
-                            Aidez-nous à améliorer CodirAI. En échange, nous vous offrons un mois gratuit sur le plan Pro d&apos;une valeur de 20&euro; HT.
-                          </p>
+                      {outil.betaCta && (
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                           <a
-                            href="mailto:info@evidencai.com?subject=Beta-test%20CodirAI&body=Bonjour%2C%0A%0AJe%20souhaite%20devenir%20beta-testeur%20de%20CodirAI.%0A%0AMerci"
-                            className="inline-flex items-center gap-2 px-5 py-2.5 bg-ambre text-bleu-nuit font-semibold rounded-lg hover:bg-ambre-light transition-colors"
+                            href={outil.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-5 py-2.5 bg-bleu-nuit text-white font-semibold rounded-lg hover:bg-bleu-nuit-light transition-colors"
                           >
-                            Devenir beta-testeur
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                            {outil.cta || 'Découvrir'}
+                            <ExternalLink className="w-4 h-4" />
                           </a>
+                          <div className="flex items-center gap-3 px-4 py-2.5 bg-blue-50 border border-blue-200 rounded-lg">
+                            <div className="text-sm">
+                              <span className="text-bleu-nuit font-semibold">Beta-testeurs recherchés</span>
+                              <span className="text-gray-500 mx-1.5">|</span>
+                              <span className="text-gray-600">1 mois Pro offert (20&euro; HT)</span>
+                            </div>
+                            <a
+                              href={"mailto:info@evidencai.com?subject=" + encodeURIComponent("Beta-test CodirAI") + "&body=" + encodeURIComponent("Bonjour,\n\nJe souhaite devenir beta-testeur de CodirAI.\n\nMerci")}
+                              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-ambre text-bleu-nuit text-sm font-semibold rounded-lg hover:bg-ambre-light transition-colors whitespace-nowrap"
+                            >
+                              Postuler
+                              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                            </a>
+                          </div>
                         </div>
                       )}
                     </div>
