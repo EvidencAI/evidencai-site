@@ -353,14 +353,14 @@ export default function OutilsPage() {
                             {outil.cta || 'Découvrir'}
                             <ExternalLink className="w-4 h-4" />
                           </a>
-                          <div className="flex items-center gap-3 px-4 py-2.5 bg-blue-50 border border-blue-200 rounded-lg">
+                          <div className="flex items-center gap-3 px-4 py-2.5 bg-blue-50 border border-blue-200 rounded-lg sm:ml-auto">
                             <div className="text-sm">
                               <span className="text-bleu-nuit font-semibold">Beta-testeurs recherchés</span>
                               <span className="text-gray-500 mx-1.5">|</span>
                               <span className="text-gray-600">1 mois Pro offert (20&euro; HT)</span>
                             </div>
                             <a
-                              href={"mailto:info@evidencai.com?subject=" + encodeURIComponent("Beta-test CodirAI") + "&body=" + encodeURIComponent("Bonjour,\n\nJe souhaite devenir beta-testeur de CodirAI.\n\nMerci")}
+                              href="mailto:info@evidencai.com?subject=Beta-test%20CodirAI&amp;body=Bonjour%2C%0A%0AJe%20souhaite%20devenir%20beta-testeur%20de%20CodirAI.%0A%0AMerci"
                               className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-ambre text-bleu-nuit text-sm font-semibold rounded-lg hover:bg-ambre-light transition-colors whitespace-nowrap"
                             >
                               Postuler
