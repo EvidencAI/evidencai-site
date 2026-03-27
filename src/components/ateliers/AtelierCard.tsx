@@ -25,6 +25,9 @@ export default function AtelierCard({ module }: AtelierCardProps) {
   const titleParts = module.title.split(' : ');
   const hasSubtitle = titleParts.length > 1;
 
+  // Rendre les \n comme des <br /> dans la description
+  const descriptionParts = module.description.split('\n');
+
   return (
     <Card hover className="flex flex-col h-full">
       <div className="flex items-start justify-between mb-4">
@@ -50,7 +53,14 @@ export default function AtelierCard({ module }: AtelierCardProps) {
       </h3>
 
       <p className="text-gray-600 mb-6 leading-relaxed">
-        {module.description}
+        {descriptionParts.length > 1
+          ? descriptionParts.map((part, i) => (
+              <span key={i}>
+                {i > 0 && <br />}
+                {part}
+              </span>
+            ))
+          : module.description}
       </p>
 
       <div className="mb-6 flex-grow">

@@ -34,7 +34,7 @@ export default function AteliersPage() {
       level: 'intermediaire' as const,
       duration: '2 heures',
       price: '120€ TTC',
-      description: 'Vous avez testé l\'IA. Les résultats étaient... moyens. Normal : 80% de la qualité dépend de la façon dont vous posez le problème. Cet atelier vous donne la méthode pour obtenir des résultats professionnels, sur vos vrais sujets.',
+      description: 'Vous avez testé l\'IA. Les résultats étaient... moyens.\nNormal : 80% de la qualité dépend de la façon dont vous posez le problème. Cet atelier vous donne la méthode pour obtenir des résultats professionnels, sur vos vrais sujets.',
       topics: [
         'La méthode C.R.T.F. : quatre réflexes pour un prompt qui produit',
         'Avant / après : le même sujet, un résultat médiocre puis un résultat exploitable',
