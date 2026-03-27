@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-bleu-nuit: #1a1a2e;
+  --color-bleu-nuit-light: #16213e;
+  --color-ambre: #f59e0b;
+  --color-ambre-light: #fbbf24;
+  --color-surface: #ffffff;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-success: #10b981;
+  --color-error: #ef4444;
+
+  /* Font families */
+  --font-family-playfair: var(--font-playfair), serif;
+  --font-family-sans: var(--font-dm-sans), system-ui, sans-serif;
+  --font-family-mono: var(--font-jetbrains), monospace;
+}
+
+/* Base styles */
+body {
+  background-color: var(--color-bleu-nuit);
+  color: var(--color-text-primary);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Touch targets - éléments interactifs uniquement */
+button,
+a[role="button"],
+nav a,
+.cta {
+  min-height: 48px;
+}
+
+/* Transitions - éléments interactifs uniquement */
+button,
+a,
+input,
+select,
+textarea {
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out, border-color 300ms ease-in-out, opacity 300ms ease-in-out;
+}
