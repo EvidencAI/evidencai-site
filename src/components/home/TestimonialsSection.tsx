@@ -11,14 +11,14 @@ export default function TestimonialsSection() {
     },
     {
       quote: 'Stéphane a su comprendre nos contraintes métier et intégrer l\'IA là où elle apporte vraiment de la valeur. L\'équipe s\'est approprié les outils naturellement, sans résistance au changement.',
-      author: 'Léa D.',
+      author: 'Léa S.',
       role: 'Directrice',
       company: 'Nature d\'Eaux',
       context: 'Implémentation IA — 2026',
     },
     {
       quote: 'Le plugin pour le Tribunal de Commerce a transformé ma préparation des audiences. L\'analyse des dossiers est plus rigoureuse et le gain de temps est considérable.',
-      author: 'Nicolas R.',
+      author: 'Nicolas C.',
       role: 'Président',
       company: 'Cuisine AVIVA Valence',
       context: 'Plugin TC — 2026',

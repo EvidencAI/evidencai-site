@@ -14,7 +14,7 @@ export default function FunnelSection() {
     },
     {
       title: 'Nos formations',
-      description: 'Deux possibilités : formations programmées (DecidIA) ou parcours sur mesure pour votre équipe. Financement OPCO possible.',
+      description: 'Deux possibilités : formations inter-entreprises ou parcours sur mesure pour votre équipe. Financement OPCO possible.',
       price: 'Sur devis',
       href: '/formation',
       icon: GraduationCap,
