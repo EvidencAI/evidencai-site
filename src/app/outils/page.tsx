@@ -1,36 +1,156 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import Card from '@/components/ui/Card';
-import { Brain, Lightbulb, ShieldCheck, Scale, Radar, ExternalLink, MonitorSmartphone, Puzzle, Globe } from 'lucide-react';
+import { Brain, Lightbulb, ShieldCheck, Scale, Radar, ExternalLink, MonitorSmartphone, Puzzle, Globe, MessageSquare, Zap, BookOpen, Atom, Network, Sparkles, Mail } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Nos outils IA - EvidencAI',
   description: 'Découvrez nos applications IA : Mnemos (mémoire persistante), CodirAI (aide à la décision), ConfidentIA (anonymisation), JudicIA (rédaction judiciaire) et SignalPro (veille économique).',
 };
 
-const outils = [
-  {
-    id: 'mnemos',
-    name: 'Mnemos',
-    tagline: 'Mémoire persistante pour IA',
-    icon: Brain,
-    install: 'Plugin Claude Cowork',
-    installIcon: Puzzle,
-    status: 'En test',
-    statusColor: 'bg-amber-100 text-amber-800',
-    href: 'https://mnemos.evidencai.com',
-    external: true,
-    description: 'Mnemos donne à Claude une mémoire qui persiste entre les conversations. Vos projets, vos préférences, vos décisions passées : tout est conservé dans un graphe de connaissances sémantique. Plus besoin de tout réexpliquer à chaque nouvelle session.',
-    features: [
-      'Graphe de connaissances avec 10 types d\'atomes (faits, décisions, intentions, signaux...)',
-      'Espaces de travail isolés par projet avec mémoire transversale',
-      'Recall Engine intelligent : retrouve les 12 atomes les plus pertinents, pas les 200 derniers messages',
-      'Dashboard bilingue FR/EN pour visualiser et gérer sa mémoire',
-      'Profil utilisateur avec facettes comportementales',
-    ],
-    tech: ['Supabase', 'PostgreSQL', 'pgvector', 'Node.js', 'API Anthropic (Opus, Sonnet, Haiku)'],
-    marche: 'Tout utilisateur de Claude souhaitant une continuité entre ses sessions de travail.',
-  },
+function MnemosDetail() {
+  return (
+    <Card id="mnemos" className="bg-white p-8">
+      <div className="flex flex-col md:flex-row md:items-start gap-6">
+        <div className="flex-shrink-0">
+          <div className="w-16 h-16 bg-bleu-nuit rounded-xl flex items-center justify-center">
+            <Brain className="w-8 h-8 text-ambre" />
+          </div>
+        </div>
+
+        <div className="flex-grow">
+          <div className="flex flex-wrap items-center gap-3 mb-2">
+            <h2 className="font-playfair text-2xl md:text-3xl font-bold text-bleu-nuit">Mnemos</h2>
+            <span className="text-xs px-3 py-1 rounded-full font-semibold bg-amber-100 text-amber-800">En test</span>
+          </div>
+          <p className="text-ambre font-semibold mb-1">Mémoire persistante pour IA</p>
+          <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
+            <Puzzle className="w-4 h-4" />
+            <span>Plugin Claude Cowork</span>
+          </div>
+
+          <p className="text-gray-600 leading-relaxed mb-2">
+            Claude est puissant, mais il oublie tout entre deux conversations. Mnemos lui donne une mémoire persistante : vos décisions, faits, contacts et contextes sont conservés et rappelés automatiquement d&apos;un fil à l&apos;autre.
+          </p>
+          <p className="text-gray-600 leading-relaxed mb-8">
+            Pas de syntaxe à apprendre, pas de commande à retenir. Vous parlez normalement à Claude, c&apos;est lui qui pilote Mnemos en arrière-plan.
+          </p>
+
+          {/* Cycle de session */}
+          <div className="mb-8">
+            <h3 className="font-semibold text-bleu-nuit mb-4 text-lg">Le cycle d&apos;une session</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-gray-50 rounded-lg p-5 border border-gray-100">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="w-7 h-7 bg-bleu-nuit text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
+                  <span className="font-semibold text-bleu-nuit">Début de fil</span>
+                </div>
+                <p className="text-xs text-gray-500 font-mono mb-2">&quot;Mnemos espace [projet]&quot;</p>
+                <p className="text-sm text-gray-600">Charge votre profil, le codex de l&apos;espace, les 3 derniers handovers, les connaissances récentes et les atomes épinglés. Claude reprend exactement là où vous en étiez.</p>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-5 border border-gray-100">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="w-7 h-7 bg-bleu-nuit text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
+                  <span className="font-semibold text-bleu-nuit">Pendant la conversation</span>
+                </div>
+                <p className="text-xs text-ambre font-semibold mb-2">automatique</p>
+                <p className="text-sm text-gray-600">Mnemos travaille en arrière-plan. Il extrait les connaissances de vos échanges et injecte intelligemment les connaissances passées quand elles sont utiles.</p>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-5 border border-gray-100">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="w-7 h-7 bg-bleu-nuit text-white rounded-full flex items-center justify-center text-sm font-bold">3</span>
+                  <span className="font-semibold text-bleu-nuit">Fin de fil</span>
+                </div>
+                <p className="text-xs text-gray-500 font-mono mb-2">&quot;Fin de session&quot;</p>
+                <p className="text-sm text-gray-600">Génère un handover narratif : résumé, décisions prises, tâches en attente. Ce handover alimente le codex et sera relu au début du prochain fil.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Deux mémoires */}
+          <div className="mb-8">
+            <h3 className="font-semibold text-bleu-nuit mb-4 text-lg">Deux mémoires complémentaires</h3>
+
+            <div className="space-y-4">
+              <div className="border border-gray-200 rounded-lg p-5">
+                <h4 className="font-semibold text-bleu-nuit mb-3 flex items-center gap-2">
+                  <BookOpen className="w-5 h-5 text-ambre" />
+                  Mémoire de session
+                </h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <p className="text-sm font-semibold text-bleu-nuit mb-1">Handover</p>
+                    <p className="text-sm text-gray-600">En fin de session, Mnemos génère le résumé narratif de votre travail. Décisions prises, avancées, tâches en attente. C&apos;est la passation entre deux conversations.</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-bleu-nuit mb-1">Codex</p>
+                    <p className="text-sm text-gray-600">Les handovers successifs alimentent un dossier vivant par espace. C&apos;est la mémoire de long terme de chaque projet, qui se consolide au fil du temps.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border border-gray-200 rounded-lg p-5">
+                <h4 className="font-semibold text-bleu-nuit mb-3 flex items-center gap-2">
+                  <Atom className="w-5 h-5 text-ambre" />
+                  Mémoire continue
+                </h4>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div>
+                    <p className="text-sm font-semibold text-bleu-nuit mb-1">Atomes</p>
+                    <p className="text-sm text-gray-600">Unités de connaissance extraites automatiquement : faits, décisions, positions, contacts, intentions, événements... Chaque atome est typé, daté et rattaché à un espace.</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-bleu-nuit mb-1">Connexions</p>
+                    <p className="text-sm text-gray-600">Les atomes sont reliés par des liens sémantiques : confirme, contredit, précède, implique. Un graphe de connaissances qui navigue par association.</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-bleu-nuit mb-1">Insights (le neurone)</p>
+                    <p className="text-sm text-gray-600">Analyse les connexions entre vos espaces et détecte ce que vous ne voyez pas : tensions entre projets, convergences inattendues, évolutions silencieuses.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Mail et agenda */}
+          <div className="mb-8 bg-gray-50 rounded-lg p-5 border border-gray-100">
+            <h4 className="font-semibold text-bleu-nuit mb-2 flex items-center gap-2">
+              <Mail className="w-5 h-5 text-ambre" />
+              Connectez votre mail et agenda
+            </h4>
+            <p className="text-sm text-gray-600">Mnemos peut collecter automatiquement vos mails et événements d&apos;agenda. Les contacts sont extraits et ajoutés à votre carnet. Les événements importants deviennent des atomes. Tout est filtré par pertinence, rien n&apos;est stocké en brut.</p>
+          </div>
+
+          {/* Stack */}
+          <div className="mb-6">
+            <h3 className="font-semibold text-bleu-nuit mb-3">Stack technique</h3>
+            <div className="flex flex-wrap gap-2">
+              {['Supabase', 'PostgreSQL', 'pgvector', 'Node.js', 'API Anthropic (Opus, Sonnet, Haiku)'].map((tech) => (
+                <span key={tech} className="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 rounded font-mono">{tech}</span>
+              ))}
+            </div>
+          </div>
+
+          <div className="mb-6">
+            <h3 className="font-semibold text-bleu-nuit mb-2">Marché cible</h3>
+            <p className="text-sm text-gray-600">Tout utilisateur de Claude souhaitant une continuité entre ses sessions de travail.</p>
+          </div>
+
+          <a
+            href="https://mnemos.evidencai.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-bleu-nuit text-white font-semibold rounded-lg hover:bg-bleu-nuit-light transition-colors"
+          >
+            Découvrir le dashboard
+            <ExternalLink className="w-4 h-4" />
+          </a>
+        </div>
+      </div>
+    </Card>
+  );
+}
+
+const autresOutils = [
   {
     id: 'codirai',
     name: 'CodirAI',
@@ -138,7 +258,11 @@ export default function OutilsPage() {
           </div>
 
           <div className="space-y-12 max-w-5xl mx-auto">
-            {outils.map((outil) => {
+            {/* Mnemos - fiche enrichie */}
+            <MnemosDetail />
+
+            {/* Autres outils - format standard */}
+            {autresOutils.map((outil) => {
               const IconComponent = outil.icon;
               const InstallIcon = outil.installIcon;
               return (
