@@ -3,10 +3,10 @@ import AtelierCard from '@/components/ateliers/AtelierCard';
 
 export const metadata: Metadata = {
   title: 'Ateliers IA - 2h pour maîtriser l\'intelligence artificielle',
-  description: 'Ateliers pratiques de 2h pour découvrir et maîtriser l\'IA. 3 niveaux : débutant, intermédiaire, confirmé. 120€ TTC par personne.',
+  description: 'Ateliers pratiques de 2h pour comprendre et maîtriser l\'IA. 4 modules : fondamentaux, Claude, outils IA, intégration entreprise. 120€ TTC par personne.',
   openGraph: {
     title: 'Ateliers IA - EvidencAI',
-    description: 'Ateliers pratiques de 2h pour découvrir et maîtriser l\'IA',
+    description: 'Ateliers pratiques de 2h pour comprendre et maîtriser l\'IA. Du premier contact à l\'intégration en entreprise.',
     url: 'https://evidencai.com/ateliers',
   },
 };
@@ -14,48 +14,63 @@ export const metadata: Metadata = {
 export default function AteliersPage() {
   const ateliers = [
     {
-      id: 'debutant',
-      title: 'Découvrir l\'IA au quotidien',
+      id: 'comprendre',
+      title: 'Comprendre l\'IA pour un usage lucide et efficient',
       level: 'debutant' as const,
       duration: '2 heures',
       price: '120€ TTC',
-      description: 'Pour les curieux qui veulent comprendre ce qu\'est vraiment l\'IA et comment l\'utiliser au quotidien, sans prérequis technique.',
+      description: 'Vous entendez parler d\'IA partout. Certains sont enthousiastes, d\'autres inquiets, la plupart sont perdus. Cet atelier vous donne les clés pour comprendre ce que l\'IA fait vraiment, et les 4 réflexes pour l\'utiliser sans vous faire avoir.',
       topics: [
-        'Comprendre ce qu\'est (et n\'est pas) l\'IA',
-        'Premiers usages concrets dans votre quotidien',
-        'Démonstration live avec Claude',
-        'Les bonnes pratiques pour démarrer',
-        'Questions/réponses personnalisées',
+        'Les 4 piliers d\'un usage maîtrisé : Contextualiser, Vérifier, Recadrer, Itérer',
+        'Ce que l\'IA sait faire, ce qu\'elle ne sait pas, et ce qu\'elle fait semblant de savoir',
+        'Démonstration live : la même question posée de deux façons, deux résultats radicalement différents',
+        'Les 6 pièges que tout le monde fait (et comment les éviter)',
+        'Première prise en main de Claude : votre première conversation vraiment utile',
       ],
     },
     {
-      id: 'intermediaire',
-      title: 'L\'IA dans votre métier',
+      id: 'maitriser',
+      title: 'Maîtriser Claude : produire, itérer, réussir',
       level: 'intermediaire' as const,
       duration: '2 heures',
       price: '120€ TTC',
-      description: 'Pour les professionnels qui veulent intégrer l\'IA dans leur workflow quotidien et gagner en efficacité.',
+      description: 'Vous avez testé l\'IA. Les résultats étaient... moyens. Normal : 80% de la qualité dépend de la façon dont vous posez le problème. Cet atelier vous donne la méthode pour obtenir des résultats professionnels, sur vos vrais sujets.',
       topics: [
-        'Cas d\'usage adaptés à votre secteur',
-        'Techniques de prompt engineering',
-        'Outils IA pour votre métier',
-        'Automatisation de tâches répétitives',
-        'Atelier pratique personnalisé',
+        'La méthode C.R.T.F. : quatre réflexes pour un prompt qui produit',
+        'Avant / après : le même sujet, un résultat médiocre puis un résultat exploitable',
+        'Atelier sur votre cas réel : rédaction, analyse, préparation de réunion',
+        'L\'art de l\'itération : transformer un premier jet en résultat professionnel',
+        'Configurer votre espace Claude pour retrouver vos contextes et continuer seul',
       ],
     },
     {
-      id: 'confirme',
-      title: 'Automatiser et créer avec l\'IA',
+      id: 'outils',
+      title: 'NotebookLM, Perplexity & Cie : choisir les bons outils IA',
+      level: 'debutant' as const,
+      duration: '2 heures',
+      price: '120€ TTC',
+      description: 'NotebookLM, Perplexity, ChatGPT, Claude, Gemini... Vous avez entendu ces noms sans savoir lequel utiliser, ni pourquoi. Cet atelier vous donne une grille de lecture claire pour choisir le bon outil au bon moment, et arrêter de papillonner.',
+      topics: [
+        'NotebookLM : synthétiser et interroger vos documents en quelques minutes',
+        'Perplexity : rechercher avec des sources, pas des suppositions',
+        'Claude, ChatGPT, Gemini : forces, limites et positionnements réels',
+        'Les 4 piliers appliqués à chaque outil : même méthode, outils différents',
+        'Votre boîte à outils personnalisée : quel outil pour quel usage dans votre quotidien',
+      ],
+    },
+    {
+      id: 'connecter',
+      title: 'L\'IA dans votre entreprise : de l\'outil au levier',
       level: 'confirme' as const,
       duration: '2 heures',
       price: '120€ TTC',
-      description: 'Pour les utilisateurs avancés qui veulent créer des workflows IA personnalisés et développer des solutions sur mesure.',
+      description: 'L\'IA dans un onglet, c\'est un gadget. L\'IA connectée à vos données, vos outils et vos processus, c\'est un levier stratégique. Cet atelier vous montre concrètement ce qui devient possible, et vous aide à identifier vos premiers cas d\'usage.',
       topics: [
-        'Architecture d\'agents IA',
-        'Création de workflows automatisés',
-        'Intégration d\'APIs IA',
-        'Développement d\'outils sur mesure',
-        'Stratégie d\'implémentation',
+        'Ce que change l\'IA connectée : démonstration avec des outils réels',
+        'Plugins et intégrations : comment l\'IA accède à vos fichiers, votre agenda, vos données',
+        'Sécurité et confidentialité : les vraies questions à se poser avant de connecter quoi que ce soit',
+        'Trois cas d\'usage concrets adaptés à votre secteur',
+        'Votre feuille de route : repartez avec vos priorités d\'intégration identifiées',
       ],
     },
   ];
@@ -63,7 +78,11 @@ export default function AteliersPage() {
   const faqItems = [
     {
       question: 'Faut-il un niveau technique particulier ?',
-      answer: 'Non, chaque module est adapté à son niveau. Le module débutant ne nécessite aucune compétence technique. Les modules intermédiaire et confirmé s\'adaptent à votre profil.',
+      answer: 'Non. L\'atelier "Comprendre l\'IA" ne nécessite aucune compétence technique. Pour "Maîtriser Claude", avoir déjà utilisé un assistant IA est un plus. Pour "L\'IA dans votre entreprise", une expérience préalable avec l\'IA est recommandée.',
+    },
+    {
+      question: 'Dans quel ordre suivre les ateliers ?',
+      answer: 'Nous recommandons de commencer par "Comprendre l\'IA" qui pose les fondamentaux. Ensuite, "Maîtriser Claude" et "NotebookLM, Perplexity & Cie" peuvent être suivis dans l\'ordre de votre choix. "L\'IA dans votre entreprise" est idéal en dernier pour une vision stratégique.',
     },
     {
       question: 'Les ateliers sont-ils en présentiel ou distanciel ?',
@@ -119,7 +138,8 @@ export default function AteliersPage() {
               </h1>
               <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
                 2 heures pour découvrir, comprendre et maîtriser l&apos;intelligence artificielle.
-                Choisissez le module adapté à votre niveau.
+                <br />
+                Quatre modules, une progression : lucidité, maîtrise, discernement, vision.
               </p>
             </div>
           </div>
@@ -128,7 +148,7 @@ export default function AteliersPage() {
         {/* Ateliers Cards */}
         <section className="pb-16 md:pb-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
               {ateliers.map((atelier) => (
                 <AtelierCard key={atelier.id} module={atelier} />
               ))}

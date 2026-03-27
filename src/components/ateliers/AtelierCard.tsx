@@ -14,12 +14,18 @@ interface AtelierCardProps {
   };
 }
 
+const levelLabels: Record<string, string> = {
+  debutant: 'Tous niveaux',
+  intermediaire: 'Intermédiaire',
+  confirme: 'Avancé',
+};
+
 export default function AtelierCard({ module }: AtelierCardProps) {
   return (
     <Card hover>
       <div className="flex items-start justify-between mb-4">
         <Badge variant={module.level}>
-          {module.level === 'debutant' ? 'Débutant' : module.level === 'intermediaire' ? 'Intermédiaire' : 'Confirmé'}
+          {levelLabels[module.level] ?? module.level}
         </Badge>
         <div className="text-right">
           <p className="text-2xl font-bold text-ambre">{module.price}</p>
