@@ -5,16 +5,16 @@ import { Target, GraduationCap, Rocket } from 'lucide-react';
 export default function FunnelSection() {
   const funnelItems = [
     {
-      title: 'Ateliers',
-      description: 'Initiation pratique de 2h pour découvrir et maîtriser l\'IA au quotidien',
+      title: 'Ateliers pratiques en visio',
+      description: 'Pour un usage lucide et pragmatique de l\'IA. Initiation de 2h pour découvrir et maîtriser l\'IA au quotidien.',
       price: '120€ TTC',
       href: '/ateliers',
       icon: Target,
       level: 'Démarrage rapide',
     },
     {
-      title: 'Formation Qualiopi',
-      description: 'Parcours sur mesure de 1 à 3 jours pour votre équipe. Financement OPCO possible.',
+      title: 'Nos formations',
+      description: 'Deux possibilités : formations programmées (DecidIA) ou parcours sur mesure pour votre équipe. Financement OPCO possible.',
       price: 'Sur devis',
       href: '/formation',
       icon: GraduationCap,
@@ -22,7 +22,7 @@ export default function FunnelSection() {
     },
     {
       title: 'Audit & Implémentation',
-      description: 'Mission complète : diagnostic, recommandations et intégration IA dans vos processus',
+      description: 'Mission complète : diagnostic, recommandations et intégration IA dans vos processus.',
       price: 'Sur mesure',
       href: '/solutions',
       icon: Rocket,
@@ -47,10 +47,12 @@ export default function FunnelSection() {
             const IconComponent = item.icon;
             return (
             <Card key={item.title} hover className="flex flex-col h-full border border-gray-200 shadow-lg">
-              <IconComponent className="w-10 h-10 text-bleu-nuit mb-4" />
-              <span className="text-xs font-semibold text-ambre uppercase tracking-wide mb-2">
-                {item.level}
-              </span>
+              <div className="flex items-start gap-4 mb-4">
+                <IconComponent className="w-10 h-10 text-bleu-nuit flex-shrink-0" />
+                <span className="text-xs font-semibold text-ambre uppercase tracking-wide pt-1">
+                  {item.level}
+                </span>
+              </div>
               <h3 className="font-playfair text-2xl font-bold text-bleu-nuit mb-3">
                 {item.title}
               </h3>
