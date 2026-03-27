@@ -21,8 +21,12 @@ const levelLabels: Record<string, string> = {
 };
 
 export default function AtelierCard({ module }: AtelierCardProps) {
+  // Séparer titre principal et sous-titre au niveau du ":"
+  const titleParts = module.title.split(' : ');
+  const hasSubtitle = titleParts.length > 1;
+
   return (
-    <Card hover>
+    <Card hover className="flex flex-col h-full">
       <div className="flex items-start justify-between mb-4">
         <Badge variant={module.level}>
           {levelLabels[module.level] ?? module.level}
@@ -34,14 +38,22 @@ export default function AtelierCard({ module }: AtelierCardProps) {
       </div>
 
       <h3 className="font-playfair text-2xl font-bold text-bleu-nuit mb-4">
-        {module.title}
+        {hasSubtitle ? (
+          <>
+            {titleParts[0]}&nbsp;:
+            <br />
+            <span className="text-xl">{titleParts[1]}</span>
+          </>
+        ) : (
+          module.title
+        )}
       </h3>
 
       <p className="text-gray-600 mb-6 leading-relaxed">
         {module.description}
       </p>
 
-      <div className="mb-6">
+      <div className="mb-6 flex-grow">
         <h4 className="font-semibold text-bleu-nuit mb-3">Au programme :</h4>
         <ul className="space-y-2">
           {module.topics.map((topic, index) => (
@@ -55,12 +67,14 @@ export default function AtelierCard({ module }: AtelierCardProps) {
         </ul>
       </div>
 
-      <Link
-        href={`/ateliers/inscription?module=${module.id}`}
-        className="block w-full text-center px-6 py-3 bg-bleu-nuit text-white font-semibold rounded-lg hover:bg-bleu-nuit-light transition-colors"
-      >
-        S&apos;inscrire
-      </Link>
+      <div className="mt-auto">
+        <Link
+          href={`/ateliers/inscription?module=${module.id}`}
+          className="block w-full text-center px-6 py-3 bg-bleu-nuit text-white font-semibold rounded-lg hover:bg-bleu-nuit-light transition-colors text-sm"
+        >
+          Voir les dates et s&apos;inscrire
+        </Link>
+      </div>
     </Card>
   );
 }
