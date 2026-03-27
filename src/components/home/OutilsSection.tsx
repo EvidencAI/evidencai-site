@@ -26,7 +26,7 @@ export default function OutilsSection() {
       href: 'https://codirai.com',
       external: true,
       icon: Lightbulb,
-      tech: ['Next.js', 'Supabase', 'API Anthropic', 'Chrome Extension'],
+      tech: ['Next.js', 'Supabase', 'API OpenAI', 'Chrome Extension'],
     },
     {
       name: 'ConfidentIA',

@@ -167,7 +167,7 @@ const autresOutils = [
     external: true,
     cta: 'Découvrir',
     betaCta: true,
-    description: 'CodirAI transforme les réponses de l\'IA générative en conseils fiables et exploitables. Un comité de 15 experts virtuels analyse, challenge et structure l\'information pour vous donner des recommandations sourcées avec un score de confiance.',
+    description: 'CodirAI transforme les réponses de l\'IA générative en conseils fiables et exploitables.\nUn comité de 15 experts virtuels analyse, challenge et structure l\'information pour vous donner des recommandations sourcées avec un score de confiance.',
     features: [
       'Analyse multi-angles par 15 modules d\'expertise',
       'Score de confiance et sources vérifiables sur chaque recommandation',
@@ -175,7 +175,7 @@ const autresOutils = [
       'Génération de rapports PDF/Word pour vos prises de décision',
       'Tableau de bord centralisant l\'historique de vos analyses',
     ],
-    tech: ['Next.js', 'Supabase', 'API Anthropic (Opus, Sonnet, Haiku)', 'Chrome Extension API'],
+    tech: ['Next.js', 'Supabase', 'API OpenAI', 'Chrome Extension API'],
     marche: 'Dirigeants PME, consultants, managers opérationnels.',
   },
   {
@@ -295,7 +295,7 @@ export default function OutilsPage() {
                         <span>{outil.install}</span>
                       </div>
 
-                      <p className="text-gray-600 leading-relaxed mb-6">
+                      <p className="text-gray-600 leading-relaxed mb-6 whitespace-pre-line">
                         {outil.description}
                       </p>
 
