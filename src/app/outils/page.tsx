@@ -140,11 +140,11 @@ function MnemosDetail() {
           <div className="mb-6">
             <h3 className="font-semibold text-bleu-nuit mb-3">Aperçus</h3>
             <ScreenshotGallery screenshots={[
-              { src: "/images/mnemos/mnemos-01.png", alt: "Mnemos - Vue 1", caption: "Dashboard" },
-              { src: "/images/mnemos/mnemos-02.png", alt: "Mnemos - Vue 2", caption: "Espaces de travail" },
-              { src: "/images/mnemos/mnemos-03.png", alt: "Mnemos - Vue 3", caption: "Mémoire continue" },
-              { src: "/images/mnemos/mnemos-04.png", alt: "Mnemos - Vue 4", caption: "Cycle de session" },
-              { src: "/images/mnemos/mnemos-05.jpg", alt: "Mnemos - Vue 5", caption: "Insights" },
+              { src: "/images/mnemos/mnemos-01.png", alt: "Graphe de mémoire dynamique Mnemos", caption: "Graphe de mémoire dynamique" },
+              { src: "/images/mnemos/mnemos-02.png", alt: "Menu général Mnemos", caption: "Menu général" },
+              { src: "/images/mnemos/mnemos-03.png", alt: "Suivi d'activité Mnemos", caption: "Suivi d'activité" },
+              { src: "/images/mnemos/mnemos-04.png", alt: "Cockpit Mnemos", caption: "Cockpit" },
+              { src: "/images/mnemos/mnemos-05.jpg", alt: "Insights Mnemos", caption: "Insights" },
             ]} />
           </div>
         </div>
