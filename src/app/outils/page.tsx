@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Card from '@/components/ui/Card';
+import ScreenshotGallery from "@/components/ui/ScreenshotGallery";
 import { Brain, Lightbulb, ShieldCheck, Scale, Radar, ExternalLink, MonitorSmartphone, Puzzle, Globe, MessageSquare, Zap, BookOpen, Atom, Network, Sparkles, Mail } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -135,15 +136,16 @@ function MnemosDetail() {
             <p className="text-sm text-gray-600">Tout utilisateur de Claude souhaitant une continuité entre ses sessions de travail.</p>
           </div>
 
-          <a
-            href="https://mnemos.evidencai.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-bleu-nuit text-white font-semibold rounded-lg hover:bg-bleu-nuit-light transition-colors"
-          >
-            Découvrir le dashboard
-            <ExternalLink className="w-4 h-4" />
-          </a>
+          {/* Screenshots */}
+          <div className="mb-6">
+            <h3 className="font-semibold text-bleu-nuit mb-3">Aperçus</h3>
+            <ScreenshotGallery screenshots={[
+              { src: "/images/mnemos/dashboard.png", alt: "Dashboard Mnemos", caption: "Tableau de bord" },
+              { src: "/images/mnemos/atomes.png", alt: "Graphe d atomes", caption: "Graphe d atomes" },
+              { src: "/images/mnemos/cycle.png", alt: "Cycle de session", caption: "Cycle de session" },
+              { src: "/images/mnemos/insights.png", alt: "Insights du neurone", caption: "Insights" },
+            ]} />
+          </div>
         </div>
       </div>
     </Card>
