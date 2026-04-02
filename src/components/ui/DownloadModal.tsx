@@ -47,11 +47,10 @@ export default function DownloadModal({ isOpen, onClose, downloadUrl, accessCode
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4" onClick={onClose}>
-      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" />
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
       <div
-        className="relative bg-white rounded-2xl shadow-2xl w-full max-w-sm p-6"
-        onClick={(e) => e.stopPropagation()}
+        className="relative z-10 bg-white rounded-2xl shadow-2xl w-full max-w-sm p-6"
       >
         <button
           onClick={onClose}
@@ -88,10 +87,10 @@ export default function DownloadModal({ isOpen, onClose, downloadUrl, accessCode
               value={code}
               onChange={(e) => { setCode(e.target.value); setError(false); }}
               placeholder="Code d'accès"
-              className={`w-full px-4 py-2.5 rounded-lg border text-sm font-mono transition-colors outline-none
+              className={`w-full px-4 py-2.5 rounded-lg border text-sm font-mono text-gray-900 placeholder-gray-400 transition-colors outline-none
                 ${error
                   ? 'border-red-300 bg-red-50 focus:border-red-400'
-                  : 'border-gray-200 bg-gray-50 focus:border-ambre'
+                  : 'border-gray-200 bg-white focus:border-ambre focus:ring-1 focus:ring-ambre/30'
                 }`}
             />
             {error && (
