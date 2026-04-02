@@ -1,0 +1,67 @@
+# EvidencAI
+
+> Accompagnement IA pragmatique pour dirigeants et PME/TPE. De l'acculturation à l'implémentation.
+
+EvidencAI aide les dirigeants de PME et TPE à intégrer l'intelligence artificielle dans leur entreprise, avec une approche progressive et honnête. Fondée par Stéphane Commenge, entrepreneur et formateur, EvidencAI privilégie l'humain au centre : acculturer les équipes avant d'implémenter les outils.
+
+## Offre
+
+- Ateliers IA : sessions pratiques de 2h en visioconférence pour découvrir et maîtriser l'IA au quotidien. 120€ TTC.
+- Formations : inter-entreprises ou intra-entreprises, en partenariat avec ALIA Formation (certifiée Qualiopi). Financement OPCO possible.
+- Audit & Implémentation : diagnostic de maturité IA, acculturation des équipes, construction de solutions sur mesure.
+
+## Philosophie
+
+EvidencAI défend trois principes :
+1. L'IA améliore l'humain, elle ne le remplace pas.
+2. L'IA n'est ni une calculatrice ni un oracle, c'est un partenaire de réflexion.
+3. Acculturer avant d'implémenter : former les équipes avant d'installer les outils.
+
+## Trois leviers de création de valeur avec l'IA
+
+1. Faire ce qui était impossible : donner aux PME/TPE accès à des compétences (marketing, juridique, analyse) qui étaient hors de portée de leur structure.
+2. Gagner du temps : automatiser les tâches répétitives (ressaisies, reporting, relances).
+3. Augmenter la qualité : améliorer les sorties complexes (synthèses, analyses, aide à la décision).
+
+## Outils développés par EvidencAI
+
+- Mnemos : mémoire persistante pour Claude (plugin Cowork). Claude se souvient des projets et contextes entre les conversations.
+- CodirAI : orchestrateur de décision (extension Chrome). Analyse et structure l'information pour des décisions fiables.
+- AgorIA : formation augmentée par l'IA. Co-animation avec IA vocale, génération de quiz et supports pédagogiques.
+- ConfidentIA : anonymisation intelligente de documents pour travailler avec l'IA sans risque.
+- Mon Greffier : assistant du juge consulaire. Analyse de dossiers, structuration des points de décision, aide à la rédaction de jugements.
+- SignalPro : veille et signaux faibles. Surveillance et analyse de la situation économique et financière de partenaires.
+
+## Méthode
+
+1. Diagnostiquer (1-2 jours) : écouter, observer, cartographier les processus et les douleurs.
+2. Acculturer (1-5 jours) : les équipes découvrent ce que l'IA sait et ne sait pas faire, sur leurs cas réels.
+3. Construire (sur mesure) : commencer petit, un outil, un processus, un gain mesurable.
+
+## Ce que l'IA ne sait pas faire
+
+EvidencAI est transparent sur les limites de l'IA :
+- Elle ne comprend pas votre métier toute seule.
+- Elle ne remplace pas le jugement humain.
+- Elle ne garantit pas zéro erreur (les hallucinations existent).
+- Elle ne fonctionne pas sans méthode ni accompagnement.
+
+## Informations pratiques
+
+- Site : https://www.evidencai.com
+- Contact : contact@evidencai.com
+- Localisation : Châteauneuf-sur-Isère (Drôme, France)
+- Fondateur : Stéphane Commenge
+- Partenaire formation : ALIA Formation (certifiée Qualiopi)
+- Technologie privilégiée : Claude (Anthropic) — choix éthique pour la sécurité et la transparence.
+
+## Pages principales
+
+- /fr/ : page d'accueil
+- /fr/ateliers : ateliers IA pratiques
+- /fr/formation : formations inter et intra-entreprises
+- /fr/solutions : audit et implémentation IA
+- /fr/outils : outils IA développés par EvidencAI
+- /fr/a-propos : qui est Stéphane Commenge
+- /fr/contact : formulaire de contact
+- /fr/blog : articles et réflexions sur l'IA en entreprise

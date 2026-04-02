@@ -6,4 +6,8 @@ Allow: /
 Disallow: /api/
 
 # Sitemap
-Sitemap: https://evidencai.com/sitemap.xml
+Sitemap: https://www.evidencai.com/sitemap.xml
+
+# LLM context file available at:
+# https://www.evidencai.com/llms.txt
+# Spec: https://llmstxt.org

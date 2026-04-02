@@ -14,8 +14,8 @@ const config: Config = {
           light: '#16213e',
         },
         'ambre': {
-          DEFAULT: '#f59e0b',
-          light: '#fbbf24',
+          DEFAULT: '#E07A5F',
+          light: '#E8927A',
         },
       },
       fontFamily: {

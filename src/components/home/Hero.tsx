@@ -1,30 +1,42 @@
 import Link from 'next/link';
+import type { Locale } from '@/i18n/config';
+import type { getDictionary } from '@/i18n/dictionaries';
 
-export default function Hero() {
+interface HeroProps {
+  dict: Awaited<ReturnType<typeof getDictionary>>;
+  locale: Locale;
+}
+
+export default function Hero({ dict, locale }: HeroProps) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-bleu-nuit via-bleu-nuit-light to-bleu-nuit py-20 md:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Pour une IA qui vous améliore.
+            {dict.home.hero.title}
             <br />
-            <span className="text-ambre">Pas qui vous remplace.</span>
+            <span className="text-ambre">{dict.home.hero.titleHighlight}</span>
           </h1>
           <p className="text-lg md:text-xl text-text-secondary mb-10 leading-relaxed max-w-2xl mx-auto">
-            Accompagnement IA pour dirigeants et entreprises. De l&apos;atelier découverte à l&apos;implémentation sur mesure.
+            {dict.home.hero.subtitle.split('\n').map((line, index) => (
+              <span key={index}>
+                {line}
+                {index === 0 && <br />}
+              </span>
+            ))}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
-              href="/ateliers"
+              href={`/${locale}/ateliers`}
               className="min-h-[48px] px-8 py-3 bg-ambre text-bleu-nuit font-semibold rounded-lg hover:bg-ambre-light transition-all hover:shadow-lg"
             >
-              Découvrir les ateliers
+              {dict.home.hero.cta.primary}
             </Link>
             <Link
-              href="/contact"
+              href={`/${locale}/contact`}
               className="min-h-[48px] px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-bleu-nuit transition-all"
             >
-              Parlons de votre projet
+              {dict.home.hero.cta.secondary}
             </Link>
           </div>
         </div>

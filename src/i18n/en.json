@@ -1,0 +1,745 @@
+{
+  "metadata": {
+    "site": {
+      "title": "EvidencAI | For AI that improves you. Not replaces you.",
+      "titleTemplate": "%s | EvidencAI",
+      "description": "AI guidance for executives and businesses. Workshops, Qualiopi-certified training and custom solutions. From introduction to implementation.",
+      "keywords": [
+        "AI training",
+        "artificial intelligence workshop",
+        "AI consultant SME",
+        "Qualiopi AI training",
+        "AI audit business",
+        "Claude Anthropic"
+      ],
+      "ogTitle": "EvidencAI | For AI that improves you. Not replaces you.",
+      "ogDescription": "AI guidance for executives and businesses. Workshops, Qualiopi-certified training and custom solutions.",
+      "twitterTitle": "EvidencAI | AI that improves you",
+      "twitterDescription": "AI guidance for executives and businesses"
+    }
+  },
+  "header": {
+    "logo": "EvidencAI",
+    "nav": {
+      "ateliers": "Workshops",
+      "formations": "Training",
+      "solutions": "Solutions",
+      "outils": "Our AI Tools",
+      "apropos": "About",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "cta": "Discover workshops",
+    "lang": {
+      "fr": "FR",
+      "en": "EN"
+    }
+  },
+  "footer": {
+    "tagline": "AI that improves you, not replaces you.",
+    "description": "AI guidance for executives and businesses.",
+    "copyright": "© {year} EvidencAI. All rights reserved.",
+    "sections": {
+      "produits": {
+        "title": "Products",
+        "items": {
+          "ateliers": "AI Workshops",
+          "formation": "Qualiopi Training",
+          "solutions": "Audit & Solutions",
+          "outils": "Our tools"
+        }
+      },
+      "ressources": {
+        "title": "Resources",
+        "items": {
+          "blog": "Blog",
+          "apropos": "About",
+          "contact": "Contact"
+        }
+      },
+      "legal": {
+        "title": "Legal",
+        "items": {
+          "mentions": "Legal notice",
+          "cgv": "Terms of Sale",
+          "confidentialite": "Privacy"
+        }
+      }
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "For AI that improves you.",
+      "titleHighlight": "Not replaces you.",
+      "subtitle": "AI guidance for executives and businesses.\nFrom discovery workshops to custom implementation.",
+      "cta": {
+        "primary": "Discover workshops",
+        "secondary": "Let's talk about your project"
+      }
+    },
+    "funnel": {
+      "title": "A path adapted to your AI maturity",
+      "subtitle": "From first contact with AI to full implementation, choose your step",
+      "items": {
+        "ateliers": {
+          "level": "Quick start",
+          "title": "Hands-on remote workshops",
+          "description": "For lucid and pragmatic AI use. 2-hour introduction to discover and master AI in daily work.",
+          "price": "€120 incl. VAT"
+        },
+        "formations": {
+          "level": "Skill building",
+          "title": "Our training programs",
+          "description": "Two options: inter-company training or custom program for your team. OPCO funding available.",
+          "price": "On quote"
+        },
+        "solutions": {
+          "level": "Transformation",
+          "title": "Audit & Implementation",
+          "description": "Complete mission: diagnosis, recommendations and AI integration into your processes.",
+          "price": "Custom"
+        }
+      },
+      "cta": "Learn more"
+    },
+    "values": {
+      "title": "Our philosophy",
+      "items": {
+        "ameliore": {
+          "title": "AI improves humans",
+          "description": "It doesn't replace them. Artificial intelligence amplifies your capabilities, it doesn't substitute you."
+        },
+        "outil": {
+          "title": "Not a calculator, not an oracle",
+          "description": "AI is a tool that amplifies your intelligence. Neither magic nor threat: a thinking partner."
+        },
+        "claude": {
+          "title": "Claude / Anthropic",
+          "description": "An assumed ethical choice. Safety-first, transparency and reasoning quality at the heart of every recommendation."
+        }
+      }
+    },
+    "painpoints": {
+      "badge": "95% of AI projects fail*",
+      "title": "Not because of the tech.",
+      "titleHighlight": "Because of the approach.",
+      "items": {
+        "waouh": {
+          "pain": "The wow effect that fades",
+          "detail": "You tested ChatGPT. Impressive. And then... nothing.\nWithout method, AI remains a toy."
+        },
+        "usine": {
+          "pain": "The factory that never delivers",
+          "detail": "They sell you \"AI projects\" for €50k.\n95% never happen.\nThe problem is never the tech."
+        },
+        "equipes": {
+          "pain": "Teams that disconnect",
+          "detail": "Your employees use AI in secret or not at all.\nWithout acculturation, no adoption."
+        },
+        "acheter": {
+          "pain": "Buying before understanding",
+          "detail": "Licenses, plugins, consultants...\nYou invest without knowing what you really need."
+        }
+      },
+      "cta": "Our approach is different",
+      "source": "*MIT Sloan Management Review, 2025"
+    },
+    "outils": {
+      "title": "Our AI tools",
+      "subtitle": "We build the tools we teach.\nEach application is a concrete demonstration of what AI can do.",
+      "status": {
+        "test": "In testing",
+        "beta": "Beta test",
+        "encours": "In development"
+      },
+      "cta": {
+        "decouvrir": "Discover",
+        "ensavoirplus": "Learn more",
+        "voirtous": "See all our tools in detail"
+      }
+    },
+    "testimonials": {
+      "title": "They trust us",
+      "items": {
+        "line": {
+          "quote": "The DecidIA training allowed us to move from curiosity about AI to real strategic understanding. Two intense days, concrete, and above all adapted to our reality as executives.",
+          "author": "Line T.",
+          "role": "President",
+          "company": "ALIA Formation",
+          "context": "DecidIA Training — March 2026"
+        },
+        "lea": {
+          "quote": "Stéphane understood our business constraints and integrated AI where it truly adds value. The team adopted the tools naturally, without resistance to change.",
+          "author": "Léa S.",
+          "role": "Director",
+          "company": "Nature d'Eaux",
+          "context": "AI Implementation — 2026"
+        },
+        "nicolas": {
+          "quote": "The plugin for the Commercial Court transformed my hearing preparation. Case analysis is more rigorous and the time saved is considerable.",
+          "author": "Nicolas C.",
+          "role": "President",
+          "company": "Cuisine AVIVA Valence",
+          "context": "TC Plugin — 2026"
+        }
+      }
+    }
+  },
+  "ateliers": {
+    "metadata": {
+      "title": "AI Workshops - 2h to master artificial intelligence",
+      "description": "2-hour hands-on remote workshops to understand and master AI. 4 modules: fundamentals, Claude, AI tools, business integration. €120 incl. VAT per person, max 5 participants.",
+      "ogTitle": "AI Workshops - EvidencAI",
+      "ogDescription": "2-hour hands-on remote workshops to understand and master AI. From first contact to business integration."
+    },
+    "hero": {
+      "title": "AI Workshops",
+      "subtitle": "2 hours remote, max 5 participants, a practitioner instructor.\nFour modules, one progression: lucidity, mastery, discernment, vision."
+    },
+    "modules": {
+      "comprendre": {
+        "title": "Understanding AI: for lucid and efficient use",
+        "level": "beginner",
+        "duration": "2 hours",
+        "price": "€120 incl. VAT",
+        "description": "You hear about AI everywhere. Some are enthusiastic, others worried, most are lost. This workshop gives you the keys to understand what AI really does, and the 4 reflexes to use it without being fooled.",
+        "topics": [
+          "The 4 pillars of mastered use: Contextualize, Verify, Reframe, Iterate",
+          "What AI knows how to do, what it doesn't, and what it pretends to know",
+          "Live demonstration: the same question asked two ways, two radically different results",
+          "The 6 traps everyone falls into (and how to avoid them)",
+          "Your first guided exchange with Claude, live during the workshop"
+        ]
+      },
+      "maitriser": {
+        "title": "Mastering Claude: produce, iterate, succeed",
+        "level": "intermediate",
+        "duration": "2 hours",
+        "price": "€120 incl. VAT",
+        "description": "You tested AI. The results were... average.\nNormal: 80% of quality depends on how you frame the problem. This workshop gives you the method to get professional results on your real topics.",
+        "topics": [
+          "The C.R.T.F. method: four reflexes for a prompt that produces",
+          "Before / after: the same topic, a mediocre result then an exploitable result",
+          "Guided exercise: transform a concrete case with the method, then iterate together",
+          "The art of iteration: moving from a first draft to a professional result",
+          "Practical guide included: configure your Claude space for sustainable use"
+        ]
+      },
+      "outils": {
+        "title": "NotebookLM, Perplexity & Co: choosing the right AI tools",
+        "level": "beginner",
+        "duration": "2 hours",
+        "price": "€120 incl. VAT",
+        "description": "NotebookLM, Perplexity, ChatGPT, Claude, Gemini... You've heard these names without knowing which to use, or why. This workshop gives you a clear reading grid to choose the right tool at the right time, and stop fluttering.",
+        "topics": [
+          "NotebookLM: synthesize and query your documents in minutes",
+          "Perplexity: search with sources, not assumptions",
+          "Claude, ChatGPT, Gemini: real strengths, limits and positioning",
+          "The 4 pillars applied to each tool: same method, different tools",
+          "A clear choice grid: which tool for which use in your daily work"
+        ]
+      },
+      "connecter": {
+        "title": "AI in your business: from tool to lever",
+        "level": "advanced",
+        "duration": "2 hours",
+        "price": "€120 incl. VAT",
+        "description": "AI in a tab is a gadget. AI connected to your data, your tools and your processes is a strategic lever. This workshop shows you concretely what becomes possible, and helps you identify your first use cases.",
+        "topics": [
+          "What connected AI changes: demonstration with real tools",
+          "Plugins and integrations: how AI accesses your files, your calendar, your data",
+          "Security and confidentiality: the real questions to ask before connecting anything",
+          "Three concrete use cases commented and adaptable to your sector",
+          "Key questions to build your AI integration roadmap"
+        ]
+      }
+    },
+    "levels": {
+      "debutant": "Beginner",
+      "intermediaire": "Intermediate",
+      "confirme": "Advanced"
+    },
+    "cta": "See dates and register",
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": {
+        "niveau": {
+          "question": "Do you need a particular technical level?",
+          "answer": "No. The \"Understanding AI\" workshop requires no technical skills. For \"Mastering Claude\", having already used an AI assistant is a plus. For \"AI in your business\", prior experience with AI is recommended."
+        },
+        "ordre": {
+          "question": "In what order to take the workshops?",
+          "answer": "We recommend starting with \"Understanding AI\" which lays the fundamentals. Then, \"Mastering Claude\" and \"NotebookLM, Perplexity & Co\" can be taken in the order of your choice. \"AI in your business\" is ideal last for a strategic vision."
+        },
+        "format": {
+          "question": "Are the workshops in-person or remote?",
+          "answer": "The workshops take place remotely (Google Meet or Zoom). This format allows direct exchange with the instructor while remaining comfortable from your office. In-person workshops are possible on request in Drôme (26), France."
+        },
+        "preparation": {
+          "question": "Do you need to prepare something before the workshop?",
+          "answer": "For workshops using Claude (modules 1 and 2), we ask you to create your free Claude account before the session. An email with instructions is sent upon registration."
+        },
+        "paiement": {
+          "question": "How does payment work?",
+          "answer": "Payment is made online securely via Stripe during your registration. You immediately receive a confirmation email."
+        },
+        "remboursement": {
+          "question": "Can I be refunded?",
+          "answer": "Yes, you can cancel up to 48 hours before the workshop for a full refund. Beyond that, a credit will be offered for a later session."
+        },
+        "participants": {
+          "question": "How many participants per workshop?",
+          "answer": "Maximum 5 participants to ensure personalized support and quality exchanges, even remotely."
+        },
+        "supports": {
+          "question": "Will I receive materials?",
+          "answer": "Yes, each participant receives a summary PDF, additional resources and, depending on the modules, practical guides to continue autonomously."
+        }
+      }
+    }
+  },
+  "formation": {
+    "metadata": {
+      "title": "AI Training - Catalog and custom",
+      "description": "Qualiopi-certified AI training for executives and teams. Catalog training \"Deciding with AI\" (2 days, €960 excl. VAT) and custom support. OPCO funding available.",
+      "ogTitle": "AI Training - EvidencAI",
+      "ogDescription": "Qualiopi-certified AI training. From catalog to custom, a path adapted to your business."
+    },
+    "hero": {
+      "title": "AI Training",
+      "subtitle": "Structured paths to move from curiosity to competence.\nCatalog or custom, with possible OPCO funding."
+    },
+    "catalogue": {
+      "badge": "Catalog training",
+      "title": "Deciding with AI",
+      "subtitle": "From use to strategic mastery",
+      "price": "€960 excl. VAT",
+      "priceUnit": "per person",
+      "duration": "2 days (14 hours) in person in Valence (26), France",
+      "certifications": [
+        "Qualiopi certified via ALIA Formation",
+        "OPCO funding available",
+        "Maximum 12 participants"
+      ],
+      "objectifs": {
+        "title": "Learning objectives",
+        "subtitle": "At the end of the training, you will be able to:",
+        "items": [
+          "Identify the capabilities and limits of generative AIs for your professional context",
+          "Formulate structured queries and conduct iterative conversations with an AI",
+          "Create and configure a custom AI assistant adapted to an identified business need",
+          "Use specialized tools for verified research, document synthesis and decision support",
+          "Apply security and data confidentiality rules in your professional use of AI"
+        ]
+      },
+      "sessions": {
+        "title": "Upcoming sessions",
+        "items": [
+          {
+            "dates": "April 7 & 14, 2026",
+            "location": "Valence (26)"
+          },
+          {
+            "dates": "May 5 & 12, 2026",
+            "location": "Valence (26)"
+          },
+          {
+            "dates": "June 23 & 30, 2026",
+            "location": "Valence (26)"
+          }
+        ]
+      }
+    },
+    "surmesure": {
+      "badge": "Custom training",
+      "title": "Your business isn't generic.\nNeither is your training.",
+      "subtitle": "Every support starts with listening.\nYou describe your situation, we build the path that responds to it together.",
+      "situations": {
+        "parler": {
+          "titre": "Everyone around you talks about AI.",
+          "soustitre": "But no one has shown you what it changes for your job.",
+          "description": "You read articles, you see impressive demos, but you don't make the connection with your daily work.\nWhat you need isn't technical training. It's someone who understands your job AND AI, and bridges the gap.",
+          "reponse": "Field diagnosis, demonstrations on your use cases, pragmatic roadmap."
+        },
+        "debrouiller": {
+          "titre": "Your teams manage on their own with ChatGPT.",
+          "soustitre": "You don't know what they're doing or what they risk.",
+          "description": "Shadow AI is already in your business. Without framework, without consistency, sometimes with sensitive data.\nThe problem isn't the tool. It's the lack of method.",
+          "reponse": "Audit of existing uses, training by skill level, co-constructed AI charter."
+        },
+        "retard": {
+          "titre": "You feel you're falling behind.",
+          "soustitre": "But you don't know where to start.",
+          "description": "The paralysis of the executive who sees everyone moving (or believes everyone is moving).\nYou don't need a 200-slide transformation plan.\nYou need a concrete first step.",
+          "reponse": "Executive seminar, opportunity mapping, first use cases within 48h."
+        },
+        "generique": {
+          "titre": "Generic training doesn't fit your reality.",
+          "soustitre": "",
+          "description": "You sent employees to \"generative AI\" training. They came back knowing how to write prompts, but not how to apply them to their job.\nYou need your teams to know what to do concretely with AI in THEIR daily work.",
+          "reponse": "Co-construction with your managers, real business use cases, exercises on your own documents."
+        }
+      },
+      "qualiopi": "All our custom training is delivered by ALIA Formation (Qualiopi certified).\nOPCO funding available depending on your professional branch.",
+      "cta": {
+        "text": "Let's discuss your situation for 30 minutes",
+        "subtitle": "A free exchange, without commitment.\nTo understand your context before proposing anything."
+      }
+    }
+  },
+  "solutions": {
+    "metadata": {
+      "title": "AI Solutions - Pragmatic support | EvidencAI",
+      "description": "A progressive approach to AI: acculturate your teams, identify the right levers, build pragmatically. From small automation tool to structuring project.",
+      "ogTitle": "AI Solutions - EvidencAI",
+      "ogDescription": "Acculturate before implementing. A progressive and pragmatic approach to business AI."
+    },
+    "hero": {
+      "badge": "Audit & AI Implementation",
+      "title": "You don't know where to start.",
+      "titleHighlight": "That's normal.",
+      "subtitle": "Business owner, I know the reality on the ground.\nAI isn't deployed with a slide deck.\nIt's built step by step, starting from your real problems."
+    },
+    "comprendre": {
+      "title": "Acculturate before implementing",
+      "subtitle": "Most AI projects fail because tools are installed before teams understand what AI knows how to do and what it doesn't.\nOur approach reverses the logic: we start with people.",
+      "etapes": {
+        "equipes": {
+          "title": "Your teams first",
+          "text": "Before any tool, your employees must understand what AI changes in their daily work. Not in theory. On their concrete cases."
+        },
+        "identifier": {
+          "title": "Identify the axes",
+          "text": "Together, we map the tasks where AI has real impact. Not everywhere. In the right places."
+        },
+        "construire": {
+          "title": "Build progressively",
+          "text": "From small automation tool to more ambitious project. We don't revolutionize your organization. We improve it."
+        }
+      }
+    },
+    "leviers": {
+      "title": "What AI concretely changes in your business",
+      "impossible": {
+        "title": "Do what was impossible",
+        "description": "You don't have a marketing department, no lawyer, no analyst. AI doesn't replace these positions. It gives you access to skills that were out of reach for your structure.",
+        "exemples": [
+          "An SME executive who produces their own communication materials",
+          "A craftsman who analyzes their contracts without going through a lawyer each time",
+          "A micro-business that does competitive intelligence without hiring a research analyst"
+        ]
+      },
+      "temps": {
+        "title": "Save time",
+        "description": "Quantify time lost in repetitive tasks. Re-entries, copy-paste between software, manual follow-ups... This time has a cost. AI can drastically reduce it.",
+        "exemples": [
+          "An accounting firm that re-enters 4 hours of data per case",
+          "An assistant who manually compiles weekly reports",
+          "A customer service that answers the same 20 questions each week"
+        ]
+      },
+      "qualite": {
+        "title": "Increase quality",
+        "description": "Some tasks aren't repetitive but complex. Analysis, writing, decision support... AI doesn't do them for you. It raises the level of your outputs.",
+        "exemples": [
+          "An executive who wants reliable summary notes before each meeting",
+          "A lawyer who analyzes 50 pages of contract looking for risks",
+          "A trainer who personalizes their materials for each group"
+        ]
+      }
+    },
+    "methode": {
+      "title": "Our method",
+      "subtitle": "No big bang. A logical progression, adapted to your pace.",
+      "etapes": {
+        "diagnostiquer": {
+          "step": "01",
+          "title": "Diagnose",
+          "description": "We listen, observe, map. What processes? What pain points? What level of AI maturity in your teams? You leave with a clear vision, not a quote.",
+          "duration": "1 to 2 days"
+        },
+        "acculturer": {
+          "step": "02",
+          "title": "Acculturate",
+          "description": "Your teams discover what AI knows how to do, what it doesn't know how to do, and where it can help them concretely. No jargon, no promises. Demonstrations on their real cases.",
+          "duration": "1 to 5 days"
+        },
+        "construire": {
+          "step": "03",
+          "title": "Build",
+          "description": "We start small. One tool, one process, one measurable gain. Then we expand if it makes sense. From the script that saves 2 hours per week to the structuring project.",
+          "duration": "Custom"
+        }
+      },
+      "note": "Each step is autonomous. You can start with a diagnosis alone, or chain the three. Your pace decides."
+    },
+    "pasaire": {
+      "title": "What AI doesn't know how to do",
+      "subtitle": "You deserve to be told the truth before being sold anything.",
+      "items": {
+        "comprendre": {
+          "title": "Understand your job on its own",
+          "text": "AI doesn't know your customers, your constraints, your culture. Without your expertise, it produces generic content."
+        },
+        "jugement": {
+          "title": "Replace human judgment",
+          "text": "It analyzes, structures, proposes. But the decision remains yours. And that's very good."
+        },
+        "erreur": {
+          "title": "Guarantee zero errors",
+          "text": "Generative AIs can be wrong, invent, hallucinate. A good deployment always includes human verification."
+        },
+        "methode": {
+          "title": "Function without method",
+          "text": "A tool without process is a toy. Real adoption requires training, support and follow-up."
+        }
+      }
+    },
+    "cta": {
+      "title": "Let's talk about your situation",
+      "subtitle": "One hour to understand your context, identify the first levers and see if we can work together. No commitment, no jargon.",
+      "button": "Book a discovery call",
+      "footer": "Or write to us directly via the contact page."
+    }
+  },
+  "outils": {
+    "metadata": {
+      "title": "Our AI tools - EvidencAI",
+      "description": "Discover our AI applications: Mnemos (persistent memory), CodirAI (decision support), ConfidentIA (anonymization), Mon Greffier (commercial court judge assistant) and SignalPro (economic intelligence)."
+    },
+    "hero": {
+      "title": "Our AI tools",
+      "subtitle": "We build the tools we teach. Each application is a concrete demonstration of what AI can do to improve your professional daily life."
+    },
+    "common": {
+      "install": "Installation",
+      "status": "Status",
+      "fonctionnalites": "Key features",
+      "stack": "Tech stack",
+      "marche": "Target market",
+      "apercus": "Screenshots",
+      "cta": {
+        "decouvrir": "Discover",
+        "ensavoirplus": "Learn more"
+      },
+      "beta": {
+        "recherche": "Beta testers wanted",
+        "offre": "1 month Pro free (€20 excl. VAT)"
+      }
+    }
+  },
+  "apropos": {
+    "metadata": {
+      "title": "About - Stéphane Commenge | EvidencAI",
+      "description": "Entrepreneur since 1996, Stéphane Commenge supports SME and mid-market executives in concrete AI integration. No theory, results.",
+      "ogTitle": "About - Stéphane Commenge | EvidencAI",
+      "ogDescription": "Entrepreneur since 1996, AI consultant for SME and mid-market executives"
+    },
+    "hero": {
+      "name": "Stéphane Commenge",
+      "title": "Business owner. AI consultant. Trainer.",
+      "linkedin": "LinkedIn"
+    },
+    "parcours": [
+      "I created my first business in 1996, at 23. Then I led profit centers in various sectors from 1998 to 2006, before returning to entrepreneurship. Management, business development, budget arbitrations: the same decisions you make every day, I've been making for nearly 30 years. Often with incomplete information. Always with time constraints.",
+      "In early 2025, I started using AI on my own business problems. Not out of technological fascination, but pragmatism. And I discovered something simple: on certain tasks, quality went up and time went down. Not marginally. Radically. So I dug deeper. Methodically. Like analyzing a competitive advantage when you spot one. For a year, I devoted most of my time to understanding what AI really changes in an executive's daily life.",
+      "Today, I do for others what I did for myself. I understand your job. I identify where AI creates real value in your context. And I show you how, concretely. No slides, no promises. Live demonstrations, on your cases.",
+      "Invested in local civic and economic life, I sit on institutions where rigorous analysis and decision-making under uncertainty are daily work. This also feeds my conviction: AI is a discernment tool, not a shortcut to avoid thinking.",
+      "With 16 years of experience in professional training, our training programs are delivered by our partner ALIA Formation, a Qualiopi-certified organization. This national label guarantees the quality of the pedagogical process and allows you to benefit from funding by your OPCO, significantly reducing the cost for your business."
+    ],
+    "valeurs": {
+      "title": "Why AI?",
+      "items": {
+        "conviction": {
+          "title": "A conviction, not a fad",
+          "text": "AI isn't just another technology. It's a paradigm shift in how we work, decide, create. My goal: support you in this transformation with pragmatism and ethics."
+        },
+        "claude": {
+          "title": "Why Claude / Anthropic?",
+          "text": "Anthropic places security and ethics at the heart of its approach (safety-first). Claude excels in complex reasoning, nuance and transparency. It's the tool I recommend for demanding professional use."
+        },
+        "ameliore": {
+          "title": "AI that improves humans",
+          "text": "I don't believe in AI that replaces. I believe in AI that amplifies your capabilities, frees time for the essential, and allows you to make better decisions."
+        },
+        "voir": {
+          "title": "See before believing",
+          "text": "No theoretical promises. Each workshop is based on live demonstrations, on concrete cases from your business reality. You see what AI produces, you judge for yourself. This is EvidencAI's founding principle: proof first."
+        }
+      }
+    },
+    "cta": {
+      "title": "Curious to see what AI concretely changes?",
+      "subtitle": "Two hours. Five participants. Your business reality. Zero technical jargon.",
+      "ateliers": "Discover workshops",
+      "contact": "Contact me"
+    }
+  },
+  "blog": {
+    "metadata": {
+      "title": "The AI Signal - EvidencAI Blog",
+      "description": "Every week, one AI signal decoded for business leaders. The fact, the signal, the action."
+    },
+    "title": "The AI Signal",
+    "subtitle": "AI decoded for decision-makers.",
+    "description": "Every week, a key AI development, what it means for your business, and one concrete action to take.",
+    "empty": "First articles coming soon. Stay tuned.",
+    "cta": "Back to home"
+  },
+  "contact": {
+    "metadata": {
+      "title": "Contact - Let's talk about your AI project",
+      "description": "Contact EvidencAI to discuss your training, workshop or AI audit needs. Response within 24h.",
+      "ogTitle": "Contact | EvidencAI",
+      "ogDescription": "Contact us to discuss your AI needs"
+    },
+    "hero": {
+      "title": "Let's talk about your project",
+      "subtitle": "A question? A project? Fill out this form and I'll respond within 24h."
+    },
+    "form": {
+      "nom": "Name",
+      "email": "Email",
+      "telephone": "Phone (optional)",
+      "entreprise": "Company (optional)",
+      "sujet": "Subject",
+      "message": "Message",
+      "required": "*",
+      "sujetPlaceholder": "Select a subject",
+      "sujets": {
+        "atelier": "AI Workshop",
+        "formation": "Qualiopi Training",
+        "audit": "Audit & Solutions",
+        "outil": "Our AI tools",
+        "autre": "Other"
+      },
+      "rgpd": "I accept that my data be used to contact me regarding my request. In accordance with GDPR, you have a right to access and rectify your data.",
+      "rgpdLink": "Learn more",
+      "submit": "Send message",
+      "pending": "Sending...",
+      "success": "Message sent successfully.",
+      "successSubtitle": "I'll respond within 24h."
+    },
+    "calendly": {
+      "title": "Prefer to discuss by voice?",
+      "subtitle": "30 minutes, no commitment, to understand what AI can change in your daily work.",
+      "cta": "Book a slot"
+    },
+    "coordonnees": {
+      "email": {
+        "label": "Email",
+        "value": "contact@evidencai.com"
+      },
+      "adresse": {
+        "label": "Address",
+        "value": "200 impasse Cheyssans\n26300 Châteauneuf-sur-Isère, France"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "value": "Stéphane Commenge"
+      }
+    }
+  },
+  "mentions": {
+    "metadata": {
+      "title": "Legal notice - Terms of Sale and Privacy Policy",
+      "description": "Legal notice, general terms of sale and privacy policy EvidencAI"
+    },
+    "title": "Legal notice",
+    "editeur": {
+      "title": "Site publisher",
+      "raison": "Company name:",
+      "raisonValue": "EvidencAI",
+      "forme": "Legal form:",
+      "formeValue": "SAS with capital of €180,000",
+      "siege": "Registered office:",
+      "siegeValue": "200 impasse Cheyssans, 26300 Châteauneuf-sur-Isère, France",
+      "siret": "SIRET:",
+      "siretValue": "Registration in progress",
+      "directeur": "Publication director:",
+      "directeurValue": "Stéphane Commenge",
+      "contact": "Contact:",
+      "contactValue": "contact@evidencai.com"
+    },
+    "hebergement": {
+      "title": "Hosting",
+      "hebergeur": "Host:",
+      "hebergeurValue": "Vercel Inc.",
+      "adresse": "Address:",
+      "adresseValue": "440 N Barranca Ave #4133, Covina, CA 91723, United States",
+      "site": "Website:",
+      "siteValue": "vercel.com"
+    },
+    "cgv": {
+      "title": "General Terms of Sale",
+      "objet": {
+        "title": "Article 1 - Purpose",
+        "text": "These general terms of sale apply to all workshops, training and consulting services offered by EvidencAI."
+      },
+      "prix": {
+        "title": "Article 2 - Prices",
+        "text": "Workshop prices are indicated in euros including VAT. Training and consulting service rates are communicated on personalized quote."
+      },
+      "paiement": {
+        "title": "Article 3 - Payment",
+        "text": "Payment for workshops is made online via Stripe upon registration. For training and services on quote, a 30% deposit may be requested."
+      },
+      "annulation": {
+        "title": "Article 4 - Cancellation and refund",
+        "client": "Cancellation by customer: full refund up to 48 hours before the workshop. Beyond that, a credit will be offered for a later session.",
+        "evidencai": "Cancellation by EvidencAI: full refund or postponement to a later date."
+      },
+      "retractation": {
+        "title": "Article 5 - Right of withdrawal",
+        "text": "In accordance with Article L221-28 of the Consumer Code, the right of withdrawal cannot be exercised for professional training services."
+      },
+      "pi": {
+        "title": "Article 6 - Intellectual property",
+        "text": "All training materials remain the exclusive property of EvidencAI. Any unauthorized reproduction or distribution is prohibited."
+      }
+    },
+    "confidentialite": {
+      "title": "Privacy Policy (GDPR)",
+      "responsable": {
+        "title": "Data controller",
+        "text": "EvidencAI, represented by Stéphane Commenge, is responsible for processing your personal data."
+      },
+      "donnees": {
+        "title": "Data collected",
+        "text": "We collect the following data: last name, first name, email, phone (optional), company (optional). This data is necessary for managing your registration and communication about your training."
+      },
+      "finalites": {
+        "title": "Purposes",
+        "items": [
+          "Management of workshop and training registrations",
+          "Communication regarding your order",
+          "Sending information about our activities (with your consent)",
+          "Improvement of our services"
+        ]
+      },
+      "conservation": {
+        "title": "Retention period",
+        "text": "Your data is retained for 3 years from your last interaction with EvidencAI."
+      },
+      "droits": {
+        "title": "Your rights",
+        "text": "In accordance with GDPR, you have a right to access, rectify, erase, limit, object to and port your data. To exercise these rights, contact us at contact@evidencai.com."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "text": "This site uses Google Analytics and Microsoft Clarity to analyze traffic. You can disable these cookies via your browser settings."
+      }
+    },
+    "pi": {
+      "title": "Intellectual property",
+      "text": "All content on this site (text, images, videos, logos) is protected by copyright. Any reproduction, even partial, is prohibited without prior authorization."
+    },
+    "credits": {
+      "title": "Credits",
+      "design": "Design and development:",
+      "designValue": "Stéphane Commenge",
+      "techno": "Technologies:",
+      "technoValue": "Next.js, Tailwind CSS, Vercel"
+    }
+  }
+}

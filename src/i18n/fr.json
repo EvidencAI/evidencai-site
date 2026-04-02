@@ -1,0 +1,745 @@
+{
+  "metadata": {
+    "site": {
+      "title": "EvidencAI | Pour une IA qui vous améliore. Pas qui vous remplace.",
+      "titleTemplate": "%s | EvidencAI",
+      "description": "Accompagnement IA pour dirigeants et entreprises. Ateliers, formations Qualiopi et solutions sur mesure. De l'initiation à l'implémentation.",
+      "keywords": [
+        "formation IA",
+        "atelier intelligence artificielle",
+        "consultant IA PME",
+        "formation IA Qualiopi",
+        "audit IA entreprise",
+        "Claude Anthropic"
+      ],
+      "ogTitle": "EvidencAI | Pour une IA qui vous améliore. Pas qui vous remplace.",
+      "ogDescription": "Accompagnement IA pour dirigeants et entreprises. Ateliers, formations Qualiopi et solutions sur mesure.",
+      "twitterTitle": "EvidencAI | L'IA qui vous améliore",
+      "twitterDescription": "Accompagnement IA pour dirigeants et entreprises"
+    }
+  },
+  "header": {
+    "logo": "EvidencAI",
+    "nav": {
+      "ateliers": "Ateliers",
+      "formations": "Formations",
+      "solutions": "Solutions",
+      "outils": "Nos outils IA",
+      "apropos": "À propos",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "cta": "Découvrir les ateliers",
+    "lang": {
+      "fr": "FR",
+      "en": "EN"
+    }
+  },
+  "footer": {
+    "tagline": "L'IA qui vous améliore, pas qui vous remplace.",
+    "description": "Accompagnement IA pour dirigeants et entreprises.",
+    "copyright": "© {year} EvidencAI. Tous droits réservés.",
+    "sections": {
+      "produits": {
+        "title": "Produits",
+        "items": {
+          "ateliers": "Ateliers IA",
+          "formation": "Formation Qualiopi",
+          "solutions": "Audit & Solutions",
+          "outils": "Nos outils"
+        }
+      },
+      "ressources": {
+        "title": "Ressources",
+        "items": {
+          "blog": "Blog",
+          "apropos": "À propos",
+          "contact": "Contact"
+        }
+      },
+      "legal": {
+        "title": "Légal",
+        "items": {
+          "mentions": "Mentions légales",
+          "cgv": "CGV",
+          "confidentialite": "Confidentialité"
+        }
+      }
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Pour une IA qui vous améliore.",
+      "titleHighlight": "Pas qui vous remplace.",
+      "subtitle": "Accompagnement IA pour dirigeants et entreprises.\nDe l'atelier découverte à l'implémentation sur mesure.",
+      "cta": {
+        "primary": "Découvrir les ateliers",
+        "secondary": "Parlons de votre projet"
+      }
+    },
+    "funnel": {
+      "title": "Un parcours adapté à votre maturité IA",
+      "subtitle": "Du premier contact avec l'IA à l'implémentation complète, choisissez votre étape",
+      "items": {
+        "ateliers": {
+          "level": "Démarrage rapide",
+          "title": "Ateliers pratiques en visio",
+          "description": "Pour un usage lucide et pragmatique de l'IA. Initiation de 2h pour découvrir et maîtriser l'IA au quotidien.",
+          "price": "120€ TTC"
+        },
+        "formations": {
+          "level": "Montée en compétence",
+          "title": "Nos formations",
+          "description": "Deux possibilités : formations inter-entreprises ou parcours sur mesure pour votre équipe. Financement OPCO possible.",
+          "price": "Sur devis"
+        },
+        "solutions": {
+          "level": "Transformation",
+          "title": "Audit & Implémentation",
+          "description": "Mission complète : diagnostic, recommandations et intégration IA dans vos processus.",
+          "price": "Sur mesure"
+        }
+      },
+      "cta": "En savoir plus"
+    },
+    "values": {
+      "title": "Notre philosophie",
+      "items": {
+        "ameliore": {
+          "title": "L'IA améliore l'humain",
+          "description": "Elle ne le remplace pas. L'intelligence artificielle amplifie vos capacités, elle ne vous substitue pas."
+        },
+        "outil": {
+          "title": "Pas une calculatrice, pas un oracle",
+          "description": "L'IA est un outil qui amplifie votre intelligence. Ni magie, ni menace : un partenaire de réflexion."
+        },
+        "claude": {
+          "title": "Claude / Anthropic",
+          "description": "Un choix éthique assumé. Safety-first, transparence et qualité de raisonnement au cœur de chaque recommandation."
+        }
+      }
+    },
+    "painpoints": {
+      "badge": "95% des projets IA échouent*",
+      "title": "Pas à cause de la tech.",
+      "titleHighlight": "À cause de l'approche.",
+      "items": {
+        "waouh": {
+          "pain": "L'effet waouh qui retombe",
+          "detail": "Vous avez testé ChatGPT. Impressionnant. Et puis... rien.\nSans méthode, l'IA reste un jouet."
+        },
+        "usine": {
+          "pain": "L'usine à gaz qui ne livre jamais",
+          "detail": "On vous vend des \"projets IA\" à 50k€.\n95% n'aboutissent pas.\nLe problème n'est jamais la tech."
+        },
+        "equipes": {
+          "pain": "Des équipes qui décrochent",
+          "detail": "Vos collaborateurs utilisent l'IA en cachette ou pas du tout.\nSans acculturation, pas d'adoption."
+        },
+        "acheter": {
+          "pain": "Acheter avant de comprendre",
+          "detail": "Licences, plugins, consultants...\nVous investissez sans savoir ce dont vous avez vraiment besoin."
+        }
+      },
+      "cta": "Notre approche est différente",
+      "source": "*MIT Sloan Management Review, 2025"
+    },
+    "outils": {
+      "title": "Nos outils IA",
+      "subtitle": "Nous créons les outils que nous enseignons.\nChaque application est une démonstration concrète de ce que l'IA peut faire.",
+      "status": {
+        "test": "En test",
+        "beta": "Beta test",
+        "encours": "En cours"
+      },
+      "cta": {
+        "decouvrir": "Découvrir",
+        "ensavoirplus": "En savoir plus",
+        "voirtous": "Voir tous nos outils en détail"
+      }
+    },
+    "testimonials": {
+      "title": "Ils nous font confiance",
+      "items": {
+        "line": {
+          "quote": "La formation DecidIA nous a permis de passer d'une curiosité pour l'IA à une vraie compréhension stratégique. Deux jours intenses, concrets, et surtout adaptés à notre réalité de dirigeants.",
+          "author": "Line T.",
+          "role": "Présidente",
+          "company": "ALIA Formation",
+          "context": "Formation DecidIA — Mars 2026"
+        },
+        "lea": {
+          "quote": "Stéphane a su comprendre nos contraintes métier et intégrer l'IA là où elle apporte vraiment de la valeur. L'équipe s'est approprié les outils naturellement, sans résistance au changement.",
+          "author": "Léa S.",
+          "role": "Directrice",
+          "company": "Nature d'Eaux",
+          "context": "Implémentation IA — 2026"
+        },
+        "nicolas": {
+          "quote": "Le plugin pour le Tribunal de Commerce a transformé ma préparation des audiences. L'analyse des dossiers est plus rigoureuse et le gain de temps est considérable.",
+          "author": "Nicolas C.",
+          "role": "Président",
+          "company": "Cuisine AVIVA Valence",
+          "context": "Plugin TC — 2026"
+        }
+      }
+    }
+  },
+  "ateliers": {
+    "metadata": {
+      "title": "Ateliers IA - 2h pour maîtriser l'intelligence artificielle",
+      "description": "Ateliers pratiques de 2h en visio pour comprendre et maîtriser l'IA. 4 modules : fondamentaux, Claude, outils IA, intégration entreprise. 120€ TTC par personne, 5 participants max.",
+      "ogTitle": "Ateliers IA - EvidencAI",
+      "ogDescription": "Ateliers pratiques de 2h en visio pour comprendre et maîtriser l'IA. Du premier contact à l'intégration en entreprise."
+    },
+    "hero": {
+      "title": "Ateliers IA",
+      "subtitle": "2 heures en visio, 5 participants max, un formateur praticien.\nQuatre modules, une progression : lucidité, maîtrise, discernement, vision."
+    },
+    "modules": {
+      "comprendre": {
+        "title": "Comprendre l'IA : pour un usage lucide et efficient",
+        "level": "débutant",
+        "duration": "2 heures",
+        "price": "120€ TTC",
+        "description": "Vous entendez parler d'IA partout. Certains sont enthousiastes, d'autres inquiets, la plupart sont perdus. Cet atelier vous donne les clés pour comprendre ce que l'IA fait vraiment, et les 4 réflexes pour l'utiliser sans vous faire avoir.",
+        "topics": [
+          "Les 4 piliers d'un usage maîtrisé : Contextualiser, Vérifier, Recadrer, Itérer",
+          "Ce que l'IA sait faire, ce qu'elle ne sait pas, et ce qu'elle fait semblant de savoir",
+          "Démonstration live : la même question posée de deux façons, deux résultats radicalement différents",
+          "Les 6 pièges que tout le monde fait (et comment les éviter)",
+          "Votre premier échange guidé avec Claude, en direct pendant l'atelier"
+        ]
+      },
+      "maitriser": {
+        "title": "Maîtriser Claude : produire, itérer, réussir",
+        "level": "intermédiaire",
+        "duration": "2 heures",
+        "price": "120€ TTC",
+        "description": "Vous avez testé l'IA. Les résultats étaient... moyens.\nNormal : 80% de la qualité dépend de la façon dont vous posez le problème. Cet atelier vous donne la méthode pour obtenir des résultats professionnels, sur vos vrais sujets.",
+        "topics": [
+          "La méthode C.R.T.F. : quatre réflexes pour un prompt qui produit",
+          "Avant / après : le même sujet, un résultat médiocre puis un résultat exploitable",
+          "Exercice guidé : transformer un cas concret avec la méthode, puis itérer ensemble",
+          "L'art de l'itération : passer d'un premier jet à un résultat professionnel",
+          "Guide pratique offert : configurer votre espace Claude pour un usage durable"
+        ]
+      },
+      "outils": {
+        "title": "NotebookLM, Perplexity & Cie : choisir les bons outils IA",
+        "level": "débutant",
+        "duration": "2 heures",
+        "price": "120€ TTC",
+        "description": "NotebookLM, Perplexity, ChatGPT, Claude, Gemini... Vous avez entendu ces noms sans savoir lequel utiliser, ni pourquoi. Cet atelier vous donne une grille de lecture claire pour choisir le bon outil au bon moment, et arrêter de papillonner.",
+        "topics": [
+          "NotebookLM : synthétiser et interroger vos documents en quelques minutes",
+          "Perplexity : rechercher avec des sources, pas des suppositions",
+          "Claude, ChatGPT, Gemini : forces, limites et positionnements réels",
+          "Les 4 piliers appliqués à chaque outil : même méthode, outils différents",
+          "Une grille de choix claire : quel outil pour quel usage dans votre quotidien"
+        ]
+      },
+      "connecter": {
+        "title": "L'IA dans votre entreprise : de l'outil au levier",
+        "level": "confirmé",
+        "duration": "2 heures",
+        "price": "120€ TTC",
+        "description": "L'IA dans un onglet, c'est un gadget. L'IA connectée à vos données, vos outils et vos processus, c'est un levier stratégique. Cet atelier vous montre concrètement ce qui devient possible, et vous aide à identifier vos premiers cas d'usage.",
+        "topics": [
+          "Ce que change l'IA connectée : démonstration avec des outils réels",
+          "Plugins et intégrations : comment l'IA accède à vos fichiers, votre agenda, vos données",
+          "Sécurité et confidentialité : les vraies questions à se poser avant de connecter quoi que ce soit",
+          "Trois cas d'usage concrets commentés et adaptables à votre secteur",
+          "Les questions clés pour construire votre feuille de route d'intégration IA"
+        ]
+      }
+    },
+    "levels": {
+      "debutant": "Débutant",
+      "intermediaire": "Intermédiaire",
+      "confirme": "Confirmé"
+    },
+    "cta": "Voir les dates et s'inscrire",
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": {
+        "niveau": {
+          "question": "Faut-il un niveau technique particulier ?",
+          "answer": "Non. L'atelier \"Comprendre l'IA\" ne nécessite aucune compétence technique. Pour \"Maîtriser Claude\", avoir déjà utilisé un assistant IA est un plus. Pour \"L'IA dans votre entreprise\", une expérience préalable avec l'IA est recommandée."
+        },
+        "ordre": {
+          "question": "Dans quel ordre suivre les ateliers ?",
+          "answer": "Nous recommandons de commencer par \"Comprendre l'IA\" qui pose les fondamentaux. Ensuite, \"Maîtriser Claude\" et \"NotebookLM, Perplexity & Cie\" peuvent être suivis dans l'ordre de votre choix. \"L'IA dans votre entreprise\" est idéal en dernier pour une vision stratégique."
+        },
+        "format": {
+          "question": "Les ateliers sont-ils en présentiel ou distanciel ?",
+          "answer": "Les ateliers se déroulent en visio (Google Meet ou Zoom). Ce format permet un échange direct avec le formateur tout en restant confortable depuis votre bureau. Les ateliers en présentiel sont possibles sur demande dans la Drôme (26)."
+        },
+        "preparation": {
+          "question": "Faut-il préparer quelque chose avant l'atelier ?",
+          "answer": "Pour les ateliers qui utilisent Claude (modules 1 et 2), nous vous demandons de créer votre compte Claude gratuit avant la session. Un email avec les instructions vous est envoyé à l'inscription."
+        },
+        "paiement": {
+          "question": "Comment se passe le paiement ?",
+          "answer": "Le paiement se fait en ligne de manière sécurisée via Stripe lors de votre inscription. Vous recevez immédiatement une confirmation par email."
+        },
+        "remboursement": {
+          "question": "Puis-je être remboursé ?",
+          "answer": "Oui, vous pouvez annuler jusqu'à 48h avant l'atelier pour un remboursement complet. Au-delà, un avoir sera proposé pour une session ultérieure."
+        },
+        "participants": {
+          "question": "Combien de participants par atelier ?",
+          "answer": "Maximum 5 participants pour garantir un accompagnement personnalisé et des échanges de qualité, même en visio."
+        },
+        "supports": {
+          "question": "Recevrai-je des supports ?",
+          "answer": "Oui, chaque participant reçoit un support PDF récapitulatif, des ressources complémentaires et, selon les modules, des guides pratiques pour continuer en autonomie."
+        }
+      }
+    }
+  },
+  "formation": {
+    "metadata": {
+      "title": "Formations IA - Catalogue et sur mesure",
+      "description": "Formations IA certifiées Qualiopi pour dirigeants et équipes. Formation catalogue \"Décider avec l'IA\" (2 jours, 960€ HT) et accompagnement sur mesure. Financement OPCO possible.",
+      "ogTitle": "Formations IA - EvidencAI",
+      "ogDescription": "Formations IA certifiées Qualiopi. Du catalogue au sur mesure, un parcours adapté à votre entreprise."
+    },
+    "hero": {
+      "title": "Formations IA",
+      "subtitle": "Des parcours structurés pour passer de la curiosité à la compétence.\nEn catalogue ou sur mesure, avec financement OPCO possible."
+    },
+    "catalogue": {
+      "badge": "Formation catalogue",
+      "title": "Décider avec l'IA",
+      "subtitle": "De l'usage à la maîtrise stratégique",
+      "price": "960€ HT",
+      "priceUnit": "par personne",
+      "duration": "2 jours (14 heures) en présentiel à Valence (26)",
+      "certifications": [
+        "Certifiée Qualiopi via ALIA Formation",
+        "Financement OPCO possible",
+        "12 participants maximum"
+      ],
+      "objectifs": {
+        "title": "Objectifs pédagogiques",
+        "subtitle": "À l'issue de la formation, vous serez capable de :",
+        "items": [
+          "Identifier les capacités et les limites des IA génératives pour votre contexte professionnel",
+          "Formuler des requêtes structurées et mener des conversations itératives avec une IA",
+          "Créer et configurer un assistant IA personnalisé adapté à un besoin métier identifié",
+          "Utiliser des outils spécialisés de recherche vérifiée, de synthèse documentaire et d'aide à la décision",
+          "Appliquer les règles de sécurité et de confidentialité des données dans votre usage professionnel de l'IA"
+        ]
+      },
+      "sessions": {
+        "title": "Prochaines sessions",
+        "items": [
+          {
+            "dates": "7 et 14 avril 2026",
+            "location": "Valence (26)"
+          },
+          {
+            "dates": "5 et 12 mai 2026",
+            "location": "Valence (26)"
+          },
+          {
+            "dates": "23 et 30 juin 2026",
+            "location": "Valence (26)"
+          }
+        ]
+      }
+    },
+    "surmesure": {
+      "badge": "Formation sur mesure",
+      "title": "Votre entreprise n'est pas générique.\nVotre formation non plus.",
+      "subtitle": "Chaque accompagnement commence par une écoute.\nVous nous décrivez votre situation, on construit ensemble le parcours qui y répond.",
+      "situations": {
+        "parler": {
+          "titre": "Tout le monde parle d'IA autour de vous.",
+          "soustitre": "Mais personne ne vous a montré ce que ça change pour votre métier.",
+          "description": "Vous lisez des articles, vous voyez des démos impressionnantes, mais vous ne faites pas le lien avec votre quotidien.\nCe qu'il vous faut, ce n'est pas une formation technique. C'est quelqu'un qui comprend votre métier ET l'IA, et qui fait le pont.",
+          "reponse": "Diagnostic terrain, démonstrations sur vos cas d'usage, feuille de route pragmatique."
+        },
+        "debrouiller": {
+          "titre": "Vos équipes se débrouillent seules avec ChatGPT.",
+          "soustitre": "Vous ne savez pas ce qu'elles font ni ce qu'elles risquent.",
+          "description": "Le shadow AI est déjà dans votre entreprise. Sans cadre, sans cohérence, parfois avec des données sensibles.\nLe problème n'est pas l'outil. C'est l'absence de méthode.",
+          "reponse": "Audit des usages existants, formation par groupes de niveau, charte IA co-construite."
+        },
+        "retard": {
+          "titre": "Vous sentez que vous prenez du retard.",
+          "soustitre": "Mais vous ne savez pas par quoi commencer.",
+          "description": "La paralysie du dirigeant qui voit tout le monde bouger (ou qui croit que tout le monde bouge).\nVous n'avez pas besoin d'un plan de transformation à 200 slides.\nVous avez besoin d'un premier pas concret.",
+          "reponse": "Séminaire de direction, cartographie des opportunités, premiers cas d'usage en 48h."
+        },
+        "generique": {
+          "titre": "Les formations génériques ne collent pas à votre réalité.",
+          "soustitre": "",
+          "description": "Vous avez envoyé des collaborateurs à une formation \"IA générative\". Ils sont revenus en sachant écrire des prompts, mais pas les appliquer à leur job.\nVous avez besoin que vos équipes sachent quoi faire concrètement avec l'IA dans LEUR quotidien.",
+          "reponse": "Co-construction avec vos managers, cas d'usage métier réels, exercices sur vos propres documents."
+        }
+      },
+      "qualiopi": "Toutes nos formations sur mesure sont portées par ALIA Formation (certifiée Qualiopi).\nFinancement OPCO possible selon votre branche professionnelle.",
+      "cta": {
+        "text": "Échangeons 30 minutes sur votre situation",
+        "subtitle": "Un échange libre, sans engagement.\nPour comprendre votre contexte avant de proposer quoi que ce soit."
+      }
+    }
+  },
+  "solutions": {
+    "metadata": {
+      "title": "Solutions IA - Accompagnement pragmatique | EvidencAI",
+      "description": "Une approche progressive de l'IA : acculturer vos équipes, identifier les bons leviers, construire pragmatiquement. Du petit outil d'automatisation au projet structurant.",
+      "ogTitle": "Solutions IA - EvidencAI",
+      "ogDescription": "Acculturer avant d'implémenter. Une approche progressive et pragmatique de l'IA en entreprise."
+    },
+    "hero": {
+      "badge": "Audit & Implémentation IA",
+      "title": "Vous ne savez pas par où commencer.",
+      "titleHighlight": "C'est normal.",
+      "subtitle": "Chef d'entreprise, je connais la réalité du terrain.\nL'IA ne se déploie pas avec un slide deck.\nElle se construit pas à pas, en partant de vos vrais problèmes."
+    },
+    "comprendre": {
+      "title": "Acculturer avant d'implémenter",
+      "subtitle": "La plupart des projets IA échouent parce qu'on installe des outils avant que les équipes comprennent ce que l'IA sait faire et ce qu'elle ne sait pas faire.\nNotre approche inverse la logique : on commence par les gens.",
+      "etapes": {
+        "equipes": {
+          "title": "Vos équipes d'abord",
+          "text": "Avant tout outil, vos collaborateurs doivent comprendre ce que l'IA change dans leur quotidien. Pas en théorie. Sur leurs cas concrets."
+        },
+        "identifier": {
+          "title": "Identifier les axes",
+          "text": "Ensemble, on cartographie les tâches où l'IA a un vrai impact. Pas partout. Aux bons endroits."
+        },
+        "construire": {
+          "title": "Construire progressivement",
+          "text": "Du petit outil d'automatisation au projet plus ambitieux. On ne révolutionne pas votre organisation. On l'améliore."
+        }
+      }
+    },
+    "leviers": {
+      "title": "Ce que l'IA change concrètement dans votre entreprise",
+      "impossible": {
+        "title": "Faire ce qui était impossible",
+        "description": "Vous n'avez pas de service marketing, pas de juriste, pas d'analyste. L'IA ne remplace pas ces postes. Elle vous donne accès à des compétences qui étaient hors de portée de votre structure.",
+        "exemples": [
+          "Un dirigeant de PME qui produit ses propres supports de communication",
+          "Un artisan qui analyse ses contrats sans passer par un avocat à chaque fois",
+          "Une TPE qui fait sa veille concurrentielle sans recruter un chargé d'études"
+        ]
+      },
+      "temps": {
+        "title": "Gagner du temps",
+        "description": "Chiffrer le temps perdu dans les tâches répétitives. Ressaisies, copier-coller entre logiciels, relances manuelles... Ce temps a un coût. L'IA peut le réduire drastiquement.",
+        "exemples": [
+          "Un cabinet comptable qui ressaisit 4h de données par dossier",
+          "Une assistante qui compile manuellement les reporting hebdo",
+          "Un service client qui répond aux mêmes 20 questions chaque semaine"
+        ]
+      },
+      "qualite": {
+        "title": "Augmenter la qualité",
+        "description": "Certaines tâches ne sont pas répétitives mais complexes. Analyse, rédaction, aide à la décision... L'IA ne les fait pas à votre place. Elle élève le niveau de vos sorties.",
+        "exemples": [
+          "Un dirigeant qui veut des notes de synthèse fiables avant chaque réunion",
+          "Un juriste qui analyse 50 pages de contrat en cherchant les risques",
+          "Un formateur qui personnalise ses supports pour chaque groupe"
+        ]
+      }
+    },
+    "methode": {
+      "title": "Notre méthode",
+      "subtitle": "Pas de big bang. Une progression logique, adaptée à votre rythme.",
+      "etapes": {
+        "diagnostiquer": {
+          "step": "01",
+          "title": "Diagnostiquer",
+          "description": "On écoute, on observe, on cartographie. Quels processus ? Quelles douleurs ? Quel niveau de maturité IA dans vos équipes ? Vous repartez avec une vision claire, pas un devis.",
+          "duration": "1 à 2 jours"
+        },
+        "acculturer": {
+          "step": "02",
+          "title": "Acculturer",
+          "description": "Vos équipes découvrent ce que l'IA sait faire, ce qu'elle ne sait pas faire, et où elle peut les aider concrètement. Pas de jargon, pas de promesses. Des démonstrations sur leurs cas réels.",
+          "duration": "1 à 5 jours"
+        },
+        "construire": {
+          "step": "03",
+          "title": "Construire",
+          "description": "On commence petit. Un outil, un processus, un gain mesurable. Puis on élargit si ça fait sens. Du script qui fait gagner 2h par semaine au projet structurant.",
+          "duration": "Sur mesure"
+        }
+      },
+      "note": "Chaque étape est autonome. Vous pouvez commencer par un diagnostic seul, ou enchaîner les trois. C'est votre rythme qui décide."
+    },
+    "pasaire": {
+      "title": "Ce que l'IA ne sait pas faire",
+      "subtitle": "Vous méritez qu'on vous dise la vérité avant de vous vendre quoi que ce soit.",
+      "items": {
+        "comprendre": {
+          "title": "Comprendre votre métier toute seule",
+          "text": "L'IA ne connaît pas vos clients, vos contraintes, votre culture. Sans votre expertise, elle produit du générique."
+        },
+        "jugement": {
+          "title": "Remplacer le jugement humain",
+          "text": "Elle analyse, structure, propose. Mais la décision reste la vôtre. Et c'est très bien comme ça."
+        },
+        "erreur": {
+          "title": "Garantir zéro erreur",
+          "text": "Les IA génératives peuvent se tromper, inventer, halluciner. Un bon déploiement inclut toujours une vérification humaine."
+        },
+        "methode": {
+          "title": "Fonctionner sans méthode",
+          "text": "Un outil sans processus, c'est un jouet. L'adoption réelle passe par la formation, l'accompagnement et le suivi."
+        }
+      }
+    },
+    "cta": {
+      "title": "Parlons de votre situation",
+      "subtitle": "Une heure pour comprendre votre contexte, identifier les premiers leviers et voir si on peut travailler ensemble. Sans engagement, sans jargon.",
+      "button": "Réserver un échange découverte",
+      "footer": "Ou écrivez-nous directement via la page contact."
+    }
+  },
+  "outils": {
+    "metadata": {
+      "title": "Nos outils IA - EvidencAI",
+      "description": "Découvrez nos applications IA : Mnemos (mémoire persistante), CodirAI (aide à la décision), ConfidentIA (anonymisation), Mon Greffier (assistant du juge consulaire) et SignalPro (veille économique)."
+    },
+    "hero": {
+      "title": "Nos outils IA",
+      "subtitle": "Nous créons les outils que nous enseignons. Chaque application est une démonstration concrète de ce que l'IA peut faire pour améliorer votre quotidien professionnel."
+    },
+    "common": {
+      "install": "Installation",
+      "status": "Statut",
+      "fonctionnalites": "Fonctionnalités clés",
+      "stack": "Stack technique",
+      "marche": "Marché cible",
+      "apercus": "Aperçus",
+      "cta": {
+        "decouvrir": "Découvrir",
+        "ensavoirplus": "En savoir plus"
+      },
+      "beta": {
+        "recherche": "Beta-testeurs recherchés",
+        "offre": "1 mois Pro offert (20€ HT)"
+      }
+    }
+  },
+  "apropos": {
+    "metadata": {
+      "title": "À propos - Stéphane Commenge | EvidencAI",
+      "description": "Entrepreneur depuis 1996, Stéphane Commenge accompagne les dirigeants de PME et ETI dans l'intégration concrète de l'IA. Pas de théorie, des résultats.",
+      "ogTitle": "À propos - Stéphane Commenge | EvidencAI",
+      "ogDescription": "Entrepreneur depuis 1996, consultant IA pour dirigeants de PME et ETI"
+    },
+    "hero": {
+      "name": "Stéphane Commenge",
+      "title": "Chef d'entreprise. Consultant IA. Formateur.",
+      "linkedin": "LinkedIn"
+    },
+    "parcours": [
+      "J'ai créé ma première entreprise en 1996, à 23 ans. Puis j'ai dirigé des centres de profit dans des secteurs variés de 1998 à 2006, avant de reprendre la voie entrepreneuriale. Management, développement commercial, arbitrages budgétaires : les mêmes décisions que vous prenez chaque jour, je les prends depuis près de 30 ans. Souvent avec une information incomplète. Toujours avec des contraintes de temps.",
+      "Début 2025, j'ai commencé à utiliser l'IA sur mes propres problématiques métier. Pas par fascination technologique, par pragmatisme. Et j'ai découvert quelque chose de simple : sur certaines tâches, la qualité montait et le temps baissait. Pas marginalement. Radicalement. Alors j'ai creusé. Méthodiquement. Comme on analyse un avantage compétitif quand on le repère. Pendant un an, j'ai consacré l'essentiel de mon temps à comprendre ce que l'IA change vraiment dans le quotidien d'un dirigeant.",
+      "Aujourd'hui, je fais pour d'autres ce que j'ai fait pour moi. Je comprends votre métier. J'identifie où l'IA crée de la valeur réelle dans votre contexte. Et je vous montre comment, concrètement. Pas de slides, pas de promesses. Des démonstrations live, sur vos cas.",
+      "Investi dans la vie civile et économique locale, je siège dans des institutions où la rigueur d'analyse et la prise de décision sous incertitude sont le quotidien. C'est aussi ce qui nourrit ma conviction : l'IA est un outil de discernement, pas un raccourci pour éviter de réfléchir.",
+      "Fort de 16 ans d'expérience en formation professionnelle, nos formations sont portées par notre partenaire ALIA Formation, organisme certifié Qualiopi. Ce label national garantit la qualité du processus pédagogique et vous permet de bénéficier d'un financement par votre OPCO, réduisant significativement le reste à charge pour votre entreprise."
+    ],
+    "valeurs": {
+      "title": "Pourquoi l'IA ?",
+      "items": {
+        "conviction": {
+          "title": "Une conviction, pas un effet de mode",
+          "text": "L'IA n'est pas une technologie parmi d'autres. C'est un changement de paradigme dans notre façon de travailler, de décider, de créer. Mon objectif : vous accompagner dans cette transformation avec pragmatisme et éthique."
+        },
+        "claude": {
+          "title": "Pourquoi Claude / Anthropic ?",
+          "text": "Anthropic place la sécurité et l'éthique au cœur de son approche (safety-first). Claude excelle en raisonnement complexe, nuance et transparence. C'est l'outil que je recommande pour un usage professionnel exigeant."
+        },
+        "ameliore": {
+          "title": "L'IA qui améliore l'humain",
+          "text": "Je ne crois pas à l'IA qui remplace. Je crois à l'IA qui amplifie vos capacités, libère du temps pour l'essentiel, et vous permet de prendre de meilleures décisions."
+        },
+        "voir": {
+          "title": "Voir avant de croire",
+          "text": "Pas de promesse théorique. Chaque atelier repose sur des démonstrations en direct, sur des cas concrets issus de votre réalité métier. Vous voyez ce que l'IA produit, vous jugez par vous-même. C'est le principe fondateur d'EvidencAI : la preuve d'abord."
+        }
+      }
+    },
+    "cta": {
+      "title": "Curieux de voir ce que l'IA change concrètement ?",
+      "subtitle": "Deux heures. Cinq participants. Votre réalité métier. Zéro jargon technique.",
+      "ateliers": "Découvrir les ateliers",
+      "contact": "Me contacter"
+    }
+  },
+  "blog": {
+    "metadata": {
+      "title": "Le Signal IA - Blog EvidencAI",
+      "description": "Chaque semaine, un signal IA décrypté pour les dirigeants. Le fait, ce que ça change, ce que vous pouvez faire."
+    },
+    "title": "Le Signal IA",
+    "subtitle": "L'IA décryptée pour ceux qui décident.",
+    "description": "Chaque semaine, un fait marquant de l'IA, ce qu'il signifie pour votre entreprise, et une action concrète à lancer.",
+    "empty": "Les premiers articles arrivent bientôt. Restez connecté.",
+    "cta": "Retour à l'accueil"
+  },
+  "contact": {
+    "metadata": {
+      "title": "Contact - Parlons de votre projet IA",
+      "description": "Contactez EvidencAI pour échanger sur vos besoins en formation, atelier ou audit IA. Réponse sous 24h.",
+      "ogTitle": "Contact | EvidencAI",
+      "ogDescription": "Contactez-nous pour échanger sur vos besoins en IA"
+    },
+    "hero": {
+      "title": "Parlons de votre projet",
+      "subtitle": "Une question ? Un projet ? Remplissez ce formulaire et je vous réponds sous 24h."
+    },
+    "form": {
+      "nom": "Nom",
+      "email": "Email",
+      "telephone": "Téléphone (optionnel)",
+      "entreprise": "Entreprise (optionnel)",
+      "sujet": "Sujet",
+      "message": "Message",
+      "required": "*",
+      "sujetPlaceholder": "Sélectionnez un sujet",
+      "sujets": {
+        "atelier": "Atelier IA",
+        "formation": "Formation Qualiopi",
+        "audit": "Audit & Solutions",
+        "outil": "Nos outils IA",
+        "autre": "Autre"
+      },
+      "rgpd": "J'accepte que mes données soient utilisées pour me recontacter dans le cadre de ma demande. Conformément au RGPD, vous disposez d'un droit d'accès et de rectification de vos données.",
+      "rgpdLink": "En savoir plus",
+      "submit": "Envoyer le message",
+      "pending": "Envoi en cours...",
+      "success": "Message envoyé avec succès.",
+      "successSubtitle": "Je vous réponds sous 24h."
+    },
+    "calendly": {
+      "title": "Vous préférez en discuter de vive voix ?",
+      "subtitle": "30 minutes, sans engagement, pour comprendre ce que l'IA peut changer dans votre quotidien.",
+      "cta": "Réserver un créneau"
+    },
+    "coordonnees": {
+      "email": {
+        "label": "Email",
+        "value": "contact@evidencai.com"
+      },
+      "adresse": {
+        "label": "Adresse",
+        "value": "200 impasse Cheyssans\n26300 Châteauneuf-sur-Isère"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "value": "Stéphane Commenge"
+      }
+    }
+  },
+  "mentions": {
+    "metadata": {
+      "title": "Mentions légales - CGV et Politique de confidentialité",
+      "description": "Mentions légales, conditions générales de vente et politique de confidentialité EvidencAI"
+    },
+    "title": "Mentions légales",
+    "editeur": {
+      "title": "Éditeur du site",
+      "raison": "Raison sociale :",
+      "raisonValue": "EvidencAI",
+      "forme": "Forme juridique :",
+      "formeValue": "SAS au capital de 180 000 €",
+      "siege": "Siège social :",
+      "siegeValue": "200 impasse Cheyssans, 26300 Châteauneuf-sur-Isère",
+      "siret": "SIRET :",
+      "siretValue": "En cours d'immatriculation",
+      "directeur": "Directeur de publication :",
+      "directeurValue": "Stéphane Commenge",
+      "contact": "Contact :",
+      "contactValue": "contact@evidencai.com"
+    },
+    "hebergement": {
+      "title": "Hébergement",
+      "hebergeur": "Hébergeur :",
+      "hebergeurValue": "Vercel Inc.",
+      "adresse": "Adresse :",
+      "adresseValue": "440 N Barranca Ave #4133, Covina, CA 91723, États-Unis",
+      "site": "Site web :",
+      "siteValue": "vercel.com"
+    },
+    "cgv": {
+      "title": "Conditions Générales de Vente (CGV)",
+      "objet": {
+        "title": "Article 1 - Objet",
+        "text": "Les présentes conditions générales de vente s'appliquent à tous les ateliers, formations et prestations de conseil proposés par EvidencAI."
+      },
+      "prix": {
+        "title": "Article 2 - Prix",
+        "text": "Les prix des ateliers sont indiqués en euros TTC. Les tarifs des formations et prestations de conseil sont communiqués sur devis personnalisé."
+      },
+      "paiement": {
+        "title": "Article 3 - Paiement",
+        "text": "Le paiement des ateliers s'effectue en ligne via Stripe au moment de l'inscription. Pour les formations et prestations sur devis, un acompte de 30% peut être demandé."
+      },
+      "annulation": {
+        "title": "Article 4 - Annulation et remboursement",
+        "client": "Annulation par le client : remboursement intégral jusqu'à 48h avant l'atelier. Au-delà, un avoir sera proposé pour une session ultérieure.",
+        "evidencai": "Annulation par EvidencAI : remboursement intégral ou report à une date ultérieure."
+      },
+      "retractation": {
+        "title": "Article 5 - Droit de rétractation",
+        "text": "Conformément à l'article L221-28 du Code de la consommation, le droit de rétractation ne peut être exercé pour les prestations de formation professionnelle."
+      },
+      "pi": {
+        "title": "Article 6 - Propriété intellectuelle",
+        "text": "Tous les supports de formation restent la propriété exclusive d'EvidencAI. Toute reproduction ou diffusion non autorisée est interdite."
+      }
+    },
+    "confidentialite": {
+      "title": "Politique de confidentialité (RGPD)",
+      "responsable": {
+        "title": "Responsable du traitement",
+        "text": "EvidencAI, représentée par Stéphane Commenge, est responsable du traitement de vos données personnelles."
+      },
+      "donnees": {
+        "title": "Données collectées",
+        "text": "Nous collectons les données suivantes : nom, prénom, email, téléphone (optionnel), entreprise (optionnel). Ces données sont nécessaires pour la gestion de votre inscription et la communication autour de votre formation."
+      },
+      "finalites": {
+        "title": "Finalités",
+        "items": [
+          "Gestion des inscriptions aux ateliers et formations",
+          "Communication relative à votre commande",
+          "Envoi d'informations sur nos activités (avec votre consentement)",
+          "Amélioration de nos services"
+        ]
+      },
+      "conservation": {
+        "title": "Durée de conservation",
+        "text": "Vos données sont conservées pendant 3 ans à compter de votre dernière interaction avec EvidencAI."
+      },
+      "droits": {
+        "title": "Vos droits",
+        "text": "Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité de vos données. Pour exercer ces droits, contactez-nous à contact@evidencai.com."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "text": "Ce site utilise Google Analytics et Microsoft Clarity pour analyser le trafic. Vous pouvez désactiver ces cookies via les paramètres de votre navigateur."
+      }
+    },
+    "pi": {
+      "title": "Propriété intellectuelle",
+      "text": "L'ensemble du contenu de ce site (textes, images, vidéos, logos) est protégé par le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation préalable."
+    },
+    "credits": {
+      "title": "Crédits",
+      "design": "Design et développement :",
+      "designValue": "Stéphane Commenge",
+      "techno": "Technologies :",
+      "technoValue": "Next.js, Tailwind CSS, Vercel"
+    }
+  }
+}

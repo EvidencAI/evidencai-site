@@ -1,51 +1,72 @@
 import Link from 'next/link';
+import type { Locale } from '@/i18n/config';
+import type { getDictionary } from '@/i18n/dictionaries';
 
-export default function Footer() {
+interface FooterProps {
+  locale: Locale;
+  dict: Awaited<ReturnType<typeof getDictionary>>;
+}
+
+export default function Footer({ locale, dict }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     produits: [
-      { href: '/ateliers', label: 'Ateliers IA' },
-      { href: '/formation', label: 'Formation Qualiopi' },
-      { href: '/solutions', label: 'Audit & Solutions' },
-      { href: '/outils', label: 'Nos outils' },
+      { href: `/${locale}/ateliers`, label: dict.footer.sections.produits.items.ateliers },
+      { href: `/${locale}/formation`, label: dict.footer.sections.produits.items.formation },
+      { href: `/${locale}/solutions`, label: dict.footer.sections.produits.items.solutions },
+      { href: `/${locale}/outils`, label: dict.footer.sections.produits.items.outils },
     ],
     ressources: [
-      { href: '/blog', label: 'Blog' },
-      { href: '/a-propos', label: 'À propos' },
-      { href: '/contact', label: 'Contact' },
+      { href: `/${locale}/blog`, label: dict.footer.sections.ressources.items.blog },
+      { href: `/${locale}/a-propos`, label: dict.footer.sections.ressources.items.apropos },
+      { href: `/${locale}/contact`, label: dict.footer.sections.ressources.items.contact },
     ],
     legal: [
-      { href: '/mentions-legales', label: 'Mentions légales' },
-      { href: '/mentions-legales#cgv', label: 'CGV' },
-      { href: '/mentions-legales#confidentialite', label: 'Confidentialité' },
+      { href: `/${locale}/mentions-legales`, label: dict.footer.sections.legal.items.mentions },
+      { href: `/${locale}/mentions-legales#cgv`, label: dict.footer.sections.legal.items.cgv },
+      { href: `/${locale}/mentions-legales#confidentialite`, label: dict.footer.sections.legal.items.confidentialite },
     ],
   };
 
   return (
     <footer className="bg-bleu-nuit-light border-t border-white/10">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {/* Logo & Description */}
-          <div className="space-y-4">
-            <Link href="/" className="font-playfair text-2xl font-bold text-white">
-              EvidencAI
+          <div className="space-y-2">
+            <Link href={`/${locale}`} className="font-playfair text-2xl font-bold text-white tracking-tight">
+              Evidenc<span className="text-ambre">AI</span>
             </Link>
-            <p className="text-text-secondary text-sm leading-relaxed">
-              L&apos;IA qui vous améliore, pas qui vous remplace.
-              Accompagnement IA pour dirigeants et entreprises.
+            <p className="text-text-secondary text-xs leading-relaxed">
+              {dict.footer.tagline}<br />
+              {dict.footer.description}
             </p>
+            <p className="text-text-secondary text-xs pt-1">
+              {dict.footer.copyright.replace('{year}', currentYear.toString())}
+            </p>
+            <a
+              href="https://linkedin.com/in/stephanecommenge"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-text-secondary hover:text-ambre transition-colors pt-1"
+              aria-label="LinkedIn"
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
           </div>
 
           {/* Produits */}
           <div>
-            <h3 className="font-semibold text-white mb-4">Produits</h3>
-            <ul className="space-y-3">
+            <h3 className="font-semibold text-white text-sm mb-3">{dict.footer.sections.produits.title}</h3>
+            <ul className="space-y-1.5">
               {footerLinks.produits.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-text-secondary hover:text-ambre transition-colors text-sm"
+                    className="text-text-secondary hover:text-ambre transition-colors text-xs"
                   >
                     {link.label}
                   </Link>
@@ -56,13 +77,13 @@ export default function Footer() {
 
           {/* Ressources */}
           <div>
-            <h3 className="font-semibold text-white mb-4">Ressources</h3>
-            <ul className="space-y-3">
+            <h3 className="font-semibold text-white text-sm mb-3">{dict.footer.sections.ressources.title}</h3>
+            <ul className="space-y-1.5">
               {footerLinks.ressources.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-text-secondary hover:text-ambre transition-colors text-sm"
+                    className="text-text-secondary hover:text-ambre transition-colors text-xs"
                   >
                     {link.label}
                   </Link>
@@ -73,41 +94,19 @@ export default function Footer() {
 
           {/* Légal */}
           <div>
-            <h3 className="font-semibold text-white mb-4">Légal</h3>
-            <ul className="space-y-3">
+            <h3 className="font-semibold text-white text-sm mb-3">{dict.footer.sections.legal.title}</h3>
+            <ul className="space-y-1.5">
               {footerLinks.legal.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-text-secondary hover:text-ambre transition-colors text-sm"
+                    className="text-text-secondary hover:text-ambre transition-colors text-xs"
                   >
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-white/10">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-text-secondary text-sm">
-              © {currentYear} EvidencAI. Tous droits réservés.
-            </p>
-            <div className="flex items-center gap-6">
-              <a
-                href="https://linkedin.com/in/stephanecommenge"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-text-secondary hover:text-ambre transition-colors"
-                aria-label="LinkedIn"
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-              </a>
-            </div>
           </div>
         </div>
       </div>

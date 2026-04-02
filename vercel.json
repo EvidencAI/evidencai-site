@@ -1,4 +1,17 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "evidencai.com"
+        }
+      ],
+      "destination": "https://www.evidencai.com/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/downloads/(.*)\\.plugin",

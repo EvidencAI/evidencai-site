@@ -1,20 +1,25 @@
 import { HandHeart, Lightbulb, Shield } from 'lucide-react';
+import type { getDictionary } from '@/i18n/dictionaries';
 
-export default function ValuesSection() {
+interface ValuesSectionProps {
+  dict: Awaited<ReturnType<typeof getDictionary>>;
+}
+
+export default function ValuesSection({ dict }: ValuesSectionProps) {
   const values = [
     {
-      title: 'L\'IA améliore l\'humain',
-      description: 'Elle ne le remplace pas. L\'intelligence artificielle amplifie vos capacités, elle ne vous substitue pas.',
+      title: dict.home.values.items.ameliore.title,
+      description: dict.home.values.items.ameliore.description,
       icon: HandHeart,
     },
     {
-      title: 'Pas une calculatrice, pas un oracle',
-      description: 'L\'IA est un outil qui amplifie votre intelligence. Ni magie, ni menace : un partenaire de réflexion.',
+      title: dict.home.values.items.outil.title,
+      description: dict.home.values.items.outil.description,
       icon: Lightbulb,
     },
     {
-      title: 'Claude / Anthropic',
-      description: 'Un choix éthique assumé. Safety-first, transparence et qualité de raisonnement au cœur de chaque recommandation.',
+      title: dict.home.values.items.claude.title,
+      description: dict.home.values.items.claude.description,
       icon: Shield,
     },
   ];
@@ -24,7 +29,7 @@ export default function ValuesSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="font-playfair text-3xl md:text-4xl font-bold text-white mb-4">
-            Notre philosophie
+            {dict.home.values.title}
           </h2>
         </div>
 
