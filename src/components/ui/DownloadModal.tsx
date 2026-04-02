@@ -84,7 +84,7 @@ export default function DownloadModal({ isOpen, onClose, downloadUrl, accessCode
             </label>
             <input
               ref={inputRef}
-              type="password"
+              type="text"
               value={code}
               onChange={(e) => { setCode(e.target.value); setError(false); }}
               placeholder="Code d'accès"
