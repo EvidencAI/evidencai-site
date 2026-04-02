@@ -384,7 +384,7 @@ export default async function OutilsPage({ params }: { params: Promise<{ locale:
                       {outil.id === 'mongreffier' && (
                         <div className="flex justify-end mt-2">
                           <DownloadButton
-                            downloadUrl="/downloads/mon-greffier-v3.3.0.plugin"
+                            downloadUrl="/downloads/mon-greffier-v3.3.0.zip"
                             accessCode="TC26Romans"
                           />
                         </div>
