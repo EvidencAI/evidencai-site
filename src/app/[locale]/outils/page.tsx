@@ -384,7 +384,10 @@ export default async function OutilsPage({ params }: { params: Promise<{ locale:
                       {outil.id === 'mongreffier' && (
                         <div className="flex justify-end mt-2">
                           <DownloadButton
-                            downloadUrl="/downloads/mon-greffier-v3.3.0.zip"
+                            files={[
+                              { name: 'Mon Greffier v3.3.0 (plugin Cowork)', url: '/downloads/mon-greffier-v3.3.0.zip' },
+                              { name: 'Assistant TC (skill Claude)', url: '/downloads/assistant-tc-0426.zip' },
+                            ]}
                             accessCode="TC26Romans"
                           />
                         </div>
