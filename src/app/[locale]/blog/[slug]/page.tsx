@@ -128,13 +128,24 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                   ? 'Envie d\'aller plus loin ?'
                   : 'Want to go further?'}
               </p>
-              <Link
-                href={`/${loc}${post.cta.href.replace(/^\/(fr|en)/, '')}`}
-                className="inline-block min-h-[48px] px-8 py-3 bg-ambre text-white font-semibold 
-                  rounded-lg hover:bg-ambre-light transition-all"
-              >
-                {post.cta.label}
-              </Link>
+              {post.cta.href.match(/\.\w+$/) ? (
+                <a
+                  href={post.cta.href}
+                  download
+                  className="inline-block min-h-[48px] px-8 py-3 bg-ambre text-white font-semibold 
+                    rounded-lg hover:bg-ambre-light transition-all"
+                >
+                  {post.cta.label}
+                </a>
+              ) : (
+                <Link
+                  href={`/${loc}${post.cta.href.replace(/^\/(fr|en)/, '')}`}
+                  className="inline-block min-h-[48px] px-8 py-3 bg-ambre text-white font-semibold 
+                    rounded-lg hover:bg-ambre-light transition-all"
+                >
+                  {post.cta.label}
+                </Link>
+              )}
             </div>
           </div>
         </div>
