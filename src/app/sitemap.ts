@@ -17,38 +17,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/mentions-legales', changeFrequency: 'yearly' as const, priority: 0.3 },
   ];
 
-  const locales = ['fr', 'en'] as const;
+  // Pages statiques — uniquement FR
+  const staticEntries = pages.map((page) => ({
+    url: `${baseUrl}/fr${page.path}`,
+    lastModified,
+    changeFrequency: page.changeFrequency,
+    priority: page.priority,
+  }));
 
-  // Static pages
-  const staticEntries = pages.flatMap((page) =>
-    locales.map((locale) => ({
-      url: `${baseUrl}/${locale}${page.path}`,
-      lastModified,
-      changeFrequency: page.changeFrequency,
-      priority: locale === 'fr' ? page.priority : page.priority * 0.8,
-      alternates: {
-        languages: Object.fromEntries(
-          locales.map((l) => [l, `${baseUrl}/${l}${page.path}`])
-        ),
-      },
-    }))
-  );
-
-  // Blog articles
+  // Articles de blog — uniquement FR
   const frSlugs = getPostSlugs('fr');
-  const blogEntries = frSlugs.flatMap((slug) =>
-    locales.map((locale) => ({
-      url: `${baseUrl}/${locale}/blog/${slug}`,
-      lastModified,
-      changeFrequency: 'monthly' as const,
-      priority: locale === 'fr' ? 0.7 : 0.5,
-      alternates: {
-        languages: Object.fromEntries(
-          locales.map((l) => [l, `${baseUrl}/${l}/blog/${slug}`])
-        ),
-      },
-    }))
-  );
+  const blogEntries = frSlugs.map((slug) => ({
+    url: `${baseUrl}/fr/blog/${slug}`,
+    lastModified,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
 
   return [...staticEntries, ...blogEntries];
 }
