@@ -24,7 +24,7 @@
       "source": "/downloads/(.*)\\.docx",
       "headers": [
         { "key": "Content-Type", "value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document" },
-        { "key": "Content-Disposition", "value": "attachment" }
+        { "key": "Content-Disposition", "value": "attachment; filename=\"charte-ia-template.docx\"" }
       ]
     }
   ]
