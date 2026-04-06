@@ -13,10 +13,10 @@ export default function LanguageSwitcher({ currentLocale }: { currentLocale: Loc
   const otherLocale = currentLocale === 'fr' ? 'en' : 'fr';
 
   return (
-    <div className="flex items-center bg-white/10 rounded-lg overflow-hidden text-sm font-medium">
+    <div className="flex items-center bg-white/10 rounded-md overflow-hidden text-xs font-medium">
       <Link
         href={`/fr${pathnameWithoutLocale}`}
-        className={`px-2.5 py-1.5 transition-colors ${
+        className={`px-2 py-1 transition-colors ${
           currentLocale === 'fr'
             ? 'bg-ambre text-bleu-nuit'
             : 'text-text-secondary hover:text-white'
@@ -26,7 +26,7 @@ export default function LanguageSwitcher({ currentLocale }: { currentLocale: Loc
       </Link>
       <Link
         href={`/en${pathnameWithoutLocale}`}
-        className={`px-2.5 py-1.5 transition-colors ${
+        className={`px-2 py-1 transition-colors ${
           currentLocale === 'en'
             ? 'bg-ambre text-bleu-nuit'
             : 'text-text-secondary hover:text-white'
