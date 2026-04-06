@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 import { Playfair_Display, DM_Sans, JetBrains_Mono } from 'next/font/google';
+import Script from 'next/script';
+import GA4Consent from '@/components/analytics/GA4Consent';
+import ClarityTracker from '@/components/analytics/ClarityTracker';
 import './globals.css';
 
 const playfair = Playfair_Display({
@@ -26,7 +29,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.evidencai.com'),
   title: {
-    default: 'EvidencAI | Pour une IA qui vous améliore. Pas qui vous remplace.',
+    default: 'EvidencAI | Accompagnement IA pour dirigeants de PME',
     template: '%s | EvidencAI',
   },
   description: 'Accompagnement IA pour dirigeants et entreprises. Ateliers, formations Qualiopi et solutions sur mesure. De l\'initiation à l\'implémentation.',
@@ -37,9 +40,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://evidencai.com',
+    url: 'https://www.evidencai.com',
     siteName: 'EvidencAI',
-    title: 'EvidencAI | Pour une IA qui vous améliore. Pas qui vous remplace.',
+    title: 'EvidencAI | Accompagnement IA pour dirigeants de PME',
     description: 'Accompagnement IA pour dirigeants et entreprises. Ateliers, formations Qualiopi et solutions sur mesure.',
     images: [
       {
@@ -80,8 +83,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${playfair.variable} ${dmSans.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
+      <head>
+        {/* Microsoft Clarity - Chargé sans consentement (intérêt légitime RGPD) */}
+        <Script
+          id="clarity-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window,document,"clarity","script","w3dj64hgwq");
+            `,
+          }}
+        />
+      </head>
       <body className="font-sans antialiased">
         {children}
+        {/* GA4 - Chargé uniquement avec consentement */}
+        <GA4Consent />
+        <ClarityTracker />
       </body>
     </html>
   );
