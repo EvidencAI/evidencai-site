@@ -52,7 +52,7 @@ export default function Header({ locale, dict }: HeaderProps) {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href={`/${locale}/ateliers`}
-              className="px-5 py-[7px] bg-ambre text-bleu-nuit text-sm font-semibold rounded-lg hover:bg-ambre-light transition-colors leading-none"
+              className="inline-flex items-center justify-center px-5 h-9 bg-ambre text-bleu-nuit text-sm font-semibold rounded-lg hover:bg-ambre-light transition-colors"
             >
               {dict.header.cta}
             </Link>
