@@ -60,7 +60,8 @@ textarea {
   margin-top: 2em !important;
   margin-bottom: 0.8em !important;
 }
-.prose .text-ambre {
-  color: var(--color-ambre);
+.prose .text-ambre,
+.prose span[style*="E07A5F"] {
+  color: var(--color-ambre) !important;
 }
 
