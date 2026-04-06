@@ -19,6 +19,13 @@
         { "key": "Content-Type", "value": "application/octet-stream" },
         { "key": "Content-Disposition", "value": "attachment" }
       ]
+    },
+    {
+      "source": "/downloads/(.*)\\.docx",
+      "headers": [
+        { "key": "Content-Type", "value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document" },
+        { "key": "Content-Disposition", "value": "attachment" }
+      ]
     }
   ]
 }
