@@ -46,3 +46,21 @@ select,
 textarea {
   transition: color 300ms ease-in-out, background-color 300ms ease-in-out, border-color 300ms ease-in-out, opacity 300ms ease-in-out;
 }
+
+/* Blog prose : espacement et lisibilité */
+.prose p {
+  margin-bottom: 1.5em !important;
+  line-height: 1.8 !important;
+}
+.prose h2 {
+  margin-top: 2.5em !important;
+  margin-bottom: 1em !important;
+}
+.prose h3 {
+  margin-top: 2em !important;
+  margin-bottom: 0.8em !important;
+}
+.prose .text-ambre {
+  color: var(--color-ambre);
+}
+
