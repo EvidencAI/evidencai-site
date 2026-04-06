@@ -116,7 +116,9 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                 prose-headings:font-playfair prose-headings:text-white
                 prose-a:text-ambre prose-a:no-underline hover:prose-a:underline
                 prose-strong:text-white prose-p:text-text-secondary
-                prose-li:text-text-secondary">
+                prose-li:text-text-secondary
+                prose-p:mb-6 prose-headings:mt-12 prose-headings:mb-6
+                prose-h3:mt-10">
                 <MDXRemote source={post.content} />
               </div>
             )}
