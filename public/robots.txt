@@ -5,6 +5,10 @@ Allow: /
 # Disallow API routes
 Disallow: /api/
 
+# Disallow English pages (not targeted yet)
+Disallow: /en/
+Disallow: /en
+
 # Sitemap
 Sitemap: https://www.evidencai.com/sitemap.xml
 

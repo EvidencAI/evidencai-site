@@ -20,9 +20,9 @@ export function middleware(request: NextRequest) {
     return;
   }
 
-  // Rediriger / vers /fr
+  // Rediriger / vers /fr (permanent)
   if (pathname === '/') {
-    return NextResponse.redirect(new URL(`/${defaultLocale}`, request.url));
+    return NextResponse.redirect(new URL(`/${defaultLocale}`, request.url), 308);
   }
 
   // Rediriger les autres chemins sans locale vers /fr/...
@@ -34,7 +34,7 @@ export function middleware(request: NextRequest) {
     !pathname.startsWith('/logos') &&
     !pathname.includes('.')
   ) {
-    return NextResponse.redirect(new URL(`/${defaultLocale}${pathname}`, request.url));
+    return NextResponse.redirect(new URL(`/${defaultLocale}${pathname}`, request.url), 308);
   }
 }
 
