@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { checkAndSetOptOut, shouldTrack } from '@/lib/tracking-opt-out';
 
 declare global {
   interface Window {
@@ -29,6 +30,12 @@ function loadGA4() {
 }
 
 function checkAndActivate() {
+  // Opt-out interne ou bot : d sactiver GA4 de fa on d finitive.
+  if (!shouldTrack()) {
+    // @ts-ignore
+    window[`ga-disable-${GA_ID}`] = true;
+    return;
+  }
   try {
     const stored = localStorage.getItem('cookie-consent');
     if (!stored) return;
@@ -48,8 +55,15 @@ function checkAndActivate() {
 
 export default function GA4Consent() {
   useEffect(() => {
+    // Poser/retirer le flag opt-out si l'URL contient ?notrack=1|0
+    checkAndSetOptOut();
+
     // Vérifier au chargement
     checkAndActivate();
+
+    // Opt-out interne ou bot : pas d'écouteur consent, rien ne doit pouvoir
+    // réactiver GA4 pour ce device.
+    if (!shouldTrack()) return;
 
     // Réagir quand le CookieBanner met à jour le consentement
     const handler = (e: Event) => {

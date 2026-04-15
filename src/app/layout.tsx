@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Playfair_Display, DM_Sans, JetBrains_Mono } from 'next/font/google';
-import Script from 'next/script';
 import GA4Consent from '@/components/analytics/GA4Consent';
+import ClarityConsent from '@/components/analytics/ClarityConsent';
 import ClarityTracker from '@/components/analytics/ClarityTracker';
 import './globals.css';
 
@@ -83,26 +83,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${playfair.variable} ${dmSans.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
-      <head>
-        {/* Microsoft Clarity - Chargé sans consentement (intérêt légitime RGPD) */}
-        <Script
-          id="clarity-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-              })(window,document,"clarity","script","w3dj64hgwq");
-            `,
-          }}
-        />
-      </head>
       <body className="font-sans antialiased">
         {children}
-        {/* GA4 - Chargé uniquement avec consentement */}
+        {/* Analytics - Chargés uniquement sous consentement (cf. CookieBanner).
+            GA4Consent et ClarityConsent écoutent l'événement cookie-consent-update
+            et n'injectent leur tag qu'après acceptation des cookies analytics.
+            ClarityTracker installe un stub côté client et bufferise les tags
+            jusqu'au chargement effectif de Clarity. */}
         <GA4Consent />
+        <ClarityConsent />
         <ClarityTracker />
       </body>
     </html>
