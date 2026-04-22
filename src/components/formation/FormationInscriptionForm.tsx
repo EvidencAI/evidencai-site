@@ -116,7 +116,6 @@ export default function FormationInscriptionForm() {
             className={inputClass}
           >
             <option value="">Choisir une session</option>
-            <option value="7 et 14 avril 2026">7 et 14 avril 2026 — Valence</option>
             <option value="5 et 12 mai 2026">5 et 12 mai 2026 — Valence</option>
             <option value="23 et 30 juin 2026">23 et 30 juin 2026 — Valence</option>
           </select>
