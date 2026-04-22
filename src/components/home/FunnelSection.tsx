@@ -53,29 +53,30 @@ export default function FunnelSection({ dict, locale }: FunnelSectionProps) {
           {funnelItems.map((item) => {
             const IconComponent = item.icon;
             return (
-            <Card key={item.title} hover className="flex flex-col h-full border border-gray-200 shadow-lg">
-              <div className="flex items-start gap-4 mb-4">
-                <IconComponent className="w-10 h-10 text-bleu-nuit flex-shrink-0" />
-                <span className="text-xs font-semibold text-ambre-contrast uppercase tracking-wide pt-1">
-                  {item.level}
-                </span>
-              </div>
-              <h3 className="font-playfair text-2xl font-bold text-bleu-nuit mb-3">
-                {item.title}
-              </h3>
-              <p className="text-gray-600 mb-6 flex-grow leading-relaxed">
-                {item.description}
-              </p>
-              <div className="mt-auto">
-                <p className="text-2xl font-bold text-ambre-contrast mb-4">{item.price}</p>
-                <Link
-                  href={item.href}
-                  className="block w-full text-center px-6 py-3 bg-bleu-nuit text-white font-semibold rounded-lg hover:bg-bleu-nuit-light transition-colors"
-                >
-                  {dict.home.funnel.cta}
-                </Link>
-              </div>
-            </Card>
+            <Link key={item.title} href={item.href} className="group block">
+              <Card hover className="flex flex-col h-full border border-gray-200 shadow-lg">
+                <div className="flex items-start gap-4 mb-4">
+                  <IconComponent className="w-10 h-10 text-bleu-nuit flex-shrink-0" />
+                  <span className="text-xs font-semibold text-ambre-contrast uppercase tracking-wide pt-1">
+                    {item.level}
+                  </span>
+                </div>
+                <h3 className="font-playfair text-2xl font-bold text-bleu-nuit mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 mb-6 flex-grow leading-relaxed">
+                  {item.description}
+                </p>
+                <div className="mt-auto">
+                  <p className="text-2xl font-bold text-ambre-contrast mb-4">{item.price}</p>
+                  <span
+                    className="block w-full text-center px-6 py-3 bg-bleu-nuit text-white font-semibold rounded-lg group-hover:bg-bleu-nuit-light transition-colors"
+                  >
+                    {dict.home.funnel.cta}
+                  </span>
+                </div>
+              </Card>
+            </Link>
             );
           })}
         </div>

@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getPostSlugs } from '@/lib/blog';
+import { getPostSlugs, getPostBySlug } from '@/lib/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.evidencai.com';
@@ -8,7 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [
     { path: '', changeFrequency: 'weekly' as const, priority: 1 },
     { path: '/ateliers', changeFrequency: 'weekly' as const, priority: 0.9 },
-    { path: '/formation', changeFrequency: 'monthly' as const, priority: 0.8 },
+    { path: '/formations', changeFrequency: 'monthly' as const, priority: 0.8 },
+    { path: '/formations/decider-avec-ia', changeFrequency: 'monthly' as const, priority: 0.8 },
     { path: '/solutions', changeFrequency: 'monthly' as const, priority: 0.8 },
     { path: '/outils', changeFrequency: 'monthly' as const, priority: 0.7 },
     { path: '/a-propos', changeFrequency: 'monthly' as const, priority: 0.7 },
@@ -25,14 +26,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: page.priority,
   }));
 
-  // Articles de blog — uniquement FR
+  // Articles de blog — uniquement FR, avec lastmod par article
   const frSlugs = getPostSlugs('fr');
-  const blogEntries = frSlugs.map((slug) => ({
-    url: `${baseUrl}/fr/blog/${slug}`,
-    lastModified,
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
+  const blogEntries = frSlugs.map((slug) => {
+    const post = getPostBySlug(slug, 'fr');
+    const articleDate = post?.dateModified || post?.date;
+    return {
+      url: `${baseUrl}/fr/blog/${slug}`,
+      lastModified: articleDate ? new Date(articleDate) : lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    };
+  });
 
   return [...staticEntries, ...blogEntries];
 }

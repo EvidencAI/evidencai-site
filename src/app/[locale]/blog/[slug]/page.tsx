@@ -4,8 +4,10 @@ import Link from 'next/link';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { locales, type Locale } from '@/i18n/config';
 import { getAlternates } from '@/i18n/metadata';
-import { getPostBySlug, getPostSlugs, CATEGORY_LABELS } from '@/lib/blog';
+import { getPostBySlug, getPostSlugs, getRelatedPosts, CATEGORY_LABELS } from '@/lib/blog';
 import SignalArticle from '@/components/blog/SignalArticle';
+import RelatedArticles from '@/components/blog/RelatedArticles';
+import DownloadCTAButton from '@/components/blog/DownloadCTAButton';
 
 type Params = Promise<{ locale: string; slug: string }>;
 
@@ -53,6 +55,34 @@ export default async function BlogPostPage({ params }: { params: Params }) {
   const post = getPostBySlug(slug, loc);
   if (!post) notFound();
 
+  // Breadcrumb schema
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: loc === 'fr' ? 'Accueil' : 'Home',
+        item: `https://www.evidencai.com/${loc}`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: `https://www.evidencai.com/${loc}/blog`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: post.title,
+        item: `https://www.evidencai.com/${loc}/blog/${slug}`,
+      },
+    ],
+  };
+
+  const relatedPosts = getRelatedPosts(slug, loc);
+
   const formattedDate = new Date(post.date).toLocaleDateString(
     loc === 'fr' ? 'fr-FR' : 'en-US',
     { year: 'numeric', month: 'long', day: 'numeric' }
@@ -60,21 +90,46 @@ export default async function BlogPostPage({ params }: { params: Params }) {
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
     headline: post.title,
     description: post.description,
     datePublished: post.date,
+    dateModified: post.dateModified || post.date,
+    image: `https://www.evidencai.com/og-image.png`,
     author: {
       '@type': 'Person',
       name: 'Stéphane Commenge',
+      url: 'https://www.evidencai.com/fr/a-propos',
     },
     publisher: {
       '@type': 'Organization',
       name: 'EvidencAI',
-      url: 'https://evidencai.com',
+      url: 'https://www.evidencai.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.evidencai.com/logo-evidencai.png',
+      },
     },
-    mainEntityOfPage: `https://evidencai.com/${loc}/blog/${slug}`,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://www.evidencai.com/${loc}/blog/${slug}`,
+    },
+    inLanguage: loc === 'fr' ? 'fr-FR' : 'en-US',
   };
+
+  // FAQPage schema (optionnel, alimenté via frontmatter)
+  const faqSchema = post.faq && post.faq.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: post.faq.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  } : null;
 
   return (
     <>
@@ -82,16 +137,39 @@ export default async function BlogPostPage({ params }: { params: Params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <article className="bg-bleu-nuit min-h-screen">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-3xl mx-auto">
-            {/* Back link */}
-            <Link
-              href={`/${loc}/blog`}
-              className="inline-flex items-center text-text-secondary hover:text-ambre transition-colors mb-8"
-            >
-              ← {loc === 'fr' ? 'Retour au blog' : 'Back to blog'}
-            </Link>
+            {/* Breadcrumb visuel */}
+            <nav aria-label="Breadcrumb" className="mb-6 text-sm text-text-secondary">
+              <ol className="flex items-center gap-2">
+                <li>
+                  <Link href={`/${loc}`} className="hover:text-ambre transition-colors">
+                    {loc === 'fr' ? 'Accueil' : 'Home'}
+                  </Link>
+                </li>
+                <li aria-hidden="true">›</li>
+                <li>
+                  <Link href={`/${loc}/blog`} className="hover:text-ambre transition-colors">
+                    Blog
+                  </Link>
+                </li>
+                <li aria-hidden="true">›</li>
+                <li className="text-white/70 truncate max-w-[250px]" title={post.title}>
+                  {post.title}
+                </li>
+              </ol>
+            </nav>
 
             {/* Header */}
             <header className="mb-12">
@@ -123,6 +201,9 @@ export default async function BlogPostPage({ params }: { params: Params }) {
               </div>
             )}
 
+            {/* Articles liés */}
+            <RelatedArticles posts={relatedPosts} locale={loc} />
+
             {/* CTA */}
             <div className="mt-16 p-8 bg-bleu-nuit-light rounded-xl border border-white/10 text-center">
               <p className="text-white text-lg mb-4 font-medium">
@@ -131,18 +212,11 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                   : 'Want to go further?'}
               </p>
               {post.cta.href.match(/\.\w+$/) ? (
-                <a
-                  href={post.cta.href}
-                  download
-                  className="inline-block min-h-[48px] px-8 py-3 bg-ambre text-white font-semibold 
-                    rounded-lg hover:bg-ambre-light transition-all"
-                >
-                  {post.cta.label}
-                </a>
+                <DownloadCTAButton href={post.cta.href} label={post.cta.label} />
               ) : (
                 <Link
                   href={`/${loc}${post.cta.href.replace(/^\/(fr|en)/, '')}`}
-                  className="inline-block min-h-[48px] px-8 py-3 bg-ambre text-white font-semibold 
+                  className="inline-block min-h-[48px] px-8 py-3 bg-ambre text-white font-semibold
                     rounded-lg hover:bg-ambre-light transition-all"
                 >
                   {post.cta.label}

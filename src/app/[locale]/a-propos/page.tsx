@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       title: dict.apropos.metadata.ogTitle,
       description: dict.apropos.metadata.ogDescription,
-      url: `https://evidencai.com/${locale}/a-propos`,
+      url: `https://www.evidencai.com/${locale}/a-propos`,
     },
     ...getAlternates(locale, '/a-propos'),
   };
@@ -41,7 +41,7 @@ export default async function AProposPage({ params }: { params: Promise<{ locale
       '@type': 'Organization',
       name: 'EvidencAI',
     },
-    url: `https://evidencai.com/${locale}/a-propos`,
+    url: `https://www.evidencai.com/${locale}/a-propos`,
     sameAs: [
       'https://linkedin.com/in/stephanecommenge',
     ],

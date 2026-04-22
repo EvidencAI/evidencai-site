@@ -20,6 +20,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: dict.outils.metadata.title,
     description: dict.outils.metadata.description,
+    openGraph: {
+      title: dict.outils.metadata.title,
+      description: dict.outils.metadata.description,
+      url: `https://www.evidencai.com/${locale}/outils`,
+    },
     ...getAlternates(locale, '/outils'),
   };
 }

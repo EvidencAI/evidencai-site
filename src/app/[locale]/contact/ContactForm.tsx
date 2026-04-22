@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, type FormEvent } from 'react';
+import { clarityEvent } from '@/lib/clarity';
 
 interface ContactFormProps {
   dict: any;
@@ -26,6 +27,9 @@ export default function ContactForm({ dict, locale }: ContactFormProps) {
       subject: (form.elements.namedItem('subject') as HTMLSelectElement).value,
       message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
     };
+
+    // Track Clarity event on contact form submission
+    clarityEvent('submit_contact');
 
     try {
       const res = await fetch('/api/contact', {

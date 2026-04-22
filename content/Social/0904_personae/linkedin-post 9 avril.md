@@ -1,8 +1,7 @@
-# Post LinkedIn — À publier mercredi 9 avril matin
+# Post LinkedIn — À publier jeudi 9 avril matin
 
 **Visuel :** personae.jpg (les 3 réponses Sonnet côte à côte)
-
-**Texte du post (~1500 caractères) :**
+**Publier :** jeudi 9 avril, 8h-9h
 
 ---
 
@@ -22,7 +21,6 @@ Je tape. J'appuie. Trois réponses s'affichent simultanément à l'écran, côte
 Pas trois nuances. **Trois univers.**
 
 Dans la salle, une phrase revient : *"Je ne poserai plus jamais une question de la même façon."*
-
 Voilà ce qu'ils ont compris en 3 minutes :
 
 95% des dirigeants tapent leur question dans ChatGPT ou Claude sans jamais préciser à qui ils parlent. Ils obtiennent la moyenne de tout ce que l'IA sait. Une réponse lisse. Utile parfois, décisive jamais.
@@ -37,16 +35,14 @@ Et si vous la posez à 3 rôles différents en parallèle, vous obtenez en 3 min
 
 C'est ce qu'on appelle le multi-angle. Et c'est ce qui change la manière de décider avec l'IA.
 
-→ Article complet avec la mécanique expliquée : [lien blog]
-
 Vous faites quoi, vous, avant de poser votre question à l'IA ?
+
+*EvidencAI, pour une IA qui vous améliore, pas qui vous remplace.*
 
 #IA #PME #Dirigeants #Formation #PromptEngineering #DécideravecIA
 
 ---
 
-**Notes :**
-- Publier mercredi 9 avril entre 8h et 9h (meilleure heure LinkedIn France B2B)
-- Joindre la photo personae.jpg en visuel principal
-- Remplacer [lien blog] par https://www.evidencai.com/fr/blog/meme-question-trois-dirigeants (à vérifier URL exacte selon routing Next.js)
-- Question de fin encourage commentaires (algorithme LinkedIn)
+**Premier commentaire (à publier immédiatement après le post) :**
+
+→ Article complet avec la mécanique expliquée : https://www.evidencai.com/fr/blog/meme-question-trois-dirigeants

@@ -1,8 +1,7 @@
 # Post Facebook — Charte IA
 
-**Visuel suggestion :** même que LinkedIn (page 1 du PDF ou visuel sobre)
-
-**Texte du post :**
+**Visuel :** même que LinkedIn (page 1 du PDF ou visuel sobre)
+**Publier :** en semaine, 11h ou 18h-19h
 
 ---
 
@@ -14,12 +13,10 @@ Un contrat client copié-collé dans ChatGPT pour le résumer. Un portefeuille d
 
 La bonne nouvelle : cadrer l'usage de l'IA, ça ne prend pas 6 mois ni un cabinet de conseil. Ça prend 5 règles claires, une page A4, et 15 minutes en réunion d'équipe.
 
-On a préparé un template de charte IA, prêt à l'emploi, avec un mémo signable et une politique détaillée (RGPD, AI Act, procédure d'incident). Il est en téléchargement libre ici : [lien blog]
+On a préparé un template de charte IA, prêt à l'emploi, avec un mémo signable et une politique détaillée (RGPD, AI Act, procédure d'incident). En téléchargement libre ici : https://www.evidencai.com/fr/blog/charte-ia-entreprise
 
 La première étape n'est pas de tout comprendre. C'est d'avoir un cadre.
 
----
+*EvidencAI, pour une IA qui vous améliore, pas qui vous remplace.*
 
-**Notes :**
-- Remplacer [lien blog] par l'URL du blog
-- Ton plus accessible que LinkedIn
+#DécideravecIA

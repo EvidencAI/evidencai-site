@@ -21,6 +21,7 @@ export default function Footer({ locale, dict }: FooterProps) {
       { href: `/${locale}/blog`, label: dict.footer.sections.ressources.items.blog },
       { href: `/${locale}/a-propos`, label: dict.footer.sections.ressources.items.apropos },
       { href: `/${locale}/contact`, label: dict.footer.sections.ressources.items.contact },
+      { href: `/${locale}/supports`, label: dict.footer.sections.ressources.items.supports },
     ],
     legal: [
       { href: `/${locale}/mentions-legales`, label: dict.footer.sections.legal.items.mentions },

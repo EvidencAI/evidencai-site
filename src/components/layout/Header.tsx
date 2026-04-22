@@ -5,6 +5,7 @@ import { useState } from 'react';
 import type { Locale } from '@/i18n/config';
 import type { getDictionary } from '@/i18n/dictionaries';
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
+import CTAAteliersButton from '@/components/ui/CTAAteliersButton';
 
 interface HeaderProps {
   locale: Locale;
@@ -16,7 +17,7 @@ export default function Header({ locale, dict }: HeaderProps) {
 
   const navLinks = [
     { href: `/${locale}/ateliers`, label: dict.header.nav.ateliers },
-    { href: `/${locale}/formation`, label: dict.header.nav.formations },
+    { href: `/${locale}/formations`, label: dict.header.nav.formations },
     { href: `/${locale}/solutions`, label: dict.header.nav.solutions },
     { href: `/${locale}/outils`, label: dict.header.nav.outils },
     { href: `/${locale}/a-propos`, label: dict.header.nav.apropos },
@@ -50,23 +51,23 @@ export default function Header({ locale, dict }: HeaderProps) {
 
           {/* CTA Button + Lang Switch (Desktop) */}
           <div className="hidden lg:flex items-center gap-3">
-            <Link
+            <CTAAteliersButton
               href={`/${locale}/ateliers`}
               className="inline-flex items-center justify-center px-5 h-9 bg-ambre text-bleu-nuit text-sm font-semibold rounded-lg hover:bg-ambre-light transition-colors"
             >
               {dict.header.cta}
-            </Link>
+            </CTAAteliersButton>
             <LanguageSwitcher currentLocale={locale} />
           </div>
 
           {/* Mobile: CTA + Menu Button */}
           <div className="flex lg:hidden items-center gap-2">
-            <Link
+            <CTAAteliersButton
               href={`/${locale}/ateliers`}
               className="px-4 py-2 bg-ambre text-bleu-nuit text-sm font-semibold rounded-lg hover:bg-ambre-light transition-colors"
             >
               {dict.header.nav.ateliers}
-            </Link>
+            </CTAAteliersButton>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 text-white hover:text-ambre transition-colors"

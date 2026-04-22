@@ -57,7 +57,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       contactType: 'customer service',
       availableLanguage: ['French', 'English'],
     },
-    sameAs: [],
+    sameAs: [
+      'https://www.linkedin.com/company/evidencai',
+    ],
   };
 
   const webSiteSchema = {

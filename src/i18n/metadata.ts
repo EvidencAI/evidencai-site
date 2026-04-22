@@ -13,7 +13,6 @@ export function getAlternates(locale: Locale, path: string = ''): Pick<Metadata,
       canonical: `${baseUrl}/${locale}${path}`,
       languages: {
         'fr': `${baseUrl}/fr${path}`,
-        'en': `${baseUrl}/en${path}`,
         'x-default': `${baseUrl}/fr${path}`,
       },
     },

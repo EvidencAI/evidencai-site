@@ -12,11 +12,17 @@ export interface SignalBloc {
   action: string;
 }
 
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
   description: string;
   date: string;
+  dateModified?: string;
   category: BlogCategory;
   signal: SignalBloc;
   cta: {
@@ -26,6 +32,7 @@ export interface BlogPost {
   coAuthor: string;
   readingTime: string;
   content: string;
+  faq?: FaqItem[];
 }
 
 const CONTENT_DIR = path.join(process.cwd(), 'content', 'blog');
@@ -65,6 +72,8 @@ export function getPostBySlug(slug: string, locale: Locale): BlogPost | null {
     coAuthor: data.coAuthor || 'Claude & Stéphane Commenge',
     readingTime: stats.text,
     content,
+    dateModified: data.dateModified || data.date,
+    faq: data.faq || undefined,
   };
 }
 
@@ -74,6 +83,16 @@ export function getAllPosts(locale: Locale): BlogPost[] {
     .map((slug) => getPostBySlug(slug, locale))
     .filter((post): post is BlogPost => post !== null)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+export function getRelatedPosts(currentSlug: string, locale: Locale, limit: number = 3): BlogPost[] {
+  const current = getPostBySlug(currentSlug, locale);
+  if (!current) return [];
+  const all = getAllPosts(locale).filter((p) => p.slug !== currentSlug);
+  // Priorité : même catégorie, puis les autres
+  const sameCategory = all.filter((p) => p.category === current.category);
+  const otherCategory = all.filter((p) => p.category !== current.category);
+  return [...sameCategory, ...otherCategory].slice(0, limit);
 }
 
 export const CATEGORY_LABELS: Record<BlogCategory, Record<Locale, string>> = {

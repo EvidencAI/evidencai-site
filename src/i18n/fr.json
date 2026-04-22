@@ -1,7 +1,7 @@
 {
   "metadata": {
     "site": {
-      "title": "EvidencAI | Pour une IA qui vous améliore. Pas qui vous remplace.",
+      "title": "Accompagnement IA pour dirigeants de PME",
       "titleTemplate": "%s | EvidencAI",
       "description": "Accompagnement IA pour dirigeants et entreprises. Ateliers, formations Qualiopi et solutions sur mesure. De l'initiation à l'implémentation.",
       "keywords": [
@@ -12,7 +12,7 @@
         "audit IA entreprise",
         "Claude Anthropic"
       ],
-      "ogTitle": "EvidencAI | Pour une IA qui vous améliore. Pas qui vous remplace.",
+      "ogTitle": "EvidencAI | Accompagnement IA pour dirigeants de PME",
       "ogDescription": "Accompagnement IA pour dirigeants et entreprises. Ateliers, formations Qualiopi et solutions sur mesure.",
       "twitterTitle": "EvidencAI | L'IA qui vous améliore",
       "twitterDescription": "Accompagnement IA pour dirigeants et entreprises"
@@ -54,7 +54,8 @@
         "items": {
           "blog": "Blog",
           "apropos": "À propos",
-          "contact": "Contact"
+          "contact": "Contact",
+          "supports": "Nos supports de cours"
         }
       },
       "legal": {
@@ -298,57 +299,233 @@
       }
     }
   },
-  "formation": {
+  "formations": {
     "metadata": {
-      "title": "Formations IA - Catalogue et sur mesure",
-      "description": "Formations IA certifiées Qualiopi pour dirigeants et équipes. Formation catalogue \"Décider avec l'IA\" (2 jours, 960€ HT) et accompagnement sur mesure. Financement OPCO possible.",
+      "title": "Formations IA - Parcours structurés",
+      "description": "Formations IA certifiées Qualiopi. Des parcours structurés pour passer de la curiosité à la compétence. Financement OPCO possible.",
       "ogTitle": "Formations IA - EvidencAI",
-      "ogDescription": "Formations IA certifiées Qualiopi. Du catalogue au sur mesure, un parcours adapté à votre entreprise."
+      "ogDescription": "Formations IA certifiées Qualiopi. Des parcours structurés pour passer de la curiosité à la compétence."
     },
     "hero": {
       "title": "Formations IA",
-      "subtitle": "Des parcours structurés pour passer de la curiosité à la compétence.\nEn catalogue ou sur mesure, avec financement OPCO possible."
+      "subtitle": "Des parcours structurés pour passer de la curiosité à la compétence."
     },
     "catalogue": {
-      "badge": "Formation catalogue",
-      "title": "Décider avec l'IA",
-      "subtitle": "De l'usage à la maîtrise stratégique",
-      "price": "960€ HT",
-      "priceUnit": "par personne",
-      "duration": "2 jours (14 heures) en présentiel à Valence (26)",
-      "certifications": [
-        "Certifiée Qualiopi via ALIA Formation",
-        "Financement OPCO possible",
-        "12 participants maximum"
-      ],
-      "objectifs": {
-        "title": "Objectifs pédagogiques",
-        "subtitle": "À l'issue de la formation, vous serez capable de :",
-        "items": [
-          "Identifier les capacités et les limites des IA génératives pour votre contexte professionnel",
-          "Formuler des requêtes structurées et mener des conversations itératives avec une IA",
-          "Créer et configurer un assistant IA personnalisé adapté à un besoin métier identifié",
-          "Utiliser des outils spécialisés de recherche vérifiée, de synthèse documentaire et d'aide à la décision",
-          "Appliquer les règles de sécurité et de confidentialité des données dans votre usage professionnel de l'IA"
-        ]
-      },
-      "sessions": {
-        "title": "Prochaines sessions",
-        "items": [
-          {
-            "dates": "7 et 14 avril 2026",
-            "location": "Valence (26)"
-          },
-          {
-            "dates": "5 et 12 mai 2026",
-            "location": "Valence (26)"
-          },
-          {
-            "dates": "23 et 30 juin 2026",
-            "location": "Valence (26)"
-          }
-        ]
+      "deciderAvecIA": {
+        "titre": "Décider avec l'IA",
+        "soustitre": "De l'usage à la maîtrise stratégique",
+        "badge": "2 jours · Qualiopi",
+        "prix": "960€ HT",
+        "description": "Formation immersive avec trio pédagogique : formateur humain, IA co-animatrice, assistant personnel qui reste actif après la formation."
       }
+    }
+  },
+  "formation": {
+    "metadata": {
+      "title": "Décider avec l'IA - Formation immersive",
+      "description": "Formation immersive de 2 jours avec trio pédagogique. Formateur humain, IA co-animatrice espiègle, assistant personnel qui reste avec vous. Certifié Qualiopi via ALIA Formation.",
+      "ogTitle": "Décider avec l'IA - EvidencAI",
+      "ogDescription": "Formation immersive de 2 jours. Du \"c'est impressionnant\" au \"je sais quoi en faire\"."
+    },
+    "hero": {
+      "badge": "Formation immersive · 2 jours",
+      "title": "Décider avec l'",
+      "titleHighlight": "IA",
+      "soustitre": "De l'usage à la maîtrise stratégique",
+      "accroche": "Un formateur humain. Une IA co-animatrice espiègle.\nUn assistant personnel qui reste avec vous après la formation.",
+      "description": "Ce n'est pas une formation où on vous montre des slides sur l'IA. C'est une formation où vous travaillez avec l'IA, en direct, sur vos vrais sujets, pendant deux jours.\nEt quand vous repartez, votre assistant IA repart avec vous.",
+      "meta": {
+        "format": {
+          "label": "Format",
+          "value": "2 jours espacés d'1 semaine"
+        },
+        "groupe": {
+          "label": "Groupe",
+          "value": "12 participants maximum"
+        },
+        "niveau": {
+          "label": "Niveau",
+          "value": "Débutant à intermédiaire"
+        },
+        "lieu": {
+          "label": "Lieu",
+          "value": "Présentiel · Valence (26)"
+        }
+      },
+      "cta": {
+        "primary": "Réserver ma place",
+        "secondary": "Comment ça marche ?",
+        "download": "Télécharger le programme"
+      }
+    },
+    "inscription": {
+      "label": "Inscription",
+      "titre": "Prochaines sessions",
+      "form": {
+        "type": {
+          "label": "Je souhaite",
+          "inscription": "M'inscrire",
+          "information": "Recevoir des informations"
+        },
+        "session": {
+          "label": "Session souhaitée",
+          "placeholder": "Sélectionnez une session"
+        },
+        "nom": "Nom",
+        "prenom": "Prénom",
+        "email": "Email professionnel",
+        "telephone": "Téléphone",
+        "entreprise": "Entreprise",
+        "message": "Message (optionnel)",
+        "submit": "Envoyer ma demande",
+        "pending": "Envoi en cours...",
+        "success": "Demande envoyée avec succès",
+        "error": "Une erreur est survenue"
+      }
+    },
+    "trio": {
+      "label": "Ce qui change tout",
+      "title": "Vous n'êtes pas seul face à un écran",
+      "cards": {
+        "formateur": {
+          "icon": "User",
+          "nom": "Stéphane",
+          "role": "Formateur humain",
+          "description": "Il cadre, contextualise, adapte le rythme au groupe et à vos questions. C'est lui qui fait le lien entre la théorie et votre réalité."
+        },
+        "az": {
+          "icon": "Sparkles",
+          "nom": "Az",
+          "role": "Co-animatrice IA · espiègle",
+          "description": "Elle intervient en direct pendant la formation. Elle reformule, challenge, propose des angles différents. Elle n'est pas là pour faire joli. Elle co-anime vraiment."
+        },
+        "assistant": {
+          "icon": "MessageCircle",
+          "nom": "Votre Assistant",
+          "role": "IA personnelle · pendant et après",
+          "description": "Chaque participant reçoit son propre Assistant IA, expert en intelligence artificielle. Cet assistant reste actif après la formation. Vous repartez avec un outil qui continue à vous accompagner sur vos usages de l'IA."
+        }
+      }
+    },
+    "promesse": {
+      "label": "La promesse",
+      "texte": "Vous savez déjà que l'IA existe. Vous avez peut-être même testé ChatGPT ou Claude. Ce qui vous manque, ce n'est pas l'émerveillement. C'est un cadre mental pour l'utiliser avec discernement, sans vous faire avoir, et sur vos vrais problèmes.",
+      "features": {
+        "supports": {
+          "icon": "Monitor",
+          "titre": "Supports en ligne, pas de classeur",
+          "texte": "Tout est accessible en ligne, pendant et après la formation. Pas de PDF à perdre. Vos ressources restent vivantes."
+        },
+        "pratique": {
+          "icon": "RefreshCw",
+          "titre": "Pratique sur vos vrais cas",
+          "texte": "Vous ne travaillez pas sur des exercices génériques. Vous travaillez sur vos propres sujets, vos propres documents, vos propres décisions."
+        },
+        "securite": {
+          "icon": "Shield",
+          "titre": "Sécurité et bon sens",
+          "texte": "On vous dit ce qu'il faut protéger, ce qu'il faut vérifier, et comment ne pas se faire avoir par une IA qui hallucine."
+        },
+        "plan": {
+          "icon": "ClipboardCheck",
+          "titre": "Un plan d'action en repartant",
+          "texte": "Vous repartez avec un plan concret pour continuer. Pas de grand discours. Des actions précises."
+        }
+      },
+      "title1": "En deux jours, vous passez de « c'est impressionnant »",
+      "title2": "à « je sais quoi en faire »"
+    },
+    "apres": {
+      "label": "Ce qui continue",
+      "title": "La formation se termine. L'assistant ",
+      "titleHighlight": "reste.",
+      "items": {
+        "supports": {
+          "titre": "Supports de cours accessibles",
+          "texte": "Tous les contenus de formation restent accessibles en ligne. Revenez-y quand vous en avez besoin."
+        },
+        "assistant": {
+          "titre": "Votre Assistant toujours actif",
+          "texte": "L'assistant IA avec lequel vous avez travaillé pendant la formation continue de vous accompagner. Même contexte, mêmes réflexes."
+        },
+        "ressources": {
+          "titre": "Ressources pratiques",
+          "texte": "Fiches méthode, guides de prompt, références : tout ce qui vous a servi pendant la formation reste disponible."
+        },
+        "evaluation": {
+          "titre": "Évaluation à J+30",
+          "texte": "Un mois après, on mesure l'impact réel sur votre quotidien professionnel."
+        }
+      }
+    },
+    "programme": {
+      "label": "En deux jours",
+      "title": "Du « je ne sais pas quoi lui demander » au plan d'action",
+      "jours": {
+        "jour1": {
+          "titre": "Jour 1",
+          "soustitre": "Comprendre et maîtriser",
+          "tags": [
+            "Les 4 Piliers",
+            "Méthode C.R.T.F.",
+            "Exercices guidés",
+            "Assistant personnel"
+          ]
+        },
+        "jour2": {
+          "titre": "Jour 2",
+          "soustitre": "Construire et pérenniser",
+          "tags": [
+            "Outils spécialisés",
+            "Cas d'usage métier",
+            "Sécurité des données",
+            "Plan d'action personnel"
+          ]
+        }
+      },
+      "piliers": {
+        "titre": "Les 4 Piliers d'un usage maîtrisé",
+        "items": {
+          "recadrer": {
+            "lettre": "R",
+            "titre": "Recadrer",
+            "texte": "L'IA divague ? Vous la recadrez. Comme un collaborateur qu'on recentre."
+          },
+          "contextualiser": {
+            "lettre": "C",
+            "titre": "Contextualiser",
+            "texte": "Donner le contexte que l'IA n'a pas. Votre métier, vos contraintes, vos objectifs."
+          },
+          "verifier": {
+            "lettre": "V",
+            "titre": "Vérifier",
+            "texte": "L'IA peut halluciner. Vous vérifiez. Toujours."
+          },
+          "iterer": {
+            "lettre": "I",
+            "titre": "Itérer",
+            "texte": "Le premier jet n'est jamais le bon. Vous itérez jusqu'au résultat professionnel."
+          }
+        }
+      },
+      "certif": "Finançable. Formation portée par un organisme certifié Qualiopi. Programme détaillé envoyé sur demande."
+    },
+    "sessions": {
+      "titre": "Prochaines sessions",
+      "items": [
+        {
+          "dates": "7 et 14 avril 2026",
+          "location": "Valence (26)"
+        },
+        {
+          "dates": "5 et 12 mai 2026",
+          "location": "Valence (26)"
+        },
+        {
+          "dates": "23 et 30 juin 2026",
+          "location": "Valence (26)"
+        }
+      ]
     },
     "surmesure": {
       "badge": "Formation sur mesure",
@@ -385,11 +562,27 @@
         "text": "Échangeons 30 minutes sur votre situation",
         "subtitle": "Un échange libre, sans engagement.\nPour comprendre votre contexte avant de proposer quoi que ce soit."
       }
+    },
+    "prerequis": {
+      "title": "Prérequis",
+      "items": [
+        "Ordinateur portable",
+        "Pouvoir créer un assistant personnalisé sur au moins une plateforme (Custom GPT, Projet Claude ou Gem Gemini)",
+        "Répondre au questionnaire de pré-formation transmis en amont"
+      ]
+    },
+    "formateur": {
+      "title": "Formateur et organisme de formation",
+      "nom": "Stéphane Commenge",
+      "bio": "Consultant en transformation numérique et intelligence artificielle.\nAccompagne les dirigeants de PME et ETI et leurs collaborateurs dans l'intégration opérationnelle de l'IA générative.",
+      "organisme": "Formation portée par",
+      "organismeNom": "ALIA Formation",
+      "organismeSuffix": ", organisme certifié Qualiopi."
     }
   },
   "solutions": {
     "metadata": {
-      "title": "Solutions IA - Accompagnement pragmatique | EvidencAI",
+      "title": "Solutions IA - Accompagnement pragmatique",
       "description": "Une approche progressive de l'IA : acculturer vos équipes, identifier les bons leviers, construire pragmatiquement. Du petit outil d'automatisation au projet structurant.",
       "ogTitle": "Solutions IA - EvidencAI",
       "ogDescription": "Acculturer avant d'implémenter. Une approche progressive et pragmatique de l'IA en entreprise."
@@ -504,7 +697,7 @@
   },
   "outils": {
     "metadata": {
-      "title": "Nos outils IA - EvidencAI",
+      "title": "Nos outils IA",
       "description": "Découvrez nos applications IA : Mnemos (mémoire persistante), CodirAI (aide à la décision), ConfidentIA (anonymisation), Mon Greffier (assistant du juge consulaire) et SignalPro (veille économique)."
     },
     "hero": {
@@ -530,7 +723,7 @@
   },
   "apropos": {
     "metadata": {
-      "title": "À propos - Stéphane Commenge | EvidencAI",
+      "title": "À propos - Stéphane Commenge",
       "description": "Entrepreneur depuis 1996, Stéphane Commenge accompagne les dirigeants de PME et ETI dans l'intégration concrète de l'IA. Pas de théorie, des résultats.",
       "ogTitle": "À propos - Stéphane Commenge | EvidencAI",
       "ogDescription": "Entrepreneur depuis 1996, consultant IA pour dirigeants de PME et ETI"
@@ -577,7 +770,7 @@
   },
   "blog": {
     "metadata": {
-      "title": "Le Signal IA - Blog EvidencAI",
+      "title": "Le Signal IA - Blog",
       "description": "Chaque semaine, un signal IA décrypté pour les dirigeants. Le fait, ce que ça change, ce que vous pouvez faire."
     },
     "title": "Le Signal IA",

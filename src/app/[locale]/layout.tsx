@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import type { Locale } from '@/i18n/config';
 import { locales } from '@/i18n/config';
 import { getDictionary } from '@/i18n/dictionaries';
@@ -6,10 +7,24 @@ import Footer from '@/components/layout/Footer';
 import PartnersBar from '@/components/layout/PartnersBar';
 import CookieBanner from '@/components/ui/CookieBanner';
 import HtmlLang from '@/components/ui/HtmlLang';
-import Analytics from '@/components/analytics/Analytics';
+
 
 export async function generateStaticParams(): Promise<{ locale: Locale }[]> {
   return locales.map((locale) => ({ locale }));
+}
+
+// Pages /en/ : noindex tant qu'on ne cible pas l'anglais
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  if (locale === 'en') {
+    return {
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
+  return {};
 }
 
 interface LocaleLayoutProps {
@@ -32,7 +47,6 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
       <PartnersBar />
       <Footer locale={locale} dict={dict} />
       <CookieBanner locale={locale} />
-      <Analytics />
     </div>
   );
 }

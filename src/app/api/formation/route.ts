@@ -8,7 +8,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Configuration serveur manquante.' }, { status: 500 });
     }
     const resend = new Resend(apiKey);
-    const { nom, email, telephone, entreprise, session, demande } = await request.json();
+    const { nom, email, telephone, entreprise, session, demande, message } = await request.json();
 
     if (!nom || !email) {
       return NextResponse.json(
@@ -59,6 +59,10 @@ export async function POST(request: Request) {
               ${isInscription ? `<tr>
                 <td style="padding: 8px 0; color: #6b7280;">Session</td>
                 <td style="padding: 8px 0; font-weight: 600; color: #E07A5F;">${session}</td>
+              </tr>` : ''}
+              ${message ? `<tr>
+                <td style="padding: 8px 0; color: #6b7280; vertical-align: top;">Message</td>
+                <td style="padding: 8px 0;">${message.replace(/\n/g, '<br/>')}</td>
               </tr>` : ''}
             </table>
             <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 16px 0;" />

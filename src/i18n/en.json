@@ -1,7 +1,7 @@
 {
   "metadata": {
     "site": {
-      "title": "EvidencAI | For AI that improves you. Not replaces you.",
+      "title": "AI guidance for executives and SMBs",
       "titleTemplate": "%s | EvidencAI",
       "description": "AI guidance for executives and businesses. Workshops, Qualiopi-certified training and custom solutions. From introduction to implementation.",
       "keywords": [
@@ -12,7 +12,7 @@
         "AI audit business",
         "Claude Anthropic"
       ],
-      "ogTitle": "EvidencAI | For AI that improves you. Not replaces you.",
+      "ogTitle": "EvidencAI | AI guidance for executives and SMBs",
       "ogDescription": "AI guidance for executives and businesses. Workshops, Qualiopi-certified training and custom solutions.",
       "twitterTitle": "EvidencAI | AI that improves you",
       "twitterDescription": "AI guidance for executives and businesses"
@@ -54,7 +54,8 @@
         "items": {
           "blog": "Blog",
           "apropos": "About",
-          "contact": "Contact"
+          "contact": "Contact",
+          "supports": "Course Materials"
         }
       },
       "legal": {
@@ -298,57 +299,233 @@
       }
     }
   },
-  "formation": {
+  "formations": {
     "metadata": {
-      "title": "AI Training - Catalog and custom",
-      "description": "Qualiopi-certified AI training for executives and teams. Catalog training \"Deciding with AI\" (2 days, €960 excl. VAT) and custom support. OPCO funding available.",
+      "title": "AI Training - Structured paths",
+      "description": "Qualiopi-certified AI training. Structured paths to move from curiosity to competence. OPCO funding available.",
       "ogTitle": "AI Training - EvidencAI",
-      "ogDescription": "Qualiopi-certified AI training. From catalog to custom, a path adapted to your business."
+      "ogDescription": "Qualiopi-certified AI training. Structured paths to move from curiosity to competence."
     },
     "hero": {
       "title": "AI Training",
-      "subtitle": "Structured paths to move from curiosity to competence.\nCatalog or custom, with possible OPCO funding."
+      "subtitle": "Structured paths to move from curiosity to competence."
     },
     "catalogue": {
-      "badge": "Catalog training",
-      "title": "Deciding with AI",
-      "subtitle": "From use to strategic mastery",
-      "price": "€960 excl. VAT",
-      "priceUnit": "per person",
-      "duration": "2 days (14 hours) in person in Valence (26), France",
-      "certifications": [
-        "Qualiopi certified via ALIA Formation",
-        "OPCO funding available",
-        "Maximum 12 participants"
-      ],
-      "objectifs": {
-        "title": "Learning objectives",
-        "subtitle": "At the end of the training, you will be able to:",
-        "items": [
-          "Identify the capabilities and limits of generative AIs for your professional context",
-          "Formulate structured queries and conduct iterative conversations with an AI",
-          "Create and configure a custom AI assistant adapted to an identified business need",
-          "Use specialized tools for verified research, document synthesis and decision support",
-          "Apply security and data confidentiality rules in your professional use of AI"
-        ]
-      },
-      "sessions": {
-        "title": "Upcoming sessions",
-        "items": [
-          {
-            "dates": "April 7 & 14, 2026",
-            "location": "Valence (26)"
-          },
-          {
-            "dates": "May 5 & 12, 2026",
-            "location": "Valence (26)"
-          },
-          {
-            "dates": "June 23 & 30, 2026",
-            "location": "Valence (26)"
-          }
-        ]
+      "deciderAvecIA": {
+        "titre": "Deciding with AI",
+        "soustitre": "From usage to strategic mastery",
+        "badge": "2 days · Qualiopi",
+        "prix": "€960 excl. VAT",
+        "description": "Immersive training with pedagogical trio: human trainer, AI co-facilitator, personal assistant that stays active after training."
       }
+    }
+  },
+  "formation": {
+    "metadata": {
+      "title": "Deciding with AI - Immersive training",
+      "description": "Immersive 2-day training with pedagogical trio. Human trainer, playful AI co-facilitator, personal assistant that stays with you. Qualiopi certified via ALIA Formation.",
+      "ogTitle": "Deciding with AI - EvidencAI",
+      "ogDescription": "Immersive 2-day training. From \"it's impressive\" to \"I know what to do with it\"."
+    },
+    "hero": {
+      "badge": "Immersive training · 2 days",
+      "title": "Deciding with ",
+      "titleHighlight": "AI",
+      "soustitre": "From usage to strategic mastery",
+      "accroche": "A human trainer. A playful AI co-facilitator.\nA personal assistant that stays with you after the training.",
+      "description": "This isn't a training where we show you slides about AI. It's a training where you work with AI, live, on your real topics, for two days.\nAnd when you leave, your AI assistant leaves with you.",
+      "meta": {
+        "format": {
+          "label": "Format",
+          "value": "2 days spaced 1 week apart"
+        },
+        "groupe": {
+          "label": "Group",
+          "value": "12 participants max"
+        },
+        "niveau": {
+          "label": "Level",
+          "value": "Beginner to intermediate"
+        },
+        "lieu": {
+          "label": "Location",
+          "value": "In-person · Valence (26)"
+        }
+      },
+      "cta": {
+        "primary": "Book my spot",
+        "secondary": "How does it work?",
+        "download": "Download the program"
+      }
+    },
+    "inscription": {
+      "label": "Registration",
+      "titre": "Upcoming sessions",
+      "form": {
+        "type": {
+          "label": "I want to",
+          "inscription": "Register",
+          "information": "Receive information"
+        },
+        "session": {
+          "label": "Preferred session",
+          "placeholder": "Select a session"
+        },
+        "nom": "Last name",
+        "prenom": "First name",
+        "email": "Professional email",
+        "telephone": "Phone",
+        "entreprise": "Company",
+        "message": "Message (optional)",
+        "submit": "Send my request",
+        "pending": "Sending...",
+        "success": "Request sent successfully",
+        "error": "An error occurred"
+      }
+    },
+    "trio": {
+      "label": "What changes everything",
+      "title": "You're not alone facing a screen",
+      "cards": {
+        "formateur": {
+          "icon": "User",
+          "nom": "Stéphane",
+          "role": "Human trainer",
+          "description": "He frames, contextualizes, adapts the pace to the group and your questions. He's the one who makes the connection between theory and your reality."
+        },
+        "az": {
+          "icon": "Sparkles",
+          "nom": "Az",
+          "role": "AI co-facilitator · playful",
+          "description": "She intervenes live during the training. She reformulates, challenges, proposes different angles. She's not there to look pretty. She really co-facilitates."
+        },
+        "assistant": {
+          "icon": "MessageCircle",
+          "nom": "Your Assistant",
+          "role": "Personal AI · during and after",
+          "description": "Each participant gets their own AI Assistant, an AI expert. This assistant stays active after the training. You leave with a tool that keeps helping you with your AI usage."
+        }
+      }
+    },
+    "promesse": {
+      "label": "The promise",
+      "texte": "You already know AI exists. You may have even tested ChatGPT or Claude. What you're missing isn't the wonder. It's a mental framework to use it with discernment, without being fooled, and on your real problems.",
+      "features": {
+        "supports": {
+          "icon": "Monitor",
+          "titre": "Online resources, no binder",
+          "texte": "Everything is accessible online, during and after the training. No PDFs to lose. Your resources stay alive."
+        },
+        "pratique": {
+          "icon": "RefreshCw",
+          "titre": "Practice on your real cases",
+          "texte": "You don't work on generic exercises. You work on your own topics, your own documents, your own decisions."
+        },
+        "securite": {
+          "icon": "Shield",
+          "titre": "Security and common sense",
+          "texte": "We tell you what to protect, what to verify, and how not to be fooled by a hallucinating AI."
+        },
+        "plan": {
+          "icon": "ClipboardCheck",
+          "titre": "An action plan when leaving",
+          "texte": "You leave with a concrete plan to continue. No grand speech. Specific actions."
+        }
+      },
+      "title1": "In two days, you go from \"it's impressive\"",
+      "title2": "to \"I know what to do with it\""
+    },
+    "apres": {
+      "label": "What continues",
+      "title": "The training ends. The assistant ",
+      "titleHighlight": "stays.",
+      "items": {
+        "supports": {
+          "titre": "Course materials accessible",
+          "texte": "All training content remains accessible online. Come back to it when you need it."
+        },
+        "assistant": {
+          "titre": "Your Assistant always active",
+          "texte": "The AI assistant you worked with during training continues to support you. Same context, same reflexes."
+        },
+        "ressources": {
+          "titre": "Practical resources",
+          "texte": "Method sheets, prompt guides, references: everything that helped you during training remains available."
+        },
+        "evaluation": {
+          "titre": "Evaluation at D+30",
+          "texte": "A month later, we measure the real impact on your professional daily life."
+        }
+      }
+    },
+    "programme": {
+      "label": "In two days",
+      "title": "From \"I don't know what to ask it\" to action plan",
+      "jours": {
+        "jour1": {
+          "titre": "Day 1",
+          "soustitre": "Understand and master",
+          "tags": [
+            "The 4 Pillars",
+            "C.R.T.F. Method",
+            "Guided exercises",
+            "Personal assistant"
+          ]
+        },
+        "jour2": {
+          "titre": "Day 2",
+          "soustitre": "Build and sustain",
+          "tags": [
+            "Specialized tools",
+            "Business use cases",
+            "Data security",
+            "Personal action plan"
+          ]
+        }
+      },
+      "piliers": {
+        "titre": "The 4 Pillars of mastered use",
+        "items": {
+          "recadrer": {
+            "lettre": "R",
+            "titre": "Reframe",
+            "texte": "AI wandering? You reframe it. Like a colleague you refocus."
+          },
+          "contextualiser": {
+            "lettre": "C",
+            "titre": "Contextualize",
+            "texte": "Give the context AI doesn't have. Your job, your constraints, your objectives."
+          },
+          "verifier": {
+            "lettre": "V",
+            "titre": "Verify",
+            "texte": "AI can hallucinate. You verify. Always."
+          },
+          "iterer": {
+            "lettre": "I",
+            "titre": "Iterate",
+            "texte": "The first draft is never the right one. You iterate to professional result."
+          }
+        }
+      },
+      "certif": "Fundable. Training delivered by a Qualiopi-certified organization. Detailed program sent on request."
+    },
+    "sessions": {
+      "titre": "Upcoming sessions",
+      "items": [
+        {
+          "dates": "April 7 & 14, 2026",
+          "location": "Valence (26)"
+        },
+        {
+          "dates": "May 5 & 12, 2026",
+          "location": "Valence (26)"
+        },
+        {
+          "dates": "June 23 & 30, 2026",
+          "location": "Valence (26)"
+        }
+      ]
     },
     "surmesure": {
       "badge": "Custom training",
@@ -385,11 +562,27 @@
         "text": "Let's discuss your situation for 30 minutes",
         "subtitle": "A free exchange, without commitment.\nTo understand your context before proposing anything."
       }
+    },
+    "prerequis": {
+      "title": "Prerequisites",
+      "items": [
+        "Laptop computer",
+        "Ability to create a custom assistant on at least one platform (Custom GPT, Claude Project or Gemini Gem)",
+        "Complete the pre-training questionnaire sent beforehand"
+      ]
+    },
+    "formateur": {
+      "title": "Trainer and training organization",
+      "nom": "Stéphane Commenge",
+      "bio": "Consultant in digital transformation and artificial intelligence.\nSupports SME and mid-cap executives and their teams in the operational integration of generative AI.",
+      "organisme": "Training delivered by",
+      "organismeNom": "ALIA Formation",
+      "organismeSuffix": ", Qualiopi certified organization."
     }
   },
   "solutions": {
     "metadata": {
-      "title": "AI Solutions - Pragmatic support | EvidencAI",
+      "title": "AI Solutions - Pragmatic support",
       "description": "A progressive approach to AI: acculturate your teams, identify the right levers, build pragmatically. From small automation tool to structuring project.",
       "ogTitle": "AI Solutions - EvidencAI",
       "ogDescription": "Acculturate before implementing. A progressive and pragmatic approach to business AI."
@@ -504,7 +697,7 @@
   },
   "outils": {
     "metadata": {
-      "title": "Our AI tools - EvidencAI",
+      "title": "Our AI tools",
       "description": "Discover our AI applications: Mnemos (persistent memory), CodirAI (decision support), ConfidentIA (anonymization), Mon Greffier (commercial court judge assistant) and SignalPro (economic intelligence)."
     },
     "hero": {
@@ -530,7 +723,7 @@
   },
   "apropos": {
     "metadata": {
-      "title": "About - Stéphane Commenge | EvidencAI",
+      "title": "About - Stéphane Commenge",
       "description": "Entrepreneur since 1996, Stéphane Commenge supports SME and mid-market executives in concrete AI integration. No theory, results.",
       "ogTitle": "About - Stéphane Commenge | EvidencAI",
       "ogDescription": "Entrepreneur since 1996, AI consultant for SME and mid-market executives"
@@ -577,7 +770,7 @@
   },
   "blog": {
     "metadata": {
-      "title": "The AI Signal - EvidencAI Blog",
+      "title": "The AI Signal - Blog",
       "description": "Every week, one AI signal decoded for business leaders. The fact, the signal, the action."
     },
     "title": "The AI Signal",

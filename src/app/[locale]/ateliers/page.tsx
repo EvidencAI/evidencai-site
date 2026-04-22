@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       title: dict.ateliers.metadata.ogTitle,
       description: dict.ateliers.metadata.ogDescription,
-      url: `https://evidencai.com/${locale}/ateliers`,
+      url: `https://www.evidencai.com/${locale}/ateliers`,
     },
     ...getAlternates(locale, '/ateliers'),
   };
@@ -39,6 +39,21 @@ export default async function AteliersPage({ params }: { params: Promise<{ local
       price: dict.ateliers.modules.comprendre.price,
       description: dict.ateliers.modules.comprendre.description,
       topics: dict.ateliers.modules.comprendre.topics,
+      calendlyUrl: 'https://calendly.com/stephane-commenge/comprendre-l-ia-pour-un-usage-lucide-et-efficient',
+      sessions: [
+        {
+          date: '22 avril 2026',
+          time: '9h - 11h',
+          spots: 4,
+          bookingUrl: 'https://calendly.com/stephane-commenge/comprendre-l-ia-pour-un-usage-lucide-et-efficient/2026-04-22T07:00:00+00:00',
+        },
+        {
+          date: '19 mai 2026',
+          time: '14h - 16h',
+          spots: 5,
+          bookingUrl: 'https://calendly.com/stephane-commenge/comprendre-l-ia-pour-un-usage-lucide-et-efficient/2026-05-19T12:00:00+00:00',
+        },
+      ],
     },
     {
       id: 'maitriser',
@@ -48,6 +63,21 @@ export default async function AteliersPage({ params }: { params: Promise<{ local
       price: dict.ateliers.modules.maitriser.price,
       description: dict.ateliers.modules.maitriser.description,
       topics: dict.ateliers.modules.maitriser.topics,
+      calendlyUrl: 'https://calendly.com/stephane-commenge/maitriser-claude',
+      sessions: [
+        {
+          date: '28 avril 2026',
+          time: '9h - 11h',
+          spots: 5,
+          bookingUrl: 'https://calendly.com/stephane-commenge/maitriser-claude/2026-04-28T07:00:00+00:00',
+        },
+        {
+          date: '26 mai 2026',
+          time: '14h - 16h',
+          spots: 5,
+          bookingUrl: 'https://calendly.com/stephane-commenge/maitriser-claude/2026-05-26T12:00:00+00:00',
+        },
+      ],
     },
     {
       id: 'outils',
@@ -57,6 +87,21 @@ export default async function AteliersPage({ params }: { params: Promise<{ local
       price: dict.ateliers.modules.outils.price,
       description: dict.ateliers.modules.outils.description,
       topics: dict.ateliers.modules.outils.topics,
+      calendlyUrl: 'https://calendly.com/stephane-commenge/les-outils',
+      sessions: [
+        {
+          date: '29 avril 2026',
+          time: '9h - 11h',
+          spots: 5,
+          bookingUrl: 'https://calendly.com/stephane-commenge/les-outils/2026-04-29T07:00:00+00:00',
+        },
+        {
+          date: '27 mai 2026',
+          time: '14h - 16h',
+          spots: 5,
+          bookingUrl: 'https://calendly.com/stephane-commenge/les-outils/2026-05-27T12:00:00+00:00',
+        },
+      ],
     },
     {
       id: 'connecter',
@@ -66,6 +111,21 @@ export default async function AteliersPage({ params }: { params: Promise<{ local
       price: dict.ateliers.modules.connecter.price,
       description: dict.ateliers.modules.connecter.description,
       topics: dict.ateliers.modules.connecter.topics,
+      calendlyUrl: 'https://calendly.com/stephane-commenge/les-outils-ia',
+      sessions: [
+        {
+          date: '30 avril 2026',
+          time: '9h - 11h',
+          spots: 5,
+          bookingUrl: 'https://calendly.com/stephane-commenge/les-outils-ia/2026-04-30T07:00:00+00:00',
+        },
+        {
+          date: '28 mai 2026',
+          time: '14h - 16h',
+          spots: 5,
+          bookingUrl: 'https://calendly.com/stephane-commenge/les-outils-ia/2026-05-28T12:00:00+00:00',
+        },
+      ],
     },
   ];
 

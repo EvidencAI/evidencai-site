@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EvidencAI – Générateur de visuels social media</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+    background: #0d0d1a;
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #94a3b8;
+    margin-bottom: 30px;
+    letter-spacing: 0.05em;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 40px;
+  }
+  .controls label {
+    font-size: 13px; color: #94a3b8;
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .controls input, .controls select {
+    background: #1a1a2e; border: 1px solid #2a2a4a;
+    color: #f8fafc; padding: 10px 14px; border-radius: 6px;
+    font-size: 15px; font-family: inherit; outline: none;
+  }
+  .controls input:focus, .controls select:focus { border-color: #E07A5F; }
+
+  /* === CARD === */
+  .card {
+    width: 1200px; height: 628px;
+    background: #1a1a2e;
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    padding: 80px 100px;
+  }
+
+  /* Filet corail en haut */
+  .card .accent-line {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 4px;
+    background: linear-gradient(90deg, #E07A5F 0%, #E07A5F 30%, transparent 100%);
+  }
+  /* Header : Le Signal IA + pastille catégorie */
+  .card .header {
+    position: absolute; top: 28px; left: 100px; right: 100px;
+    display: flex; align-items: center; gap: 20px;
+  }
+  .card .series-name {
+    font-size: 16px; font-weight: 600;
+    color: #f8fafc; letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .card .badge {
+    font-size: 11px; font-weight: 700;
+    color: #1a1a2e; background: #E07A5F;
+    padding: 4px 14px; border-radius: 20px;
+    text-transform: uppercase; letter-spacing: 0.1em;
+  }
+
+  /* Contenu central */
+  .card .title {
+    font-size: 44px; font-weight: 700;
+    line-height: 1.15; color: #f8fafc;
+    margin-bottom: 24px; max-width: 900px;
+    white-space: pre-line;
+  }
+  .card .separator {
+    width: 80px; height: 3px;
+    background: #E07A5F; margin-bottom: 24px;
+  }
+  .card .subtitle {
+    font-size: 20px; font-weight: 400;
+    color: #94a3b8; line-height: 1.4; max-width: 750px;
+  }
+  /* Footer : EvidencAI en corail */
+  .card .brand {
+    position: absolute; bottom: 36px; right: 60px;
+    font-size: 18px; font-weight: 700;
+    color: #E07A5F; letter-spacing: 0.05em;
+  }
+
+  /* Scale preview */
+  .card-wrapper { transform: scale(0.5); transform-origin: top center; }
+  .hint {
+    font-size: 13px; color: #64748b;
+    margin-top: -280px; margin-bottom: 20px; text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<h1>EvidencAI — Visuel social media</h1>
+
+<div class="controls">
+  <label for="cat">Catégorie (pastille)</label>
+  <select id="cat" onchange="update()">
+    <option value="OUTILS">Outils</option>
+    <option value="RÉGLEMENTATION" selected>Réglementation</option>
+    <option value="ADOPTION">Adoption</option>
+    <option value="FORMATION">Formation</option>
+  </select>
+
+  <label for="ttl">Titre (2 lignes max)</label>
+  <input id="ttl" type="text" value="Charte IA : 5 règles en une page A4" oninput="update()">
+
+  <label for="sub">Sous-titre / accroche</label>
+  <input id="sub" type="text" value="Un mémo signable pour cadrer l'usage de l'IA en PME" oninput="update()">
+</div>
+<div class="card-wrapper">
+  <div class="card" id="card">
+    <div class="accent-line"></div>
+    <div class="header">
+      <span class="series-name">Le Signal IA</span>
+      <span class="badge" id="cardBadge">RÉGLEMENTATION</span>
+    </div>
+    <div class="title" id="cardTitle">Charte IA : 5 règles
+en une page A4</div>
+    <div class="separator"></div>
+    <div class="subtitle" id="cardSub">Un mémo signable pour cadrer l'usage de l'IA en PME</div>
+    <div class="brand">EvidencAI</div>
+  </div>
+</div>
+
+<p class="hint">Ou générer via : node generate-card.mjs "CATÉGORIE" "Titre" "Sous-titre" "../visuels/fichier.png"</p>
+
+<script>
+function update() {
+  document.getElementById('cardBadge').textContent = document.getElementById('cat').value;
+  document.getElementById('cardTitle').textContent = document.getElementById('ttl').value;
+  document.getElementById('cardSub').textContent = document.getElementById('sub').value;
+}
+</script>
+
+</body>
+</html>

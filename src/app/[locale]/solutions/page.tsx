@@ -20,6 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       title: dict.solutions.metadata.ogTitle,
       description: dict.solutions.metadata.ogDescription,
+      url: `https://www.evidencai.com/${locale}/solutions`,
     },
     ...getAlternates(locale, '/solutions'),
   };

@@ -15,6 +15,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: dict.blog.metadata.title,
     description: dict.blog.metadata.description,
+    openGraph: {
+      title: dict.blog.metadata.title,
+      description: dict.blog.metadata.description,
+      url: `https://www.evidencai.com/${locale}/blog`,
+    },
     ...getAlternates(locale as Locale, '/blog'),
   };
 }

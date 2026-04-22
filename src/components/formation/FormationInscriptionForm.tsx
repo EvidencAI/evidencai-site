@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { clarityEvent } from '@/lib/clarity';
 
 export default function FormationInscriptionForm() {
   const [formData, setFormData] = useState({
@@ -10,12 +11,21 @@ export default function FormationInscriptionForm() {
     entreprise: '',
     session: '',
     demande: 'inscription',
+    message: '',
   });
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
+
+    // Track Clarity event based on form type
+    if (formData.demande === 'inscription') {
+      clarityEvent('cta_preinscription_formation');
+    } else {
+      clarityEvent('cta_info_formation');
+    }
+
     try {
       const res = await fetch('/api/formation', {
         method: 'POST',
@@ -32,16 +42,16 @@ export default function FormationInscriptionForm() {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   if (status === 'success') {
     return (
-      <div className="text-center py-8">
-        <div className="text-4xl mb-4">&#10003;</div>
-        <h3 className="font-playfair text-xl font-bold text-bleu-nuit mb-2">Demande envoyée</h3>
-        <p className="text-gray-600">
+      <div className="text-center py-8 bg-fond-surface rounded-lg border border-bleu-subtil">
+        <div className="text-4xl mb-4 text-ambre">&#10003;</div>
+        <h3 className="font-playfair text-xl font-bold text-white mb-2">Demande envoyée</h3>
+        <p className="text-text-secondary">
           {formData.demande === 'inscription'
             ? 'Votre pré-inscription a bien été reçue. Je reviens vers vous sous 48h avec les modalités.'
             : 'Votre demande a bien été reçue. Je reviens vers vous sous 48h.'}
@@ -50,11 +60,11 @@ export default function FormationInscriptionForm() {
     );
   }
 
-  const inputClass = "w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-ambre focus:border-transparent";
-  const labelClass = "block text-sm font-medium text-bleu-nuit mb-1";
+  const inputClass = "w-full px-4 py-3 bg-fond-surface border border-bleu-subtil rounded-lg text-sm text-white placeholder:text-text-secondary/50 focus:outline-none focus:ring-2 focus:ring-ambre focus:border-transparent";
+  const labelClass = "block text-sm font-medium text-text-secondary mb-1";
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4 bg-fond-surface rounded-lg p-8 border border-bleu-subtil">
       {/* Type de demande */}
       <div className="flex gap-3">
         <label className={`flex-1 cursor-pointer`}>
@@ -69,7 +79,7 @@ export default function FormationInscriptionForm() {
           <div className={`text-center py-3 rounded-lg border-2 text-sm font-medium transition-colors ${
             formData.demande === 'inscription'
               ? 'border-ambre bg-ambre/10 text-ambre'
-              : 'border-gray-200 text-gray-500 hover:border-gray-300'
+              : 'border-bleu-subtil text-text-secondary hover:border-text-secondary'
           }`}>
             Je souhaite m&apos;inscrire
           </div>
@@ -86,7 +96,7 @@ export default function FormationInscriptionForm() {
           <div className={`text-center py-3 rounded-lg border-2 text-sm font-medium transition-colors ${
             formData.demande === 'information'
               ? 'border-ambre bg-ambre/10 text-ambre'
-              : 'border-gray-200 text-gray-500 hover:border-gray-300'
+              : 'border-bleu-subtil text-text-secondary hover:border-text-secondary'
           }`}>
             Je souhaite des informations
           </div>
@@ -167,11 +177,31 @@ export default function FormationInscriptionForm() {
         </div>
       </div>
 
+      {/* Message libre */}
+      <div>
+        <label htmlFor="message" className={labelClass}>
+          {formData.demande === 'inscription'
+            ? 'Une question, une demande particulière ?'
+            : 'Décrivez votre besoin'}
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          rows={3}
+          placeholder={formData.demande === 'inscription'
+            ? 'Ex : financement OPCO, accessibilité, régime alimentaire...'
+            : 'Ex : nombre de collaborateurs, objectifs, contraintes...'}
+          className={inputClass}
+        />
+      </div>
+
       {/* Bouton */}
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="w-full py-3 bg-bleu-nuit text-white font-semibold rounded-lg hover:bg-bleu-nuit-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full py-3 bg-ambre text-white font-semibold rounded-lg hover:bg-ambre-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {status === 'sending' ? 'Envoi en cours...' : (
           formData.demande === 'inscription' ? 'Pré-réserver ma place' : 'Envoyer ma demande'
@@ -184,7 +214,7 @@ export default function FormationInscriptionForm() {
         </p>
       )}
 
-      <p className="text-xs text-gray-400 text-center">
+      <p className="text-xs text-text-secondary/70 text-center">
         Vos données sont uniquement utilisées pour traiter votre demande.
       </p>
     </form>

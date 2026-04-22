@@ -39,7 +39,7 @@ export default function ValuesSection({ dict }: ValuesSectionProps) {
             return (
             <div
               key={value.title}
-              className="text-center p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-colors"
+              className="text-center p-6 rounded-xl bg-white/5"
             >
               <IconComponent className="w-10 h-10 text-ambre mx-auto mb-4" />
               <h3 className="font-playfair text-xl font-bold text-white mb-3">
