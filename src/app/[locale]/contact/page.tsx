@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       title: dict.contact.metadata.ogTitle,
       description: dict.contact.metadata.ogDescription,
-      url: `https://evidencai.com/${locale}/contact`,
+      url: `https://www.evidencai.com/${locale}/contact`,
     },
     ...getAlternates(locale, '/contact'),
   };
@@ -78,6 +78,8 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                 <p className="text-white/40 text-xs uppercase tracking-wider mb-2">{dict.contact.coordonnees.email.label}</p>
                 <a
                   href={`mailto:${dict.contact.coordonnees.email.value}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-ambre hover:text-ambre-light transition-colors text-sm"
                 >
                   {dict.contact.coordonnees.email.value}

@@ -45,7 +45,7 @@ export default async function MentionsLegalesPage({ params }: { params: Promise<
                 <p><strong className="text-white">{dict.mentions.editeur.directeur}</strong> {dict.mentions.editeur.directeurValue}</p>
                 <p>
                   <strong className="text-white">{dict.mentions.editeur.contact}</strong>{' '}
-                  <a href={`mailto:${dict.mentions.editeur.contactValue}`} className="text-ambre hover:text-ambre-light">{dict.mentions.editeur.contactValue}</a>
+                  <a href={`mailto:${dict.mentions.editeur.contactValue}`} target="_blank" rel="noopener noreferrer" className="text-ambre hover:text-ambre-light">{dict.mentions.editeur.contactValue}</a>
                 </p>
               </div>
             </section>
