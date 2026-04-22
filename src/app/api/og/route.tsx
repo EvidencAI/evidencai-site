@@ -18,14 +18,69 @@ export async function GET(request: NextRequest) {
   const locale = (searchParams.get('locale') || 'fr') as Locale;
   const format = searchParams.get('format') || 'linkedin';
 
-  const post = getPostBySlug(slug, locale);
-  if (!post) {
-    return new Response('Post not found', { status: 404 });
-  }
-
   const isSquare = format === 'linkedin';
   const width = isSquare ? 1080 : 1200;
   const height = isSquare ? 1080 : 630;
+
+  const post = getPostBySlug(slug, locale);
+
+  // Fallback : image de marque EvidencAI quand le slug est absent ou invalide
+  if (!post) {
+    return new ImageResponse(
+      (
+        <div
+          style={{
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: '#1a1a2e',
+            fontFamily: 'system-ui, sans-serif',
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '32px',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'baseline' }}>
+              <span
+                style={{
+                  fontSize: isSquare ? '160px' : '140px',
+                  fontWeight: 700,
+                  color: 'white',
+                  letterSpacing: '-2px',
+                }}
+              >
+                Evidenc
+              </span>
+              <span
+                style={{
+                  fontSize: isSquare ? '160px' : '140px',
+                  fontWeight: 700,
+                  color: '#E07A5F',
+                  letterSpacing: '-2px',
+                }}
+              >
+                AI
+              </span>
+            </div>
+            <div style={{ color: '#94a3b8', fontSize: isSquare ? '32px' : '28px' }}>
+              Pour une IA qui vous ameliore.
+            </div>
+            <div style={{ color: '#64748b', fontSize: isSquare ? '22px' : '20px', marginTop: '16px' }}>
+              evidencai.com
+            </div>
+          </div>
+        </div>
+      ),
+      { width, height }
+    );
+  }
   const badgeColor = CATEGORY_BADGE_COLORS[post.category] || '#E07A5F';
   const categoryLabel = CATEGORY_LABELS[post.category][locale];
 
