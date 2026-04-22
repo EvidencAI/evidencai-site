@@ -514,10 +514,6 @@
       "titre": "Upcoming sessions",
       "items": [
         {
-          "dates": "April 7 & 14, 2026",
-          "location": "Valence (26)"
-        },
-        {
           "dates": "May 5 & 12, 2026",
           "location": "Valence (26)"
         },
@@ -848,20 +844,32 @@
       "siege": "Registered office:",
       "siegeValue": "200 impasse Cheyssans, 26300 Châteauneuf-sur-Isère, France",
       "siret": "SIRET:",
-      "siretValue": "Registration in progress",
+      "siretValue": "103 591 806 00015",
       "directeur": "Publication director:",
       "directeurValue": "Stéphane Commenge",
       "contact": "Contact:",
       "contactValue": "contact@evidencai.com"
     },
     "hebergement": {
-      "title": "Hosting",
+      "title": "Hosting and infrastructure",
       "hebergeur": "Host:",
-      "hebergeurValue": "Vercel Inc.",
+      "hebergeurValue": "Scaleway SAS",
       "adresse": "Address:",
-      "adresseValue": "440 N Barranca Ave #4133, Covina, CA 91723, United States",
+      "adresseValue": "8 rue de la Ville l'Évêque, 75008 Paris, France",
       "site": "Website:",
-      "siteValue": "vercel.com"
+      "siteValue": "scaleway.com",
+      "datacenter": "Datacenter:",
+      "datacenterValue": "PAR1 (Paris, France)",
+      "orchestration": "Orchestration:",
+      "orchestrationValue": "Coolify (self-hosted)",
+      "baseDeDonnees": "Database and authentication:",
+      "baseDeDonneesValue": "Supabase self-hosted (PostgreSQL, Row Level Security)",
+      "souverainete": {
+        "title": "Sovereignty, GDPR and security",
+        "intro": "EvidencAI and its applications (Mon Greffier, ConfidentIA, CodirAI, SignalPro, Mnemos) are hosted in France by Scaleway, a French cloud operator (Iliad group), in the PAR1 datacenter in Paris.",
+        "rgpd": "Your data stays in France, under French law, outside the scope of the US Cloud Act. Hosting with a French operator places your data directly under the GDPR regime, without resorting to the Standard Contractual Clauses required for non-European hosts. Compliance is structural, not contractual.",
+        "securite": "Scaleway datacenters are certified ISO 27001, ISO 27701, HDS and SOC 2. Scaleway is also engaged in the ANSSI SecNumCloud qualification process. Self-hosted Supabase on this infrastructure gives us full control over storage, at-rest encryption and access: no data transits through an uncontrolled third-party service."
+      }
     },
     "cgv": {
       "title": "General Terms of Sale",
@@ -932,7 +940,7 @@
       "design": "Design and development:",
       "designValue": "Stéphane Commenge",
       "techno": "Technologies:",
-      "technoValue": "Next.js, Tailwind CSS, Vercel"
+      "technoValue": "Next.js, Tailwind CSS, Supabase (self-hosted), Scaleway, Coolify"
     }
   }
 }

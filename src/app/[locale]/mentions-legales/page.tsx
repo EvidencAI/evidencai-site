@@ -50,7 +50,7 @@ export default async function MentionsLegalesPage({ params }: { params: Promise<
               </div>
             </section>
 
-            {/* Hébergement */}
+            {/* Hébergement et infrastructure */}
             <section className="mb-12">
               <h2 className="font-playfair text-2xl font-bold text-white mb-6">{dict.mentions.hebergement.title}</h2>
               <div className="text-text-secondary space-y-2">
@@ -60,6 +60,18 @@ export default async function MentionsLegalesPage({ params }: { params: Promise<
                   <strong className="text-white">{dict.mentions.hebergement.site}</strong>{' '}
                   <a href={`https://${dict.mentions.hebergement.siteValue}`} target="_blank" rel="noopener noreferrer" className="text-ambre hover:text-ambre-light">{dict.mentions.hebergement.siteValue}</a>
                 </p>
+                <p><strong className="text-white">{dict.mentions.hebergement.datacenter}</strong> {dict.mentions.hebergement.datacenterValue}</p>
+                <p><strong className="text-white">{dict.mentions.hebergement.orchestration}</strong> {dict.mentions.hebergement.orchestrationValue}</p>
+                <p><strong className="text-white">{dict.mentions.hebergement.baseDeDonnees}</strong> {dict.mentions.hebergement.baseDeDonneesValue}</p>
+              </div>
+
+              <h3 className="font-playfair text-xl font-semibold text-white mt-8 mb-4">
+                {dict.mentions.hebergement.souverainete.title}
+              </h3>
+              <div className="text-text-secondary space-y-4">
+                <p>{dict.mentions.hebergement.souverainete.intro}</p>
+                <p>{dict.mentions.hebergement.souverainete.rgpd}</p>
+                <p>{dict.mentions.hebergement.souverainete.securite}</p>
               </div>
             </section>
 

@@ -43,7 +43,7 @@ export default async function AProposPage({ params }: { params: Promise<{ locale
     },
     url: `https://www.evidencai.com/${locale}/a-propos`,
     sameAs: [
-      'https://linkedin.com/in/stephanecommenge',
+      'https://www.linkedin.com/in/st%C3%A9phane-commenge-7463ba20/',
     ],
     knowsAbout: [
       'Intelligence Artificielle',
@@ -94,7 +94,7 @@ export default async function AProposPage({ params }: { params: Promise<{ locale
                   {dict.apropos.hero.title}
                 </p>
                 <a
-                  href="https://linkedin.com/in/stephanecommenge"
+                  href="https://www.linkedin.com/in/st%C3%A9phane-commenge-7463ba20/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-ambre hover:text-ambre-light transition-colors"

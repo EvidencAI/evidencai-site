@@ -94,7 +94,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               <div>
                 <p className="text-white/40 text-xs uppercase tracking-wider mb-2">{dict.contact.coordonnees.linkedin.label}</p>
                 <a
-                  href="https://linkedin.com/in/stephanecommenge"
+                  href="https://www.linkedin.com/in/st%C3%A9phane-commenge-7463ba20/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-ambre hover:text-ambre-light transition-colors text-sm"

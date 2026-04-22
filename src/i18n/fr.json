@@ -514,10 +514,6 @@
       "titre": "Prochaines sessions",
       "items": [
         {
-          "dates": "7 et 14 avril 2026",
-          "location": "Valence (26)"
-        },
-        {
           "dates": "5 et 12 mai 2026",
           "location": "Valence (26)"
         },
@@ -848,20 +844,32 @@
       "siege": "Siège social :",
       "siegeValue": "200 impasse Cheyssans, 26300 Châteauneuf-sur-Isère",
       "siret": "SIRET :",
-      "siretValue": "En cours d'immatriculation",
+      "siretValue": "103 591 806 00015",
       "directeur": "Directeur de publication :",
       "directeurValue": "Stéphane Commenge",
       "contact": "Contact :",
       "contactValue": "contact@evidencai.com"
     },
     "hebergement": {
-      "title": "Hébergement",
+      "title": "Hébergement et infrastructure",
       "hebergeur": "Hébergeur :",
-      "hebergeurValue": "Vercel Inc.",
+      "hebergeurValue": "Scaleway SAS",
       "adresse": "Adresse :",
-      "adresseValue": "440 N Barranca Ave #4133, Covina, CA 91723, États-Unis",
+      "adresseValue": "8 rue de la Ville l'Évêque, 75008 Paris, France",
       "site": "Site web :",
-      "siteValue": "vercel.com"
+      "siteValue": "scaleway.com",
+      "datacenter": "Datacenter :",
+      "datacenterValue": "PAR1 (Paris, France)",
+      "orchestration": "Orchestration :",
+      "orchestrationValue": "Coolify (auto-hébergé)",
+      "baseDeDonnees": "Base de données et authentification :",
+      "baseDeDonneesValue": "Supabase self-hosted (PostgreSQL, Row Level Security)",
+      "souverainete": {
+        "title": "Souveraineté, RGPD et sécurité",
+        "intro": "EvidencAI et ses applications (Mon Greffier, ConfidentIA, CodirAI, SignalPro, Mnemos) sont hébergées en France chez Scaleway, opérateur cloud français (groupe Iliad), dans le datacenter PAR1 à Paris.",
+        "rgpd": "Vos données restent en France, sous droit français, hors du périmètre du Cloud Act américain. L'hébergement chez un opérateur français place vos données directement sous le régime du RGPD, sans recours aux Standard Contractual Clauses nécessaires pour les hébergeurs extra-européens. La conformité est structurelle, pas contractuelle.",
+        "securite": "Les datacenters Scaleway sont certifiés ISO 27001, ISO 27701, HDS et SOC 2. Scaleway est engagé dans le processus de qualification SecNumCloud de l'ANSSI. Supabase auto-hébergé sur cette infrastructure nous donne le contrôle total du stockage, du chiffrement au repos et des accès : aucune donnée ne transite par un service tiers non maîtrisé."
+      }
     },
     "cgv": {
       "title": "Conditions Générales de Vente (CGV)",
@@ -932,7 +940,7 @@
       "design": "Design et développement :",
       "designValue": "Stéphane Commenge",
       "techno": "Technologies :",
-      "technoValue": "Next.js, Tailwind CSS, Vercel"
+      "technoValue": "Next.js, Tailwind CSS, Supabase (self-hosted), Scaleway, Coolify"
     }
   }
 }

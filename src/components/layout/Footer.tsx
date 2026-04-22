@@ -47,7 +47,7 @@ export default function Footer({ locale, dict }: FooterProps) {
               {dict.footer.copyright.replace('{year}', currentYear.toString())}
             </p>
             <a
-              href="https://linkedin.com/in/stephanecommenge"
+              href="https://www.linkedin.com/in/st%C3%A9phane-commenge-7463ba20/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-text-secondary hover:text-ambre transition-colors pt-1"

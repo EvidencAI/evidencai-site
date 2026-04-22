@@ -5,7 +5,6 @@ import ReserverAtelierButton from './ReserverAtelierButton';
 interface AtelierSession {
   date: string;       // ex: "22 avril"
   time: string;       // ex: "9h - 11h"
-  spots: number;      // places restantes
   bookingUrl: string; // lien direct Calendly pour cette session
 }
 
@@ -105,15 +104,6 @@ export default function AtelierCard({ module }: AtelierCardProps) {
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="font-medium text-bleu-nuit">{session.date}</span>
                   <span className="text-gray-500">{session.time}</span>
-                  <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${
-                    session.spots <= 2
-                      ? 'bg-red-100 text-red-700'
-                      : session.spots <= 3
-                      ? 'bg-amber-100 text-amber-700'
-                      : 'bg-green-100 text-green-700'
-                  }`}>
-                    {session.spots} place{session.spots > 1 ? 's' : ''}
-                  </span>
                 </div>
                 <span className="text-xs font-semibold text-ambre-contrast group-hover:text-ambre whitespace-nowrap ml-2 flex items-center gap-1 transition-colors">
                   Réserver

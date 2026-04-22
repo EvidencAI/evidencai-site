@@ -42,15 +42,8 @@ export default async function AteliersPage({ params }: { params: Promise<{ local
       calendlyUrl: 'https://calendly.com/stephane-commenge/comprendre-l-ia-pour-un-usage-lucide-et-efficient',
       sessions: [
         {
-          date: '22 avril 2026',
-          time: '9h - 11h',
-          spots: 4,
-          bookingUrl: 'https://calendly.com/stephane-commenge/comprendre-l-ia-pour-un-usage-lucide-et-efficient/2026-04-22T07:00:00+00:00',
-        },
-        {
           date: '19 mai 2026',
           time: '14h - 16h',
-          spots: 5,
           bookingUrl: 'https://calendly.com/stephane-commenge/comprendre-l-ia-pour-un-usage-lucide-et-efficient/2026-05-19T12:00:00+00:00',
         },
       ],
@@ -68,13 +61,11 @@ export default async function AteliersPage({ params }: { params: Promise<{ local
         {
           date: '28 avril 2026',
           time: '9h - 11h',
-          spots: 5,
           bookingUrl: 'https://calendly.com/stephane-commenge/maitriser-claude/2026-04-28T07:00:00+00:00',
         },
         {
           date: '26 mai 2026',
           time: '14h - 16h',
-          spots: 5,
           bookingUrl: 'https://calendly.com/stephane-commenge/maitriser-claude/2026-05-26T12:00:00+00:00',
         },
       ],
@@ -92,13 +83,11 @@ export default async function AteliersPage({ params }: { params: Promise<{ local
         {
           date: '29 avril 2026',
           time: '9h - 11h',
-          spots: 5,
           bookingUrl: 'https://calendly.com/stephane-commenge/les-outils/2026-04-29T07:00:00+00:00',
         },
         {
           date: '27 mai 2026',
           time: '14h - 16h',
-          spots: 5,
           bookingUrl: 'https://calendly.com/stephane-commenge/les-outils/2026-05-27T12:00:00+00:00',
         },
       ],
@@ -116,13 +105,11 @@ export default async function AteliersPage({ params }: { params: Promise<{ local
         {
           date: '30 avril 2026',
           time: '9h - 11h',
-          spots: 5,
           bookingUrl: 'https://calendly.com/stephane-commenge/les-outils-ia/2026-04-30T07:00:00+00:00',
         },
         {
           date: '28 mai 2026',
           time: '14h - 16h',
-          spots: 5,
           bookingUrl: 'https://calendly.com/stephane-commenge/les-outils-ia/2026-05-28T12:00:00+00:00',
         },
       ],
