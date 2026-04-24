@@ -13,20 +13,57 @@ coAuthor: "Claude & Stéphane Commenge"
 
 ## L'erreur que font 9 PME sur 10
 
-Quand un dirigeant de PME entend parler d'IA, il pense immédiatement "technologie complexe", "data scientist", "budget conséquent". Et il reporte à plus tard.
+Quand un dirigeant de PME entend parler d'IA, il pense immédiatement <span className="corail">technologie complexe</span>, data scientist, budget conséquent. Et il reporte à plus tard.
 
 Pourtant, les PME qui tirent profit de l'IA aujourd'hui n'ont pas d'équipe tech dédiée. Elles ont juste identifié un problème récurrent et testé un outil gratuit dessus.
 
 Le secret, c'est la méthode : <span className="corail">problème d'abord, outil ensuite</span>.
 
+## Les 3 pièges classiques du démarrage
+
+**Le piège du jouet**. Vous testez ChatGPT sur une blague, vous êtes bluffé, vous achetez l'abonnement pour toute l'équipe, personne ne sait quoi en faire, l'abonnement est résilié 3 mois plus tard. Ça vous a coûté du temps de déploiement et une mauvaise réputation en interne pour le sujet IA.
+
+**Le piège du prestataire qui sait tout**. Une agence vous propose un chatbot IA sur mesure à 25 000 euros. Le devis a l'air sérieux. Six mois après, le chatbot répond à 3% des questions clients et personne ne l'utilise. L'argent est perdu, la confiance aussi.
+
+**Le piège du POC éternel**. Vous lancez un pilote sur un sous-ensemble de données. Tout fonctionne en labo. Mais passer en production demande de toucher au SI existant, de former 30 personnes, de réviser les process. L'énergie retombe, le projet s'enlise.
+
+Dans les trois cas, la cause est la même : <span className="corail">pas de problème métier clair au départ</span>. Juste une envie d'adopter l'IA.
+
+## La méthode en 4 temps
+
+Les PME qui réussissent suivent un protocole simple, que nous appelons en interne **PTMI** : Problème, Test, Mesure, Itération.
+
+**Étape 1 : Problème**. Une tâche répétitive, chronophage ou irritante qu'un collaborateur fait chaque semaine. Pas une vision stratégique, un irritant concret. Un nom, une tâche, une durée hebdomadaire.
+
+**Étape 2 : Test**. Un outil existant sur étagère, idéalement gratuit au départ. Claude, ChatGPT, Copilot, Gemini. Une session d'une heure avec le collaborateur concerné pour tester sur un cas réel. Pas un POC de 3 mois, une heure.
+
+**Étape 3 : Mesure**. Est-ce que ça fait gagner du temps ? Combien ? La qualité du résultat est-elle acceptable ? Le collaborateur se sent-il à l'aise ? Trois questions, trois réponses en fin de semaine.
+
+**Étape 4 : Itération**. Si oui, on généralise à l'équipe avec un mode d'emploi de <span className="corail">une demi-page</span>. Si non, on change d'outil ou on change de problème. Pas de drame, pas de réunion stratégique, on itère.
+
+Le cycle complet prend deux semaines, pas six mois. Vous finissez soit avec un cas d'usage validé que l'équipe adopte, soit avec une leçon apprise à faible coût.
+
 ## 3 exemples concrets (pas de la science-fiction)
 
-**Le comptable qui passe 2 heures par semaine à catégoriser des factures.** Un assistant IA peut le faire en 10 minutes. Gain : <span className="corail">8 heures par mois</span>, zéro investissement.
+**Le comptable qui passe 2 heures par semaine à catégoriser des factures.** Un assistant IA lit le PDF et propose la catégorie. Le comptable valide ou corrige. Gain : <span className="corail">8 heures par mois</span>, zéro investissement logiciel. Outil utilisé : Claude ou ChatGPT, versions gratuites.
 
-**La responsable RH qui rédige les mêmes réponses aux candidatures.** Un template intelligent génère des réponses personnalisées en 30 secondes. Gain : du temps libéré pour les **entretiens qui comptent**.
+**La responsable RH qui rédige les mêmes réponses aux candidatures.** Un prompt de template génère des réponses personnalisées en 30 secondes à partir du CV et du poste. Gain : du temps libéré pour les **entretiens qui comptent**, ton plus humain qu'un mail copié-collé. Temps de mise en place : 1 heure pour écrire le prompt, rodé au bout d'une semaine.
 
-**Le dirigeant qui prépare ses réunions en relisant 15 emails.** Un résumé IA de la conversation en 1 clic. Gain : <span className="corail">20 minutes par réunion</span>, chaque jour.
+**Le dirigeant qui prépare ses réunions en relisant 15 emails.** Un résumé IA du fil de conversation en 1 clic, avec les points de décision extraits. Gain : <span className="corail">20 minutes par réunion</span>, chaque jour. Outil : Copilot dans Outlook si vous êtes chez Microsoft, sinon Claude en copier-coller.
 
+Dans les trois cas, la mise en place a coûté moins d'une journée de travail. Aucun budget. Aucun intégrateur. Aucun risque juridique, à condition de respecter quelques règles sur les données qu'on confie à l'outil.
+
+## Les 3 règles à ne pas négliger
+
+Un démarrage réussi n'est pas qu'une affaire de productivité. Trois garde-fous à poser dès la première semaine.
+
+**Règle 1 : pas de données sensibles dans les outils grand public**. Pas de données clients nominatives, pas de données RH individuelles, pas de données financières détaillées dans ChatGPT ou Claude version gratuite. Pour ces cas, il existe des versions entreprise avec clauses de non-entraînement et hébergement européen.
+
+**Règle 2 : validation humaine sur les décisions**. L'IA propose, l'humain décide. Un refus de candidature, une réponse client sensible, un chiffre qui va dans un reporting : toujours relus par un humain avant envoi ou publication.
+
+**Règle 3 : tracer ce qui marche**. Un document partagé où l'équipe note les bons usages découverts. Au bout de 3 mois, vous avez un patrimoine de 10 à 15 cas d'usage validés en interne, sans avoir dépensé un euro en conseil.
+
+Pour structurer ces règles, notre article [charte IA en entreprise](/fr/blog/charte-ia-entreprise) donne un template prêt à adapter. Pour voir 5 cas concrets mis en œuvre, lire [5 cas concrets d'IA en PME](/fr/blog/5-cas-concrets-ia-pme).
 
 ## La co-écriture, mode d'emploi
 
