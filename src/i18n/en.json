@@ -608,7 +608,7 @@
       "titleHighlight": "Claude",
       "soustitre": "Structure, automate, steer",
       "accroche": "The day your only limit becomes your imagination.\nIn two days, you learn to make Claude your co-architect.",
-      "description": "You lead, you arbitrate, you make the calls. Often alone, with no peer who truly challenges your decisions.\nBuilding with Claude (Anthropic) teaches you to turn AI into the thinking partner your structure never gave you. A dialogue method that tests your ideas, and five pillars so Claude holds up in your work: memory, project, skill, plugin, Claude Code.\nWhen the method is in place and the pillars in hand, your only limit becomes your imagination.",
+      "description": "You lead, you arbitrate, you make the calls.\n<span class=\"text-ambre\">Often alone</span>, with no peer who truly challenges your decisions.\nBuilding with Claude (Anthropic) teaches you to turn AI into the <span class=\"text-ambre\">thinking partner</span> your structure never gave you. A dialogue method that tests your ideas, and <span class=\"text-ambre\">five pillars</span> so Claude holds up in your work: memory, project, skill, plugin, Claude Code.\nWhen the method is in place and the pillars in hand, your only limit becomes <span class=\"text-ambre\">your imagination</span>.",
       "meta": {
         "format": {
           "label": "Format",

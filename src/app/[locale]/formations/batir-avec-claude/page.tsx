@@ -176,9 +176,10 @@ export default async function FormationBatirPage({ params }: { params: Promise<{
             {dict.formationBatir.hero.accroche}
           </p>
 
-          <p className="text-text-secondary text-base md:text-lg text-center mb-10 max-w-3xl mx-auto leading-relaxed whitespace-pre-line">
-            {dict.formationBatir.hero.description}
-          </p>
+          <p
+            className="text-text-secondary text-base md:text-lg text-center mb-10 max-w-3xl mx-auto leading-relaxed whitespace-pre-line"
+            dangerouslySetInnerHTML={{ __html: dict.formationBatir.hero.description }}
+          />
 
           <div className="flex flex-wrap gap-8 justify-center mb-10 text-sm">
             {Object.values(dict.formationBatir.hero.meta).map((item, i) => (

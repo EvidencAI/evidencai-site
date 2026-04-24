@@ -608,7 +608,7 @@
       "titleHighlight": "Claude",
       "soustitre": "Structurer, automatiser, piloter",
       "accroche": "Le jour où la seule limite devient votre imagination.\nEn deux jours, vous apprenez à faire de Claude votre co-architecte.",
-      "description": "Vous dirigez, vous arbitrez, vous tranchez. Souvent seul, sans pair qui challenge vraiment vos décisions.\nBâtir avec Claude (Anthropic) vous apprend à faire de l'IA ce partenaire de pensée que la structure ne vous a pas donné. Une méthode de dialogue qui éprouve, et cinq piliers pour que Claude tienne debout dans votre métier : mémoire, projet, skill, plugin, Claude Code.\nQuand la méthode est là et les piliers en main, votre seule limite devient votre imagination.",
+      "description": "Vous dirigez, vous arbitrez, vous tranchez.\n<span class=\"text-ambre\">Souvent seul</span>, sans pair qui challenge vraiment vos décisions.\nBâtir avec Claude (Anthropic) vous apprend à faire de l'IA ce <span class=\"text-ambre\">partenaire de pensée</span> que la structure ne vous a pas donné. Une méthode de dialogue qui éprouve, et <span class=\"text-ambre\">cinq piliers</span> pour que Claude tienne debout dans votre métier : mémoire, projet, skill, plugin, Claude Code.\nQuand la méthode est là et les piliers en main, votre seule limite devient <span class=\"text-ambre\">votre imagination</span>.",
       "meta": {
         "format": {
           "label": "Format",
