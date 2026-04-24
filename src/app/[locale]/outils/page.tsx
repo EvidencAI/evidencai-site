@@ -202,7 +202,7 @@ const autresOutils = [
   {
     id: 'agoria',
     name: 'AgorIA',
-    tagline: 'Cockpit de formation et assistant IA pour chaque apprenant',
+    tagline: 'Cockpit de formation et Mentor IA pour chaque apprenant',
     icon: GraduationCap,
     install: 'Application web',
     installIcon: Globe,
@@ -210,10 +210,10 @@ const autresOutils = [
     statusColor: 'bg-purple-100 text-purple-800',
     href: null,
     external: false,
-    description: 'AgorIA transforme vos sessions de formation en expériences interactives pilotées par l\'IA, côté formateur et côté apprenant.\nCôté formateur : un cockpit qui co-anime vocalement, génère les supports, les quiz et les questionnaires.\nCôté apprenant : chaque participant reçoit son propre Assistant IA, expert en intelligence artificielle, configuré pour ses besoins métier. L\'assistant reste actif après la formation : même contexte, mêmes réflexes, un outil qui continue à l\'accompagner sur ses usages de l\'IA.',
+    description: 'AgorIA transforme vos sessions de formation en expériences interactives pilotées par l\'IA, côté formateur et côté apprenant.\nCôté formateur : un cockpit qui co-anime vocalement, génère les supports, les quiz et les questionnaires.\nCôté apprenant : chaque participant reçoit son propre Mentor IA, expert en intelligence artificielle, configuré pour ses besoins métier. Le Mentor IA reste actif après la formation : même contexte, mêmes réflexes, un outil qui continue à l\'accompagner sur ses usages de l\'IA.',
     features: [
-      'Assistant IA personnel pour chaque participant, configuré pour son métier et ses besoins',
-      'L\'assistant reste actif après la formation : continuité des usages, même contexte',
+      'Mentor IA pour chaque participant, configuré pour son métier et ses besoins',
+      'Le Mentor IA reste actif après la formation : continuité des usages, même contexte',
       'Co-animation IA vocale synchronisée avec les slides (TTS temps réel)',
       'Création assistée de supports pédagogiques (slides, fiches, exercices)',
       'Quiz adaptatifs par niveau et questionnaires pré/post formation',

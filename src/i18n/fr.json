@@ -302,13 +302,14 @@
   "formations": {
     "metadata": {
       "title": "Formations IA - Parcours structurés",
-      "description": "Formations IA certifiées Qualiopi. Des parcours structurés pour passer de la curiosité à la compétence. Financement OPCO possible.",
+      "description": "Formations IA certifiées Qualiopi. Chaque participant repart avec son Mentor IA, actif bien après la formation. Financement OPCO possible.",
       "ogTitle": "Formations IA - EvidencAI",
-      "ogDescription": "Formations IA certifiées Qualiopi. Des parcours structurés pour passer de la curiosité à la compétence."
+      "ogDescription": "Formations IA certifiées Qualiopi. Chaque participant repart avec son Mentor IA, actif bien après la formation."
     },
     "hero": {
       "title": "Formations IA",
-      "subtitle": "Des parcours structurés pour passer de la curiosité à la compétence."
+      "subtitle": "Des parcours structurés pour passer de la curiosité à la compétence.",
+      "mentor": "Chaque participant repart avec son <span class=\"text-ambre\">Mentor IA</span>, actif bien après la formation."
     },
     "catalogue": {
       "deciderAvecIA": {
@@ -316,7 +317,7 @@
         "soustitre": "De l'usage à la maîtrise stratégique",
         "badge": "2 jours · Qualiopi · Débutant/Intermédiaire",
         "prix": "960€ HT",
-        "description": "De « je n'ose pas m'en servir » à « je décide avec au quotidien ». Deux jours sur vos vrais dossiers, animés par un chef d'entreprise qui pratique l'IA chaque jour.\n\nChacun repart avec sa méthode et son assistant IA personnel, calibré sur son métier et actif après la formation."
+        "description": "De « je n'ose pas m'en servir » à « je décide avec au quotidien ». Deux jours sur vos vrais dossiers, animés par un chef d'entreprise qui pratique l'IA chaque jour.\n\nChacun repart avec sa méthode et son Mentor IA, calibré sur son métier et actif après la formation."
       },
       "batirAvecClaude": {
         "titre": "Bâtir avec Claude",
@@ -330,7 +331,7 @@
   "formation": {
     "metadata": {
       "title": "Décider avec l'IA - Formation immersive",
-      "description": "Formation immersive de 2 jours avec trio pédagogique. Formateur humain, IA co-animatrice espiègle, assistant personnel qui reste avec vous. Certifié Qualiopi via ALIA Formation.",
+      "description": "Formation immersive de 2 jours avec trio pédagogique. Formateur humain, IA co-animatrice espiègle, Mentor IA qui reste avec vous. Certifié Qualiopi via ALIA Formation.",
       "ogTitle": "Décider avec l'IA - EvidencAI",
       "ogDescription": "Formation immersive de 2 jours. Du \"c'est impressionnant\" au \"je sais quoi en faire\"."
     },
@@ -339,8 +340,8 @@
       "title": "Décider avec l'",
       "titleHighlight": "IA",
       "soustitre": "De l'usage à la maîtrise stratégique",
-      "accroche": "Un formateur humain. Une IA co-animatrice espiègle.\nUn assistant personnel qui reste avec vous après la formation.",
-      "description": "Ce n'est pas une formation où on vous montre des slides sur l'IA. C'est une formation où vous travaillez avec l'IA, en direct, sur vos vrais sujets, pendant deux jours.\nEt quand vous repartez, votre assistant IA repart avec vous.",
+      "accroche": "Un formateur humain. Une IA co-animatrice espiègle.\nUn Mentor IA qui reste avec vous après la formation.",
+      "description": "Ce n'est pas une formation où on vous montre des slides sur l'IA. C'est une formation où vous travaillez avec l'IA, en direct, sur vos vrais sujets, pendant deux jours.\nEt quand vous repartez, votre Mentor IA repart avec vous.",
       "meta": {
         "format": {
           "label": "Format",
@@ -408,9 +409,9 @@
         },
         "assistant": {
           "icon": "MessageCircle",
-          "nom": "Votre Assistant",
-          "role": "Mentor IA · pendant et après",
-          "description": "Chaque participant reçoit son propre Assistant IA, expert en intelligence artificielle. Cet assistant reste actif après la formation. Vous repartez avec un outil qui continue à vous accompagner sur vos usages de l'IA."
+          "nom": "Votre Mentor IA",
+          "role": "Pendant et après la formation",
+          "description": "Chaque participant reçoit son propre Mentor IA, expert en intelligence artificielle. Il reste actif après la formation. Vous repartez avec un outil qui continue à vous accompagner sur vos usages de l'IA."
         }
       }
     },
@@ -444,7 +445,7 @@
     },
     "apres": {
       "label": "Ce qui continue",
-      "title": "La formation se termine. L'assistant ",
+      "title": "La formation se termine. Le Mentor IA ",
       "titleHighlight": "reste.",
       "items": {
         "supports": {
@@ -452,8 +453,8 @@
           "texte": "Tous les contenus de formation restent accessibles en ligne. Revenez-y quand vous en avez besoin."
         },
         "assistant": {
-          "titre": "Votre Assistant toujours actif",
-          "texte": "L'assistant IA avec lequel vous avez travaillé pendant la formation continue de vous accompagner. Même contexte, mêmes réflexes."
+          "titre": "Votre Mentor IA toujours actif",
+          "texte": "Le Mentor IA avec lequel vous avez travaillé pendant la formation continue de vous accompagner. Même contexte, mêmes réflexes."
         },
         "ressources": {
           "titre": "Ressources pratiques",
@@ -476,7 +477,7 @@
             "Les 4 Piliers",
             "Méthode C.R.T.F.",
             "Exercices guidés",
-            "Assistant personnel"
+            "Mentor IA"
           ]
         },
         "jour2": {
@@ -676,8 +677,8 @@
         },
         "assistant": {
           "icon": "MessageCircle",
-          "nom": "Votre Assistant",
-          "role": "Mentor IA · pendant et après",
+          "nom": "Votre Mentor IA",
+          "role": "Pendant et après la formation",
           "description": "Un outil IA préparé pour la session, livré à chaque participant dès l'ouverture. Il embarque tous les cours et la méthode, vous assiste pendant la formation et reste avec vous après. Durant les deux jours, vous apprenez à en construire d'autres, calibrés sur vos propres besoins métier."
         }
       }
@@ -720,8 +721,8 @@
           "texte": "Les skills que vous avez bâtis, les workflows que vous avez automatisés restent opérationnels dans votre environnement réel. Ils travaillent pour vous, pas dans un bac à sable."
         },
         "assistant": {
-          "titre": "Votre Assistant enrichi",
-          "texte": "L'Assistant IA personnel avec lequel vous avez co-construit la formation continue d'évoluer au rythme de vos usages. Même contexte, même méthode, même partenariat."
+          "titre": "Votre Mentor IA enrichi",
+          "texte": "Le Mentor IA avec lequel vous avez co-construit la formation continue d'évoluer au rythme de vos usages. Même contexte, même méthode, même partenariat."
         },
         "ressources": {
           "titre": "Bibliothèque vivante",

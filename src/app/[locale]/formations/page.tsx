@@ -42,6 +42,11 @@ export default async function FormationsPage({ params }: { params: Promise<{ loc
     locale === 'fr'
       ? [
           {
+            question: 'Qu\'est-ce que le Mentor IA livré à chaque participant ?',
+            answer:
+              'Le Mentor IA est un outil IA préparé sur-mesure pour la session et livré à chaque participant dès l\'ouverture de la formation. Il embarque tous les cours et la méthode, vous assiste pendant les deux jours, et reste actif après la formation pour vous accompagner au quotidien. C\'est un différenciant fort d\'EvidencAI : là où la plupart des formations IA se limitent à un accès à ChatGPT et un PDF de notes, vous repartez avec un partenaire IA durable, calibré sur votre contexte métier.',
+          },
+          {
             question: 'Quelle formation IA choisir pour une PME ?',
             answer:
               'Pour une PME, deux parcours complémentaires : "Décider avec l\'IA" (2 jours, niveau débutant à intermédiaire) pour poser les fondamentaux et structurer l\'usage de l\'IA dans le quotidien ; "Bâtir avec Claude" (2 jours, niveau avancé) pour passer de l\'usage à la construction de skills, workflows et automatisations. Les deux formations sont certifiées Qualiopi et finançables par OPCO.',
@@ -54,7 +59,7 @@ export default async function FormationsPage({ params }: { params: Promise<{ loc
           {
             question: 'Quel est le prix d\'une formation IA pour dirigeant ?',
             answer:
-              'Chaque formation (Décider avec l\'IA comme Bâtir avec Claude) est à 960 euros HT pour 2 jours (14h). Tarif incluant le formateur humain, la co-animation par une IA dédiée, et un assistant IA personnel qui reste actif après la formation. Financement OPCO possible selon votre branche.',
+              'Chaque formation (Décider avec l\'IA comme Bâtir avec Claude) est à 960 euros HT pour 2 jours (14h). Tarif incluant le formateur humain, la co-animation par une IA dédiée, et un Mentor IA qui reste actif après la formation. Financement OPCO possible selon votre branche.',
           },
           {
             question: 'Les formations EvidencAI sont-elles certifiées Qualiopi ?',
@@ -74,6 +79,11 @@ export default async function FormationsPage({ params }: { params: Promise<{ loc
         ]
       : [
           {
+            question: 'What is the AI Mentor delivered to each participant?',
+            answer:
+              'The AI Mentor is an AI tool prepared specifically for the session and delivered to every participant from day one. It carries all the course content and method, supports you throughout the two days, and stays active after the training to help you in your daily work. It\'s a strong differentiator for EvidencAI: where most AI trainings limit themselves to access to ChatGPT and a PDF of notes, you leave with a lasting AI partner, tuned to your business context.',
+          },
+          {
             question: 'Which AI training to choose for an SMB?',
             answer:
               'For an SMB, two complementary paths: "Deciding with AI" (2 days, beginner to intermediate) to set the fundamentals and structure AI usage in daily work; "Building with Claude" (2 days, advanced) to move from usage to building skills, workflows and automations. Both are Qualiopi-certified and eligible for OPCO funding.',
@@ -86,7 +96,7 @@ export default async function FormationsPage({ params }: { params: Promise<{ loc
           {
             question: 'What is the price of AI training for executives?',
             answer:
-              'Each training (Deciding with AI as well as Building with Claude) is 960 euros excl. VAT for 2 days (14 hours). Includes the human trainer, AI co-facilitation, and a personal AI assistant that stays active after training. OPCO funding available depending on sector.',
+              'Each training (Deciding with AI as well as Building with Claude) is 960 euros excl. VAT for 2 days (14 hours). Includes the human trainer, AI co-facilitation, and an AI Mentor that stays active after training. OPCO funding available depending on sector.',
           },
           {
             question: 'Are EvidencAI trainings Qualiopi-certified?',
@@ -149,6 +159,10 @@ export default async function FormationsPage({ params }: { params: Promise<{ loc
           <p className="text-xl md:text-2xl text-text-primary max-w-3xl mx-auto">
             {dict.formations.hero.subtitle}
           </p>
+          <p
+            className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mt-4"
+            dangerouslySetInnerHTML={{ __html: dict.formations.hero.mentor }}
+          />
         </div>
       </section>
 
@@ -219,11 +233,15 @@ export default async function FormationsPage({ params }: { params: Promise<{ loc
             </Link>
           </div>
 
-          <p className="text-center text-text-secondary text-sm mt-8 max-w-2xl mx-auto">
-            {locale === 'fr'
-              ? 'Formation immersive avec trio pédagogique : un formateur humain, une IA co-animatrice, un assistant personnel qui reste actif après la formation.'
-              : 'Immersive training with a teaching trio: a human trainer, an AI co-facilitator, a personal assistant that stays active after the training.'}
-          </p>
+          <p
+            className="text-center text-text-secondary text-sm mt-8 max-w-2xl mx-auto"
+            dangerouslySetInnerHTML={{
+              __html:
+                locale === 'fr'
+                  ? 'Formation immersive avec trio pédagogique : un formateur humain, une IA co-animatrice, et <span class="text-ambre">votre propre Mentor IA</span>, livré dès l\'ouverture et actif bien après.'
+                  : 'Immersive training with a teaching trio: a human trainer, an AI co-facilitator, and <span class="text-ambre">your own AI Mentor</span>, delivered from the start and active long after.',
+            }}
+          />
         </div>
       </section>
 

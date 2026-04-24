@@ -55,8 +55,8 @@ export default async function FormationPage({ params }: { params: Promise<{ loca
     '@type': 'Course',
     name: locale === 'fr' ? 'Décider avec l\'IA - Formation immersive' : 'Deciding with AI - Immersive Training',
     description: locale === 'fr'
-      ? 'Formation immersive de 2 jours avec trio pédagogique : formateur humain, IA co-animatrice, assistant personnel. Certifié Qualiopi via ALIA Formation.'
-      : 'Immersive 2-day training with pedagogical trio: human trainer, AI co-facilitator, personal assistant. Qualiopi-certified via ALIA Formation.',
+      ? 'Formation immersive de 2 jours avec trio pédagogique : formateur humain, IA co-animatrice, Mentor IA. Certifié Qualiopi via ALIA Formation.'
+      : 'Immersive 2-day training with pedagogical trio: human trainer, AI co-facilitator, AI Mentor. Qualiopi-certified via ALIA Formation.',
     url: `https://www.evidencai.com/${locale}/formations/decider-avec-ia`,
     provider: {
       '@type': 'Organization',
@@ -124,8 +124,8 @@ export default async function FormationPage({ params }: { params: Promise<{ loca
         acceptedAnswer: {
           '@type': 'Answer',
           text: locale === 'fr'
-            ? 'Un formateur humain qui cadre et adapte, une IA co-animatrice (Az) qui intervient en direct, et votre assistant IA personnel configuré pour vos besoins, qui reste actif après la formation.'
-            : 'A human trainer who frames and adapts, an AI co-facilitator (Az) who intervenes live, and your personal AI assistant configured for your needs, which stays active after training.',
+            ? 'Un formateur humain qui cadre et adapte, une IA co-animatrice (Az) qui intervient en direct, et votre Mentor IA configuré pour vos besoins, qui reste actif après la formation.'
+            : 'A human trainer who frames and adapts, an AI co-facilitator (Az) who intervenes live, and your AI Mentor configured for your needs, which stays active after training.',
         },
       },
       {
@@ -288,7 +288,7 @@ export default async function FormationPage({ params }: { params: Promise<{ loca
       </section>
 
       {/* ================================ */}
-      {/* Section 4 — "L'assistant reste" */}
+      {/* Section 4 — "Le Mentor IA reste" */}
       {/* ================================ */}
       <section
         className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 border-t border-b border-bleu-subtil"
@@ -468,7 +468,7 @@ export default async function FormationPage({ params }: { params: Promise<{ loca
 
             <div className="space-y-6 text-text-primary text-lg leading-relaxed">
               <p className="italic text-text-secondary">
-                Ils sont venus à Valence les 7 et 14 avril 2026. Six chefs d&apos;entreprise, quatre secteurs, des questions très différentes. Deux jours plus tard, chacun est reparti avec sa méthode, son assistant IA personnel, et une idée claire de ce qu&apos;il allait en faire. Voici ce qu&apos;ils en disent, en chiffres et en mots.
+                Ils sont venus à Valence les 7 et 14 avril 2026. Six chefs d&apos;entreprise, quatre secteurs, des questions très différentes. Deux jours plus tard, chacun est reparti avec sa méthode, son Mentor IA, et une idée claire de ce qu&apos;il allait en faire. Voici ce qu&apos;ils en disent, en chiffres et en mots.
               </p>
 
               <p>
@@ -541,7 +541,7 @@ export default async function FormationPage({ params }: { params: Promise<{ loca
                 , deux participants sont venus ensemble : Sébastien Felix, président, et Alexandre Carton, directeur commercial. Deux jours durant, ils sont revenus sur le même dossier : la conformité de leurs produits aux normes en vigueur. Un sujet touffu, chronophage, où la moindre imprécision a des conséquences commerciales et juridiques.
               </p>
               <p>
-                Ce qu&apos;ils ressortent de la formation, ce n&apos;est pas une théorie. C&apos;est un début de chantier : chacun construit un assistant IA dédié, calibré sur leur documentation technique, capable de répondre aux questions réglementaires qui les occupent au quotidien. Actif après la formation.
+                Ce qu&apos;ils ressortent de la formation, ce n&apos;est pas une théorie. C&apos;est un début de chantier : chacun construit son Mentor IA dédié, calibré sur leur documentation technique, capable de répondre aux questions réglementaires qui les occupent au quotidien. Actif après la formation.
               </p>
               <p>
                 Alexandre, en trois mots : «&nbsp;découverte, rassurante, utile&nbsp;». Sébastien : «&nbsp;concrète, animée, conviviale&nbsp;». Aucun des deux ne repart avec un diaporama à classer. Ils repartent avec un outil en construction, posé sur leur propre terrain, qui va continuer de s&apos;affiner à mesure qu&apos;ils l&apos;utiliseront sur les vrais dossiers des prochaines semaines.
@@ -606,10 +606,10 @@ export default async function FormationPage({ params }: { params: Promise<{ loca
                 «&nbsp;Et après la formation, je fais quoi tout seul ?&nbsp;»
               </h3>
               <p>
-                C&apos;est la différence majeure de ce parcours. Chaque participant ne repart pas avec un manuel à ranger sur une étagère, mais avec <strong className="text-white">son propre assistant IA</strong>, construit pendant les deux jours sur le métier, le contexte, les documents de son entreprise. Cet assistant reste actif après la formation et continue de progresser au rythme de son utilisateur.
+                C&apos;est la différence majeure de ce parcours. Chaque participant ne repart pas avec un manuel à ranger sur une étagère, mais avec <strong className="text-white">son propre Mentor IA</strong>, construit pendant les deux jours sur le métier, le contexte, les documents de son entreprise. Ce Mentor IA reste actif après la formation et continue de progresser au rythme de son utilisateur.
               </p>
               <p>
-                Sarah Carrier préside Holding Carrier, un groupe de location TP-bâtiment. Son usage envisagé : préparer ses assemblées générales. Un rendez-vous annuel, codifié, chronophage, stratégique. Elle en repart avec un assistant qui l&apos;aidera chaque année, nourri des documents propres à son groupe, formé à sa façon de travailler.
+                Sarah Carrier préside Holding Carrier, un groupe de location TP-bâtiment. Son usage envisagé : préparer ses assemblées générales. Un rendez-vous annuel, codifié, chronophage, stratégique. Elle en repart avec son Mentor IA qui l&apos;aidera chaque année, nourri des documents propres à son groupe, formé à sa façon de travailler.
               </p>
               <p>
                 Laurent, Magali, Nicolas, Sarah, Sébastien, Alexandre : tous les six repartent avec le leur, calibré sur leur réalité, pas sur un cas d&apos;école. Cette pédagogie par l&apos;action, où le formateur humain est flanqué d&apos;une IA co-animatrice pendant les deux jours, c&apos;est ce qui distingue ce parcours d&apos;une formation IA générique.
@@ -627,7 +627,7 @@ export default async function FormationPage({ params }: { params: Promise<{ loca
                   <strong className="text-white">Une méthode</strong>, la méthode EvidencAI, pour décider avec l&apos;IA sans s&apos;y perdre.
                 </li>
                 <li className="pl-4 border-l-2 border-ambre">
-                  <strong className="text-white">Un assistant IA personnel</strong>, calibré sur leur métier, actif après la formation.
+                  <strong className="text-white">Un Mentor IA</strong>, calibré sur leur métier, actif après la formation.
                 </li>
                 <li className="pl-4 border-l-2 border-ambre">
                   <strong className="text-white">Un projet concret</strong> à déployer dans leur entreprise dès la semaine suivante.

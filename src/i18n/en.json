@@ -302,13 +302,14 @@
   "formations": {
     "metadata": {
       "title": "AI Training - Structured paths",
-      "description": "Qualiopi-certified AI training. Structured paths to move from curiosity to competence. OPCO funding available.",
+      "description": "Qualiopi-certified AI training. Every participant leaves with their own AI Mentor, active long after the training. OPCO funding available.",
       "ogTitle": "AI Training - EvidencAI",
-      "ogDescription": "Qualiopi-certified AI training. Structured paths to move from curiosity to competence."
+      "ogDescription": "Qualiopi-certified AI training. Every participant leaves with their own AI Mentor, active long after the training."
     },
     "hero": {
       "title": "AI Training",
-      "subtitle": "Structured paths to move from curiosity to competence."
+      "subtitle": "Structured paths to move from curiosity to competence.",
+      "mentor": "Every participant leaves with their own <span class=\"text-ambre\">AI Mentor</span>, active long after the training."
     },
     "catalogue": {
       "deciderAvecIA": {
@@ -316,7 +317,7 @@
         "soustitre": "From usage to strategic mastery",
         "badge": "2 days · Qualiopi · Beginner/Intermediate",
         "prix": "€960 excl. VAT",
-        "description": "From \"I don't dare use it\" to \"I make decisions with it every day\". Two days on your real cases, led by a business owner who uses AI daily.\n\nEach participant leaves with their own method and personal AI assistant, tuned to their work and active after the training."
+        "description": "From \"I don't dare use it\" to \"I make decisions with it every day\". Two days on your real cases, led by a business owner who uses AI daily.\n\nEach participant leaves with their own method and their own AI Mentor, tuned to their work and active after the training."
       },
       "batirAvecClaude": {
         "titre": "Building with Claude",
@@ -330,7 +331,7 @@
   "formation": {
     "metadata": {
       "title": "Deciding with AI - Immersive training",
-      "description": "Immersive 2-day training with pedagogical trio. Human trainer, playful AI co-facilitator, personal assistant that stays with you. Qualiopi certified via ALIA Formation.",
+      "description": "Immersive 2-day training with pedagogical trio. Human trainer, playful AI co-facilitator, AI Mentor that stays with you. Qualiopi certified via ALIA Formation.",
       "ogTitle": "Deciding with AI - EvidencAI",
       "ogDescription": "Immersive 2-day training. From \"it's impressive\" to \"I know what to do with it\"."
     },
@@ -339,8 +340,8 @@
       "title": "Deciding with ",
       "titleHighlight": "AI",
       "soustitre": "From usage to strategic mastery",
-      "accroche": "A human trainer. A playful AI co-facilitator.\nA personal assistant that stays with you after the training.",
-      "description": "This isn't a training where we show you slides about AI. It's a training where you work with AI, live, on your real topics, for two days.\nAnd when you leave, your AI assistant leaves with you.",
+      "accroche": "A human trainer. A playful AI co-facilitator.\nAn AI Mentor that stays with you after the training.",
+      "description": "This isn't a training where we show you slides about AI. It's a training where you work with AI, live, on your real topics, for two days.\nAnd when you leave, your AI Mentor leaves with you.",
       "meta": {
         "format": {
           "label": "Format",
@@ -408,9 +409,9 @@
         },
         "assistant": {
           "icon": "MessageCircle",
-          "nom": "Your Assistant",
-          "role": "AI mentor · during and after",
-          "description": "Each participant gets their own AI Assistant, an AI expert. This assistant stays active after the training. You leave with a tool that keeps helping you with your AI usage."
+          "nom": "Your AI Mentor",
+          "role": "During and after the training",
+          "description": "Each participant gets their own AI Mentor, an AI expert. It stays active after the training. You leave with a tool that keeps helping you with your AI usage."
         }
       }
     },
@@ -444,7 +445,7 @@
     },
     "apres": {
       "label": "What continues",
-      "title": "The training ends. The assistant ",
+      "title": "The training ends. The AI Mentor ",
       "titleHighlight": "stays.",
       "items": {
         "supports": {
@@ -452,8 +453,8 @@
           "texte": "All training content remains accessible online. Come back to it when you need it."
         },
         "assistant": {
-          "titre": "Your Assistant always active",
-          "texte": "The AI assistant you worked with during training continues to support you. Same context, same reflexes."
+          "titre": "Your AI Mentor always active",
+          "texte": "The AI Mentor you worked with during training continues to support you. Same context, same reflexes."
         },
         "ressources": {
           "titre": "Practical resources",
@@ -476,7 +477,7 @@
             "The 4 Pillars",
             "C.R.T.F. Method",
             "Guided exercises",
-            "Personal assistant"
+            "AI Mentor"
           ]
         },
         "jour2": {
@@ -676,8 +677,8 @@
         },
         "assistant": {
           "icon": "MessageCircle",
-          "nom": "Your Assistant",
-          "role": "AI mentor · during and after",
+          "nom": "Your AI Mentor",
+          "role": "During and after the training",
           "description": "An AI tool prepared for the session, delivered to every participant from day one. It carries all the course content and method, supports you during the training, and stays with you afterwards. Over the two days, you learn to build others, calibrated to your own work needs."
         }
       }
@@ -720,8 +721,8 @@
           "texte": "The skills you built and the workflows you automated remain operational in your real environment. They work for you, not in a sandbox."
         },
         "assistant": {
-          "titre": "Your enriched Assistant",
-          "texte": "The personal AI Assistant you co-built the training with keeps evolving at the pace of your usage. Same context, same method, same partnership."
+          "titre": "Your enriched AI Mentor",
+          "texte": "The AI Mentor you co-built the training with keeps evolving at the pace of your usage. Same context, same method, same partnership."
         },
         "ressources": {
           "titre": "Living library",
