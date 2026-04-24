@@ -65,4 +65,3 @@ Une réponse `202 Accepted` signifie que la notification a été prise en compte
 ```
 
 Codes d'erreur habituels IndexNow : 400 (URL invalide), 403 (clé introuvable), 422 (host incohérent).
-# Déclencheur pipeline Vercel: 2026-04-24 20:22:24
