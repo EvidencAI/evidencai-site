@@ -677,8 +677,8 @@
         "assistant": {
           "icon": "MessageCircle",
           "nom": "Your Assistant",
-          "role": "Personal AI · during and after",
-          "description": "Each participant co-builds their own AI Assistant during the training, calibrated to their work. The skills built during the session stay active and keep evolving with you after D+2."
+          "role": "AI trainer · during and after",
+          "description": "An AI tool prepared for the session, delivered to every participant from day one. It carries all the course content and method, supports you during the training, and stays with you afterwards. Over the two days, you learn to build others, calibrated to your own work needs."
         }
       }
     },
