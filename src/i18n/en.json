@@ -409,7 +409,7 @@
         "assistant": {
           "icon": "MessageCircle",
           "nom": "Your Assistant",
-          "role": "Personal AI · during and after",
+          "role": "AI mentor · during and after",
           "description": "Each participant gets their own AI Assistant, an AI expert. This assistant stays active after the training. You leave with a tool that keeps helping you with your AI usage."
         }
       }
@@ -677,7 +677,7 @@
         "assistant": {
           "icon": "MessageCircle",
           "nom": "Your Assistant",
-          "role": "AI trainer · during and after",
+          "role": "AI mentor · during and after",
           "description": "An AI tool prepared for the session, delivered to every participant from day one. It carries all the course content and method, supports you during the training, and stays with you afterwards. Over the two days, you learn to build others, calibrated to your own work needs."
         }
       }

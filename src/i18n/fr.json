@@ -409,7 +409,7 @@
         "assistant": {
           "icon": "MessageCircle",
           "nom": "Votre Assistant",
-          "role": "IA personnelle · pendant et après",
+          "role": "Mentor IA · pendant et après",
           "description": "Chaque participant reçoit son propre Assistant IA, expert en intelligence artificielle. Cet assistant reste actif après la formation. Vous repartez avec un outil qui continue à vous accompagner sur vos usages de l'IA."
         }
       }
@@ -677,7 +677,7 @@
         "assistant": {
           "icon": "MessageCircle",
           "nom": "Votre Assistant",
-          "role": "Formateur IA · pendant et après",
+          "role": "Mentor IA · pendant et après",
           "description": "Un outil IA préparé pour la session, livré à chaque participant dès l'ouverture. Il embarque tous les cours et la méthode, vous assiste pendant la formation et reste avec vous après. Durant les deux jours, vous apprenez à en construire d'autres, calibrés sur vos propres besoins métier."
         }
       }
