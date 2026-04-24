@@ -48,7 +48,7 @@ That's it. Two extra lines, and the answer changes completely.
 
 ## Why it works
 
-Technically, AI predicts each word based on the preceding context. The role you give it doesn't change the chosen words *a little*. It reconditions **the entire probability distribution** at every word. And this effect compounds at every following word.
+Technically, AI predicts each word based on the preceding context. The role you give it doesn't change the chosen words *a little*. It reconditions **the entire probability distribution** at every word. And this effect compounds at every following word. This is exactly the mechanism documented by [Anthropic's system prompts guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts) and [OpenAI's prompt engineering guide](https://platform.openai.com/docs/guides/prompt-engineering).
 
 Over a 400-word answer, you get three texts with nothing in common. Not because the AI is creative. Because the starting frame was radically different.
 

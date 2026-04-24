@@ -4,6 +4,7 @@ import { getAlternates } from '@/i18n/metadata';
 import { locales, type Locale } from '@/i18n/config';
 import { getAllPosts, CATEGORY_LABELS, type BlogCategory } from '@/lib/blog';
 import BlogCard from '@/components/blog/BlogCard';
+import { buildBreadcrumbSchema, jsonLd } from '@/lib/schema';
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -30,8 +31,13 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
   const dict = await getDictionary(loc);
   const posts = getAllPosts(loc);
 
+  const breadcrumbSchema = buildBreadcrumbSchema(loc, [
+    { name: 'Blog', url: `/${loc}/blog` },
+  ]);
+
   return (
     <div className="bg-bleu-nuit min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema) }} />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Hero */}
         <div className="max-w-3xl mx-auto text-center mb-16">

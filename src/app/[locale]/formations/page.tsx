@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getDictionary } from '@/i18n/dictionaries';
 import { getAlternates } from '@/i18n/metadata';
 import { locales, type Locale } from '@/i18n/config';
+import { buildBreadcrumbSchema, buildFaqSchema, jsonLd } from '@/lib/schema';
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -29,6 +30,82 @@ export default async function FormationsPage({ params }: { params: Promise<{ loc
   const resolvedParams = await params;
   const locale = resolvedParams.locale as Locale;
   const dict = await getDictionary(locale);
+
+  const breadcrumbSchema = buildBreadcrumbSchema(locale, [
+    {
+      name: locale === 'fr' ? 'Formations' : 'Training',
+      url: `/${locale}/formations`,
+    },
+  ]);
+
+  const faqItems: Array<{ question: string; answer: string }> =
+    locale === 'fr'
+      ? [
+          {
+            question: 'Quelle formation IA choisir pour une PME ?',
+            answer:
+              'Pour une PME, deux parcours complémentaires : "Décider avec l\'IA" (2 jours, niveau débutant à intermédiaire) pour poser les fondamentaux et structurer l\'usage de l\'IA dans le quotidien ; "Bâtir avec Claude" (2 jours, niveau avancé) pour passer de l\'usage à la construction de skills, workflows et automatisations. Les deux formations sont certifiées Qualiopi et finançables par OPCO.',
+          },
+          {
+            question: 'Quelle est la différence entre "Décider avec l\'IA" et "Bâtir avec Claude" ?',
+            answer:
+              '"Décider avec l\'IA" est la porte d\'entrée : comprendre, cadrer, intégrer l\'IA dans ses décisions quotidiennes. "Bâtir avec Claude" est la suite avancée : construire ses propres skills, brancher des connecteurs, automatiser via des tâches programmées, étendre Claude avec des plugins. La première vise l\'usage, la seconde vise la construction.',
+          },
+          {
+            question: 'Quel est le prix d\'une formation IA pour dirigeant ?',
+            answer:
+              'Chaque formation (Décider avec l\'IA comme Bâtir avec Claude) est à 960 euros HT pour 2 jours (14h). Tarif incluant le formateur humain, la co-animation par une IA dédiée, et un assistant IA personnel qui reste actif après la formation. Financement OPCO possible selon votre branche.',
+          },
+          {
+            question: 'Les formations EvidencAI sont-elles certifiées Qualiopi ?',
+            answer:
+              'Oui. Les formations EvidencAI sont portées par ALIA Formation, organisme certifié Qualiopi. Cette certification permet le financement par les OPCO et garantit le respect du référentiel national qualité des actions de formation.',
+          },
+          {
+            question: 'Peut-on organiser une formation IA sur mesure pour son entreprise ?',
+            answer:
+              'Oui. EvidencAI propose des formations intra-entreprise sur mesure, construites à partir de votre contexte et de vos cas d\'usage. Le parcours commence par un échange pour cadrer vos besoins, puis nous construisons un programme adapté à vos équipes. Interventions en Drôme, Ardèche, Isère, Rhône et Auvergne-Rhône-Alpes.',
+          },
+          {
+            question: 'Où se déroulent les formations EvidencAI ?',
+            answer:
+              'Les sessions inter-entreprises se déroulent à Valence (Drôme). Les formations intra-entreprise ont lieu dans vos locaux, en Auvergne-Rhône-Alpes prioritairement (Drôme, Ardèche, Isère, Rhône). Une option distancielle est possible sur demande.',
+          },
+        ]
+      : [
+          {
+            question: 'Which AI training to choose for an SMB?',
+            answer:
+              'For an SMB, two complementary paths: "Deciding with AI" (2 days, beginner to intermediate) to set the fundamentals and structure AI usage in daily work; "Building with Claude" (2 days, advanced) to move from usage to building skills, workflows and automations. Both are Qualiopi-certified and eligible for OPCO funding.',
+          },
+          {
+            question: 'What\'s the difference between "Deciding with AI" and "Building with Claude"?',
+            answer:
+              '"Deciding with AI" is the entry point: understanding, framing and integrating AI in daily decisions. "Building with Claude" is the advanced follow-up: building custom skills, plugging in connectors, automating with scheduled tasks, extending Claude with plugins. The first targets usage, the second targets construction.',
+          },
+          {
+            question: 'What is the price of AI training for executives?',
+            answer:
+              'Each training (Deciding with AI as well as Building with Claude) is 960 euros excl. VAT for 2 days (14 hours). Includes the human trainer, AI co-facilitation, and a personal AI assistant that stays active after training. OPCO funding available depending on sector.',
+          },
+          {
+            question: 'Are EvidencAI trainings Qualiopi-certified?',
+            answer:
+              'Yes. EvidencAI trainings are delivered by ALIA Formation, a Qualiopi-certified organization. This certification enables OPCO funding and ensures compliance with the national quality standard for professional training.',
+          },
+          {
+            question: 'Can you organize custom AI training for our company?',
+            answer:
+              'Yes. EvidencAI offers custom in-house training built from your context and use cases. The process starts with a scoping call, then we build a program adapted to your teams. Available throughout Auvergne-Rhône-Alpes (Drôme, Ardèche, Isère, Rhône).',
+          },
+          {
+            question: 'Where do EvidencAI trainings take place?',
+            answer:
+              'Open sessions take place in Valence (Drôme, France). In-house trainings are held at your premises, primarily in Auvergne-Rhône-Alpes. Remote delivery is available on request.',
+          },
+        ];
+
+  const faqSchema = buildFaqSchema(faqItems);
 
   const surMesure = [
     {
@@ -59,6 +136,8 @@ export default async function FormationsPage({ params }: { params: Promise<{ loc
 
   return (
     <div className="bg-bleu-nuit">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(faqSchema) }} />
       {/* ================================ */}
       {/* Section 1 — Hero */}
       {/* ================================ */}
@@ -74,53 +153,119 @@ export default async function FormationsPage({ params }: { params: Promise<{ loc
       </section>
 
       {/* ================================ */}
-      {/* Section 2 — Card Formation Catalogue */}
+      {/* Section 2 — Cards Catalogue (Décider + Bâtir) */}
       {/* ================================ */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
-          <Link
-            href={`/${locale}/formations/decider-avec-ia`}
-            className="block bg-fond-surface border border-bleu-subtil rounded-2xl p-8 hover:border-ambre hover:-translate-y-1 transition-all duration-300 group"
-          >
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Card Décider */}
+            <Link
+              href={`/${locale}/formations/decider-avec-ia`}
+              className="relative block bg-fond-surface border border-bleu-subtil rounded-2xl p-8 hover:border-ambre hover:-translate-y-1 transition-all duration-300 group overflow-hidden flex flex-col"
+            >
               <div className="flex-1">
                 <div className="mb-4">
                   <span className="font-mono text-xs uppercase tracking-wider text-ambre border border-ambre/30 px-3 py-1 rounded-full">
                     {dict.formations.catalogue.deciderAvecIA.badge}
                   </span>
                 </div>
-                <h2 className="font-playfair text-3xl md:text-4xl font-bold text-white mb-2">
+                <h2 className="font-playfair text-2xl md:text-3xl font-bold text-white mb-2">
                   {dict.formations.catalogue.deciderAvecIA.titre}
                 </h2>
-                <p className="text-ambre text-lg md:text-xl font-medium mb-4">
+                <p className="text-ambre text-lg font-medium mb-4">
                   {dict.formations.catalogue.deciderAvecIA.soustitre}
                 </p>
-                <p className="text-text-secondary leading-relaxed mb-4">
+                <p className="text-text-secondary leading-relaxed mb-4 whitespace-pre-line">
                   {dict.formations.catalogue.deciderAvecIA.description}
                 </p>
-                <div className="font-mono text-xs text-text-secondary">
-                  {locale === 'fr' ? 'Prochaines sessions : ' : 'Next sessions: '}
-                  {dict.formation.sessions.items.map((session, i) => (
-                    <span key={i}>
-                      {i > 0 && ' · '}
-                      <span className="text-text-primary">{session.dates.replace(' 2026', '')}</span>
-                    </span>
-                  ))}
-                </div>
               </div>
-              <div className="md:text-right flex-shrink-0">
-                <div className="font-playfair text-3xl font-bold text-white">
+              <div className="flex items-end justify-between pt-4 border-t border-bleu-subtil">
+                <span className="text-sm text-text-secondary">{locale === 'fr' ? 'Voir le programme' : 'See program'} →</span>
+                <div className="font-playfair text-2xl font-bold text-white">
                   {dict.formations.catalogue.deciderAvecIA.prix}
                 </div>
               </div>
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-ambre scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-          </Link>
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-ambre scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+            </Link>
+
+            {/* Card Bâtir */}
+            <Link
+              href={`/${locale}/formations/batir-avec-claude`}
+              className="relative block bg-fond-surface border border-bleu-subtil rounded-2xl p-8 hover:border-ambre hover:-translate-y-1 transition-all duration-300 group overflow-hidden flex flex-col"
+            >
+              <div className="flex-1">
+                <div className="mb-4">
+                  <span className="font-mono text-xs uppercase tracking-wider text-ambre border border-ambre/30 px-3 py-1 rounded-full">
+                    {dict.formations.catalogue.batirAvecClaude.badge}
+                  </span>
+                </div>
+                <h2 className="font-playfair text-2xl md:text-3xl font-bold text-white mb-2">
+                  {dict.formations.catalogue.batirAvecClaude.titre}
+                </h2>
+                <p className="text-ambre text-lg font-medium mb-4">
+                  {dict.formations.catalogue.batirAvecClaude.soustitre}
+                </p>
+                <p className="text-text-secondary leading-relaxed mb-4 whitespace-pre-line">
+                  {dict.formations.catalogue.batirAvecClaude.description}
+                </p>
+              </div>
+              <div className="flex items-end justify-between pt-4 border-t border-bleu-subtil">
+                <span className="text-sm text-text-secondary">{locale === 'fr' ? 'Voir le programme' : 'See program'} →</span>
+                <div className="font-playfair text-2xl font-bold text-white">
+                  {dict.formations.catalogue.batirAvecClaude.prix}
+                </div>
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-ambre scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+            </Link>
+          </div>
+
+          <p className="text-center text-text-secondary text-sm mt-8 max-w-2xl mx-auto">
+            {locale === 'fr'
+              ? 'Formation immersive avec trio pédagogique : un formateur humain, une IA co-animatrice, un assistant personnel qui reste actif après la formation.'
+              : 'Immersive training with a teaching trio: a human trainer, an AI co-facilitator, a personal assistant that stays active after the training.'}
+          </p>
         </div>
       </section>
 
       {/* ================================ */}
-      {/* Section 3 — Sur mesure */}
+      {/* Section 3 — FAQ */}
+      {/* ================================ */}
+      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 border-t border-bleu-subtil">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="font-mono text-xs uppercase tracking-wider text-ambre border border-ambre/30 px-4 py-1.5 rounded-full inline-block mb-6">
+              {locale === 'fr' ? 'Questions fréquentes' : 'Frequently asked questions'}
+            </span>
+            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-white mb-4">
+              {locale === 'fr' ? 'Ce qu\'on nous demande le plus souvent' : 'What we get asked most'}
+            </h2>
+          </div>
+
+          <div className="space-y-3">
+            {faqItems.map((item, i) => (
+              <details
+                key={i}
+                className="group bg-fond-surface border border-bleu-subtil rounded-xl overflow-hidden hover:border-ambre/40 transition-colors"
+              >
+                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none">
+                  <span className="font-playfair text-lg md:text-xl font-semibold text-white leading-snug">
+                    {item.question}
+                  </span>
+                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-ambre/10 flex items-center justify-center text-ambre text-xl leading-none transition-transform duration-200 group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <div className="px-6 pb-6 text-text-secondary leading-relaxed border-t border-bleu-subtil pt-4">
+                  {item.answer}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================================ */}
+      {/* Section 4 — Sur mesure */}
       {/* ================================ */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">

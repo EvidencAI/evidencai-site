@@ -4,6 +4,7 @@ import { Clock, TrendingUp, Search, Users, Wrench, MessageCircle, Brain, ShieldX
 import { getDictionary } from '@/i18n/dictionaries';
 import { getAlternates } from '@/i18n/metadata';
 import { locales, type Locale } from '@/i18n/config';
+import { buildBreadcrumbSchema, jsonLd } from '@/lib/schema';
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -30,6 +31,13 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
   const resolvedParams = await params;
   const locale = resolvedParams.locale as Locale;
   const dict = await getDictionary(locale);
+
+  const breadcrumbSchema = buildBreadcrumbSchema(locale, [
+    {
+      name: locale === 'fr' ? 'Solutions' : 'Solutions',
+      url: `/${locale}/solutions`,
+    },
+  ]);
 
   const serviceSchema = {
     '@context': 'https://schema.org',
@@ -143,6 +151,7 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema) }} />
       {/* Hero */}
       <section className="relative overflow-hidden py-20 md:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { getDictionary } from '@/i18n/dictionaries';
 import { getAlternates } from '@/i18n/metadata';
 import { locales, type Locale } from '@/i18n/config';
+import { buildBreadcrumbSchema, buildFaqSchema, jsonLd } from '@/lib/schema';
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -37,13 +38,19 @@ export default async function AProposPage({ params }: { params: Promise<{ locale
     '@type': 'Person',
     name: dict.apropos.hero.name,
     jobTitle: dict.apropos.hero.title,
+    description: locale === 'fr'
+      ? 'Président de CORA, fondateur d\'EvidencAI, juge consulaire au Tribunal de Commerce de Romans-sur-Isère. Accompagne dirigeants et PME dans l\'adoption pragmatique de l\'IA.'
+      : 'President of CORA, founder of EvidencAI, consular judge at the Commercial Court of Romans-sur-Isère. Helps executives and SMBs adopt AI pragmatically.',
     worksFor: {
       '@type': 'Organization',
       name: 'EvidencAI',
+      url: 'https://www.evidencai.com',
     },
     url: `https://www.evidencai.com/${locale}/a-propos`,
+    image: 'https://www.evidencai.com/logo-evidencai.png',
     sameAs: [
       'https://www.linkedin.com/in/st%C3%A9phane-commenge-7463ba20/',
+      'https://www.linkedin.com/company/evidencai',
     ],
     knowsAbout: [
       'Intelligence Artificielle',
@@ -51,8 +58,63 @@ export default async function AProposPage({ params }: { params: Promise<{ locale
       'Claude AI',
       'Anthropic',
       'Conseil en IA',
+      'Transformation numérique PME',
+      'AI Act',
+      'Adoption IA entreprise',
     ],
+    nationality: { '@type': 'Country', name: 'France' },
+    homeLocation: {
+      '@type': 'Place',
+      name: 'Drôme, Auvergne-Rhône-Alpes, France',
+    },
   };
+
+  const breadcrumbSchema = buildBreadcrumbSchema(locale, [
+    {
+      name: locale === 'fr' ? 'À propos' : 'About',
+      url: `/${locale}/a-propos`,
+    },
+  ]);
+
+  const faqSchema = buildFaqSchema(
+    locale === 'fr'
+      ? [
+          {
+            question: 'Qui est Stéphane Commenge ?',
+            answer: 'Stéphane Commenge est le fondateur d\'EvidencAI, président de CORA (conseil et formation en IA), et juge consulaire au Tribunal de Commerce de Romans-sur-Isère. Il accompagne dirigeants et PME dans l\'adoption pragmatique de l\'intelligence artificielle depuis 2024, avec une approche ancrée sur le terrain et non dogmatique.',
+          },
+          {
+            question: 'Pourquoi EvidencAI ?',
+            answer: 'EvidencAI est né du constat que 95% des projets IA en entreprise n\'atteignent jamais la production. La cause : trop de démonstrations, pas assez d\'ancrage métier. EvidencAI apporte une méthode simple, centrée sur les irritants concrets des PME, avec une conviction forte : l\'IA ne remplace pas, elle augmente.',
+          },
+          {
+            question: 'Quelle est la spécialité d\'EvidencAI ?',
+            answer: 'EvidencAI est spécialisé dans l\'accompagnement des dirigeants et cadres de PME/TPE sur l\'adoption de l\'IA générative. Trois axes : formation certifiée Qualiopi, diagnostic de maturité, construction de solutions sur mesure. Zone d\'intervention principale : Auvergne-Rhône-Alpes (Drôme, Ardèche, Isère, Rhône).',
+          },
+          {
+            question: 'Quelle IA est utilisée par EvidencAI ?',
+            answer: 'EvidencAI travaille principalement avec Claude (Anthropic) pour ses garanties éthiques et sa qualité de raisonnement, mais les formations couvrent également ChatGPT, Copilot, Gemini et Mistral. Le choix de l\'outil dépend du cas d\'usage et des contraintes de l\'entreprise, notamment sur la localisation des données.',
+          },
+        ]
+      : [
+          {
+            question: 'Who is Stéphane Commenge?',
+            answer: 'Stéphane Commenge is the founder of EvidencAI, president of CORA (AI consulting and training), and consular judge at the Commercial Court of Romans-sur-Isère, France. He has been supporting executives and SMBs in pragmatic AI adoption since 2024, with a grounded, non-dogmatic approach.',
+          },
+          {
+            question: 'Why EvidencAI?',
+            answer: 'EvidencAI was founded on the observation that 95% of enterprise AI projects never reach production. The cause: too many demos, not enough business anchoring. EvidencAI brings a simple method focused on concrete SMB pain points, with a strong conviction: AI doesn\'t replace, it augments.',
+          },
+          {
+            question: 'What is EvidencAI\'s specialty?',
+            answer: 'EvidencAI specializes in supporting SMB executives and managers on generative AI adoption. Three focus areas: Qualiopi-certified training, maturity assessment, custom solution building. Primary service area: Auvergne-Rhône-Alpes region in France (Drôme, Ardèche, Isère, Rhône).',
+          },
+          {
+            question: 'Which AI does EvidencAI use?',
+            answer: 'EvidencAI primarily uses Claude (Anthropic) for its ethical guarantees and reasoning quality, but training also covers ChatGPT, Copilot, Gemini and Mistral. Tool selection depends on the use case and company constraints, notably data localization.',
+          },
+        ]
+  );
 
   return (
     <>
@@ -60,6 +122,14 @@ export default async function AProposPage({ params }: { params: Promise<{ locale
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(faqSchema) }}
       />
 
       <div className="bg-bleu-nuit">

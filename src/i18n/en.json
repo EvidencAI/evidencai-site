@@ -167,21 +167,21 @@
           "author": "Line T.",
           "role": "President",
           "company": "ALIA Formation",
-          "context": "DecidIA Training — March 2026"
+          "context": "DecidIA Training · March 2026"
         },
         "lea": {
           "quote": "Stéphane understood our business constraints and integrated AI where it truly adds value. The team adopted the tools naturally, without resistance to change.",
           "author": "Léa S.",
           "role": "Director",
           "company": "Nature d'Eaux",
-          "context": "AI Implementation — 2026"
+          "context": "AI Implementation · 2026"
         },
         "nicolas": {
           "quote": "The plugin for the Commercial Court transformed my hearing preparation. Case analysis is more rigorous and the time saved is considerable.",
           "author": "Nicolas C.",
           "role": "President",
           "company": "Cuisine AVIVA Valence",
-          "context": "TC Plugin — 2026"
+          "context": "TC Plugin · 2026"
         }
       }
     }
@@ -314,9 +314,16 @@
       "deciderAvecIA": {
         "titre": "Deciding with AI",
         "soustitre": "From usage to strategic mastery",
-        "badge": "2 days · Qualiopi",
+        "badge": "2 days · Qualiopi · Beginner/Intermediate",
         "prix": "€960 excl. VAT",
-        "description": "Immersive training with pedagogical trio: human trainer, AI co-facilitator, personal assistant that stays active after training."
+        "description": "From \"I don't dare use it\" to \"I make decisions with it every day\". Two days on your real cases, led by a business owner who uses AI daily.\n\nEach participant leaves with their own method and personal AI assistant, tuned to their work and active after the training."
+      },
+      "batirAvecClaude": {
+        "titre": "Building with Claude",
+        "soustitre": "Make Claude your co-architect",
+        "badge": "2 days · Qualiopi · Advanced",
+        "prix": "€960 excl. VAT",
+        "description": "Deciding is using it. Building is turning it into a partner. A method for dialogue, five pillars to hold the structure: memory, project, skill, plugin, Claude Code.\n\nYou leave with your workshop, not course notes."
       }
     }
   },
@@ -520,6 +527,18 @@
         {
           "dates": "June 23 & 30, 2026",
           "location": "Valence (26)"
+        },
+        {
+          "dates": "September 8 & 15, 2026",
+          "location": "Valence (26)"
+        },
+        {
+          "dates": "October 6 & 13, 2026",
+          "location": "Valence (26)"
+        },
+        {
+          "dates": "November 3 & 10, 2026",
+          "location": "Valence (26)"
         }
       ]
     },
@@ -571,6 +590,233 @@
       "title": "Trainer and training organization",
       "nom": "Stéphane Commenge",
       "bio": "Consultant in digital transformation and artificial intelligence.\nSupports SME and mid-cap executives and their teams in the operational integration of generative AI.",
+      "organisme": "Training delivered by",
+      "organismeNom": "ALIA Formation",
+      "organismeSuffix": ", Qualiopi certified organization."
+    }
+  },
+  "formationBatir": {
+    "metadata": {
+      "title": "Building with Claude - Advanced training",
+      "description": "2 days to make Claude your co-architect. Method of challenging dialogue, mastery of the 5 pillars: memory, project, skill, plugin, Claude Code. Qualiopi certified via ALIA Formation.",
+      "ogTitle": "Building with Claude - EvidencAI",
+      "ogDescription": "The day your only limit becomes your imagination. 2 days to make Claude your co-architect, not your executor."
+    },
+    "hero": {
+      "badge": "Advanced training · 2 days",
+      "title": "Building with ",
+      "titleHighlight": "Claude",
+      "soustitre": "Structure, automate, steer",
+      "accroche": "The day your only limit becomes your imagination.\nIn two days, you learn to make Claude your co-architect.",
+      "description": "You lead, you arbitrate, you make the calls. Often alone, with no peer who truly challenges your decisions.\nBuilding with Claude (Anthropic) teaches you to turn AI into the thinking partner your structure never gave you. A dialogue method that tests your ideas, and five pillars so Claude holds up in your work: memory, project, skill, plugin, Claude Code.\nWhen the method is in place and the pillars in hand, your only limit becomes your imagination.",
+      "meta": {
+        "format": {
+          "label": "Format",
+          "value": "2 days spaced 1 week apart"
+        },
+        "groupe": {
+          "label": "Group",
+          "value": "8 participants max"
+        },
+        "niveau": {
+          "label": "Level",
+          "value": "Advanced"
+        },
+        "lieu": {
+          "label": "Location",
+          "value": "In-person · Valence (26)"
+        }
+      },
+      "cta": {
+        "primary": "Book my spot",
+        "secondary": "How does it work?",
+        "download": "Download the program"
+      }
+    },
+    "inscription": {
+      "label": "Registration",
+      "titre": "Upcoming sessions",
+      "form": {
+        "type": {
+          "label": "I want to",
+          "inscription": "Register",
+          "information": "Receive information"
+        },
+        "session": {
+          "label": "Preferred session",
+          "placeholder": "Select a session"
+        },
+        "nom": "Last name",
+        "prenom": "First name",
+        "email": "Professional email",
+        "telephone": "Phone",
+        "entreprise": "Company",
+        "message": "Message (optional)",
+        "submit": "Send my request",
+        "pending": "Sending...",
+        "success": "Request sent successfully",
+        "error": "An error occurred"
+      }
+    },
+    "trio": {
+      "label": "The atelier",
+      "title": "You don't build alone",
+      "cards": {
+        "formateur": {
+          "icon": "User",
+          "nom": "Stéphane",
+          "role": "Trainer · AI architect",
+          "description": "He opens his atelier in full transparency. His real environment, his actual production plugins (Mon Greffier, Mnemos), his method at work right in front of you. You're not watching a polished demo. You're stepping onto his construction site."
+        },
+        "az": {
+          "icon": "Sparkles",
+          "nom": "Az",
+          "role": "AI co-architect · playful",
+          "description": "She intervenes live, challenges your choices, proposes angles you wouldn't have seen, pushes you to iterate. The mirror that tests your thinking, in real time, in front of everyone."
+        },
+        "assistant": {
+          "icon": "MessageCircle",
+          "nom": "Your Assistant",
+          "role": "Personal AI · during and after",
+          "description": "Each participant co-builds their own AI Assistant during the training, calibrated to their work. The skills built during the session stay active and keep evolving with you after D+2."
+        }
+      }
+    },
+    "promesse": {
+      "label": "The method",
+      "texte": "Thinking with Claude isn't a gift, it's a method. Four gestures shape this partnership and turn it into a reflex.\nThe most important one isn't technical. It's the ability to communicate, explore, think out loud with Claude as with a peer who tests your thinking, not an executor filling in the blanks.",
+      "features": {
+        "structurer": {
+          "icon": "Monitor",
+          "titre": "Structure",
+          "texte": "Make Claude know you. Memory, preferences, project. The day you stop re-explaining who you are and what you're after at every conversation."
+        },
+        "coconstruire": {
+          "icon": "RefreshCw",
+          "titre": "Co-construct",
+          "texte": "Dialogue as method. You keep the thinking, Claude holds the pen, the mirror, the counter-argument. Iterating, challenging, testing: that's where Claude becomes your partner."
+        },
+        "automatiser": {
+          "icon": "ClipboardCheck",
+          "titre": "Automate",
+          "texte": "Capitalize on what works. What you used to redo every Friday now runs every night. Skills become bricks, connectors bridge Claude to your real professional life."
+        },
+        "etendre": {
+          "icon": "Shield",
+          "titre": "Extend",
+          "texte": "Your tool speaks your business, because you shaped it for it. Plugins, Claude Code: you build what existed nowhere else, because nobody had built it for you."
+        }
+      },
+      "title1": "You remain the architect.",
+      "title2": "Claude holds the tools."
+    },
+    "apres": {
+      "label": "What continues",
+      "title": "The training ends. Your atelier ",
+      "titleHighlight": "continues.",
+      "items": {
+        "supports": {
+          "titre": "Active skills and workflows",
+          "texte": "The skills you built and the workflows you automated remain operational in your real environment. They work for you, not in a sandbox."
+        },
+        "assistant": {
+          "titre": "Your enriched Assistant",
+          "texte": "The personal AI Assistant you co-built the training with keeps evolving at the pace of your usage. Same context, same method, same partnership."
+        },
+        "ressources": {
+          "titre": "Living library",
+          "texte": "Your captured prompts, configured connectors, refined skills: an atelier that grows with you, not a binder that gathers dust."
+        },
+        "evaluation": {
+          "titre": "Evaluation at D+30",
+          "texte": "A month later, we measure the real impact: which skills do you use? Which automations run? What's left to build? The method continues beyond the training."
+        }
+      }
+    },
+    "programme": {
+      "label": "In two days",
+      "title": "From user to pilot, from pilot to architect",
+      "jours": {
+        "jour1": {
+          "titre": "Day 1",
+          "soustitre": "Structure your intelligence",
+          "tags": [
+            "Cowork and projects",
+            "Iterative co-construction",
+            "Custom skills",
+            "Artifacts and libraries"
+          ]
+        },
+        "jour2": {
+          "titre": "Day 2",
+          "soustitre": "Automate your intelligence",
+          "tags": [
+            "Business connectors",
+            "Scheduled tasks",
+            "Plugins and ecosystem",
+            "Claude Code: what's now possible"
+          ]
+        }
+      },
+      "piliers": {
+        "titre": "The 5 pillars of the builder",
+        "soustitre": "Five Claude tools to master. Together, they hold the edifice up. None of them turns you into a developer. All of them make you autonomous.",
+        "items": {
+          "memoire": {
+            "lettre": "01",
+            "titre": "Memory",
+            "texte": "Claude recognizes you. Preferences, context, useful history: you no longer start from scratch at every conversation."
+          },
+          "projet": {
+            "lettre": "02",
+            "titre": "Project",
+            "texte": "Claude inhabits a space. Cowork, knowledge base, instructions: a structured atelier where work accumulates instead of evaporating."
+          },
+          "skill": {
+            "lettre": "03",
+            "titre": "Skill",
+            "texte": "Claude does it without you thinking about it. Every recurring business process becomes a brick, triggered by a word, adaptable to the real case."
+          },
+          "plugin": {
+            "lettre": "04",
+            "titre": "Plugin",
+            "texte": "Claude becomes a business tool. You assemble your bricks into an edifice, connected to your data, dedicated to your field."
+          },
+          "claudeCode": {
+            "lettre": "05",
+            "titre": "Claude Code",
+            "texte": "Claude builds with you. No need to code: you know what it makes possible and how to ask for it. Your only limit becomes your imagination."
+          }
+        }
+      },
+      "certif": "Fundable. Training delivered by ALIA Formation, a Qualiopi-certified organization. Detailed PDF program available for download at the top of the page, or sent on request."
+    },
+    "sessions": {
+      "titre": "Upcoming sessions",
+      "items": [
+        {
+          "dates": "October 15 & 22, 2026",
+          "location": "Valence (26)"
+        },
+        {
+          "dates": "December 1 & 8, 2026",
+          "location": "Valence (26)"
+        }
+      ]
+    },
+    "prerequis": {
+      "title": "Prerequisites",
+      "items": [
+        "Regular use of Claude for at least 1 month (conversations, projects)",
+        "Active Claude Pro or Team subscription",
+        "Laptop computer",
+        "Complete the pre-training questionnaire sent beforehand"
+      ]
+    },
+    "formateur": {
+      "title": "Trainer and training organization",
+      "nom": "Stéphane Commenge",
+      "bio": "Consultant in digital transformation and artificial intelligence, AI architect.\nCo-creator of plugins and applications with Claude (Anthropic): Mnemos (contextual memory), Mon Greffier (assistant for consular judges).\nDuring the training, he opens his own atelier in full transparency: real environment, production plugins, method at work. No sanitized demo, the construction site as it truly is.",
       "organisme": "Training delivered by",
       "organismeNom": "ALIA Formation",
       "organismeSuffix": ", Qualiopi certified organization."

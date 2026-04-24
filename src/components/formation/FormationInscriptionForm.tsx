@@ -3,7 +3,22 @@
 import { useState } from 'react';
 import { clarityEvent } from '@/lib/clarity';
 
-export default function FormationInscriptionForm() {
+type SessionOption = { value: string; label: string };
+
+interface FormationInscriptionFormProps {
+  sessions?: SessionOption[];
+  formationKey?: 'decider' | 'batir';
+}
+
+const DEFAULT_SESSIONS: SessionOption[] = [
+  { value: '5 et 12 mai 2026', label: '5 et 12 mai 2026 — Valence' },
+  { value: '23 et 30 juin 2026', label: '23 et 30 juin 2026 — Valence' },
+];
+
+export default function FormationInscriptionForm({
+  sessions = DEFAULT_SESSIONS,
+  formationKey = 'decider',
+}: FormationInscriptionFormProps = {}) {
   const [formData, setFormData] = useState({
     nom: '',
     email: '',
@@ -30,7 +45,7 @@ export default function FormationInscriptionForm() {
       const res = await fetch('/api/formation', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, formation: formationKey }),
       });
       if (res.ok) {
         setStatus('success');
@@ -116,8 +131,9 @@ export default function FormationInscriptionForm() {
             className={inputClass}
           >
             <option value="">Choisir une session</option>
-            <option value="5 et 12 mai 2026">5 et 12 mai 2026 — Valence</option>
-            <option value="23 et 30 juin 2026">23 et 30 juin 2026 — Valence</option>
+            {sessions.map((s) => (
+              <option key={s.value} value={s.value}>{s.label}</option>
+            ))}
           </select>
         </div>
       )}

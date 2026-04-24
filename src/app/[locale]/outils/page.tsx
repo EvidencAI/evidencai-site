@@ -7,6 +7,7 @@ import { Brain, Lightbulb, GraduationCap, ShieldCheck, Scale, Radar, ExternalLin
 import { getDictionary } from '@/i18n/dictionaries';
 import { getAlternates } from '@/i18n/metadata';
 import { locales, type Locale } from '@/i18n/config';
+import { buildBreadcrumbSchema, jsonLd } from '@/lib/schema';
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -293,8 +294,16 @@ export default async function OutilsPage({ params }: { params: Promise<{ locale:
   const locale = resolvedParams.locale as Locale;
   const dict = await getDictionary(locale);
 
+  const breadcrumbSchema = buildBreadcrumbSchema(locale, [
+    { name: locale === 'fr' ? 'Outils' : 'Tools', url: `/${locale}/outils` },
+  ]);
+
   return (
     <div className="bg-bleu-nuit">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema) }}
+      />
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">

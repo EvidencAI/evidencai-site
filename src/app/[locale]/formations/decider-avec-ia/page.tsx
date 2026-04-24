@@ -1,10 +1,17 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import FormationInscriptionForm from '@/components/formation/FormationInscriptionForm';
+import SessionsGrid from '@/components/formation/SessionsGrid';
 import { getDictionary } from '@/i18n/dictionaries';
 import { getAlternates } from '@/i18n/metadata';
 import { locales, type Locale } from '@/i18n/config';
+import { buildBreadcrumbSchema, jsonLd } from '@/lib/schema';
 import { User, Sparkles, MessageCircle, Monitor, RefreshCw, Shield, ClipboardCheck } from 'lucide-react';
+
+// Helper pour nommer les instances de cours (CourseInstance JSON-LD)
+function courseInstanceName(locale: Locale): string {
+  return locale === 'fr' ? 'Session présentielle' : 'In-person session';
+}
 
 // Helper pour mapper les noms d'icônes aux composants Lucide
 const iconMap = {
@@ -50,6 +57,7 @@ export default async function FormationPage({ params }: { params: Promise<{ loca
     description: locale === 'fr'
       ? 'Formation immersive de 2 jours avec trio pédagogique : formateur humain, IA co-animatrice, assistant personnel. Certifié Qualiopi via ALIA Formation.'
       : 'Immersive 2-day training with pedagogical trio: human trainer, AI co-facilitator, personal assistant. Qualiopi-certified via ALIA Formation.',
+    url: `https://www.evidencai.com/${locale}/formations/decider-avec-ia`,
     provider: {
       '@type': 'Organization',
       name: 'EvidencAI',
@@ -58,11 +66,43 @@ export default async function FormationPage({ params }: { params: Promise<{ loca
     educationalCredentialAwarded: 'Qualiopi (via ALIA Formation)',
     isAccessibleForFree: false,
     inLanguage: locale === 'fr' ? 'fr' : 'en',
+    educationalLevel: locale === 'fr' ? 'Débutant à intermédiaire' : 'Beginner to intermediate',
+    timeRequired: 'PT14H',
     audience: {
       '@type': 'BusinessAudience',
       audienceType: locale === 'fr' ? 'Dirigeants et professionnels' : 'Executives and professionals',
     },
+    offers: {
+      '@type': 'Offer',
+      price: '960',
+      priceCurrency: 'EUR',
+      availability: 'https://schema.org/InStock',
+      category: locale === 'fr' ? 'Formation professionnelle' : 'Professional training',
+      url: `https://www.evidencai.com/${locale}/formations/decider-avec-ia#inscription`,
+    },
+    hasCourseInstance: dict.formation.sessions.items.map((session) => ({
+      '@type': 'CourseInstance',
+      courseMode: 'Onsite',
+      location: {
+        '@type': 'Place',
+        name: session.location,
+      },
+      name: `${courseInstanceName(locale)} – ${session.dates}`,
+      description: `${session.dates} à ${session.location}`,
+      courseWorkload: 'PT14H',
+    })),
   };
+
+  const breadcrumbSchema = buildBreadcrumbSchema(locale, [
+    {
+      name: locale === 'fr' ? 'Formations' : 'Training',
+      url: `/${locale}/formations`,
+    },
+    {
+      name: locale === 'fr' ? 'Décider avec l\'IA' : 'Deciding with AI',
+      url: `/${locale}/formations/decider-avec-ia`,
+    },
+  ]);
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -105,6 +145,7 @@ export default async function FormationPage({ params }: { params: Promise<{ loca
     <div className="bg-bleu-nuit">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema) }} />
 
       {/* ================================ */}
       {/* Section 1 — Hero */}
@@ -394,19 +435,211 @@ export default async function FormationPage({ params }: { params: Promise<{ loca
           </div>
 
           {/* Grille des dates */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
-            {dict.formation.sessions.items.map((session, i) => (
-              <div key={i} className="text-center p-4 bg-fond-surface rounded-lg border border-bleu-subtil">
-                <p className="font-semibold text-text-primary">{session.dates}</p>
-                <p className="text-sm text-text-secondary">{session.location}</p>
-              </div>
-            ))}
-          </div>
+          <SessionsGrid
+            sessions={dict.formation.sessions.items}
+            label={locale === 'fr' ? 'Session présentielle' : 'In-person session'}
+          />
 
           {/* Formulaire directement visible */}
-          <FormationInscriptionForm />
+          <FormationInscriptionForm
+            sessions={dict.formation.sessions.items.map((s) => ({
+              value: s.dates,
+              label: `${s.dates} · ${s.location}`,
+            }))}
+            formationKey="decider"
+          />
         </div>
       </section>
+
+      {/* ================================ */}
+      {/* Section 9 — Retour d'expérience Session Avril 2026 (FR uniquement) */}
+      {/* ================================ */}
+      {locale === 'fr' && (
+        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 border-t border-bleu-subtil">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="font-mono text-xs uppercase tracking-wider text-ambre border border-ambre/30 px-4 py-1.5 rounded-full inline-block mb-6">
+                Retour d&apos;expérience
+              </span>
+              <h2 className="font-playfair text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                Session Avril 2026 : six chefs d&apos;entreprise face à l&apos;IA
+              </h2>
+            </div>
+
+            <div className="space-y-6 text-text-primary text-lg leading-relaxed">
+              <p className="italic text-text-secondary">
+                Ils sont venus à Valence les 7 et 14 avril 2026. Six chefs d&apos;entreprise, quatre secteurs, des questions très différentes. Deux jours plus tard, chacun est reparti avec sa méthode, son assistant IA personnel, et une idée claire de ce qu&apos;il allait en faire. Voici ce qu&apos;ils en disent, en chiffres et en mots.
+              </p>
+
+              <p>
+                Cette session inter-entreprises du parcours «&nbsp;Décider avec l&apos;IA&nbsp;» a été animée dans les locaux valentinois par Stéphane Commenge, chef d&apos;entreprise praticien de l&apos;IA au quotidien et concepteur du programme. Sept participants inscrits, six réponses recueillies en clôture, un questionnaire envoyé aux participants en fin de J2 dans le cadre du suivi Qualiopi exigé par ALIA Formation, l&apos;organisme qui porte la certification. Les chiffres qui suivent sont des moyennes sur ces six réponses.
+              </p>
+
+              {/* Dashboard chiffres */}
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 my-12">
+                {[
+                  { value: '9,3/10', label: 'Note globale' },
+                  { value: '9,2/10', label: 'NPS' },
+                  { value: '9,5/10', label: 'Formateur' },
+                  { value: '9,5/10', label: 'Accueil' },
+                  { value: '6,8/10', label: 'Confiance IA seul' },
+                ].map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="bg-fond-surface border border-bleu-subtil rounded-xl p-4 text-center"
+                  >
+                    <div className="font-playfair text-2xl md:text-3xl font-bold text-ambre mb-1">
+                      {stat.value}
+                    </div>
+                    <div className="font-mono text-[11px] uppercase tracking-wider text-text-secondary">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p className="text-sm text-text-secondary text-center -mt-6">
+                6 répondants sur 6. 100 % de chefs d&apos;entreprise. Curseur de confiance par défaut positionné à 1.
+              </p>
+
+              {/* Section 1 : Je ne suis pas technique */}
+              <h3 className="font-playfair text-2xl md:text-3xl font-bold text-white mt-16 mb-4 leading-tight">
+                «&nbsp;Je ne suis pas technique, ça va me dépasser&nbsp;»
+              </h3>
+              <p>
+                Nicolas Chaffois préside{' '}
+                <a
+                  href="https://www.cuisines-aviva.com/magasins-cuisines/valence"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-ambre hover:underline"
+                >
+                  Cuisine Aviva Valence
+                </a>
+                . Dirigeant d&apos;un magasin de cuisine équipée, il n&apos;est pas développeur, il n&apos;a pas fait d&apos;école d&apos;ingénieurs, et au moment de remplir le questionnaire de satisfaction, il a mis le curseur de confiance à <strong>1 sur 10</strong>.
+              </p>
+              <p>
+                Et pourtant. Dans ses trois mots pour décrire la formation : «&nbsp;prise de conscience&nbsp;». Sa note globale : 9 sur 10. Sa recommandation : 9 sur 10.
+              </p>
+              <p>
+                Le message qu&apos;il envoie est limpide. On ne sort pas de cette formation technicien. On en sort lucide. On comprend ce que l&apos;IA sait faire, ce qu&apos;elle ne sait pas, et comment la cadrer sans se faire avoir. Nicolas ne prétend pas être prêt à l&apos;utiliser seul demain matin. Il sait désormais où il en est. Chacun avance à son rythme, et cette première marche de lucidité vaut mieux qu&apos;une fausse assurance que la formation se refuse à vendre.
+              </p>
+
+              {/* Section 2 : Métier concret */}
+              <h3 className="font-playfair text-2xl md:text-3xl font-bold text-white mt-16 mb-4 leading-tight">
+                «&nbsp;Comment ça tient dans mon métier concret ?&nbsp;»
+              </h3>
+              <p>
+                Chez{' '}
+                <a
+                  href="https://www.cibox.com/fr/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-ambre hover:underline"
+                >
+                  CIBOX
+                </a>
+                , deux participants sont venus ensemble : Sébastien Felix, président, et Alexandre Carton, directeur commercial. Deux jours durant, ils sont revenus sur le même dossier : la conformité de leurs produits aux normes en vigueur. Un sujet touffu, chronophage, où la moindre imprécision a des conséquences commerciales et juridiques.
+              </p>
+              <p>
+                Ce qu&apos;ils ressortent de la formation, ce n&apos;est pas une théorie. C&apos;est un début de chantier : chacun construit un assistant IA dédié, calibré sur leur documentation technique, capable de répondre aux questions réglementaires qui les occupent au quotidien. Actif après la formation.
+              </p>
+              <p>
+                Alexandre, en trois mots : «&nbsp;découverte, rassurante, utile&nbsp;». Sébastien : «&nbsp;concrète, animée, conviviale&nbsp;». Aucun des deux ne repart avec un diaporama à classer. Ils repartent avec un outil en construction, posé sur leur propre terrain, qui va continuer de s&apos;affiner à mesure qu&apos;ils l&apos;utiliseront sur les vrais dossiers des prochaines semaines.
+              </p>
+
+              {/* Section 3 : Changer quelque chose */}
+              <h3 className="font-playfair text-2xl md:text-3xl font-bold text-white mt-16 mb-4 leading-tight">
+                «&nbsp;Est-ce que ça va vraiment changer quelque chose dans ma boîte ?&nbsp;»
+              </h3>
+              <p>
+                Magali Chaumel copréside avec Laurent Lefevre l&apos;
+                <a
+                  href="https://www.areas.fr/agence-assurance/26320/l.lefevre-et-m.chaumel-saint-marcel-les-valences"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-ambre hover:underline"
+                >
+                  Agence Aréas Lefevre &amp; Chaumel
+                </a>{' '}
+                à Saint-Marcel-lès-Valence. À la question «&nbsp;usage concret envisagé&nbsp;», sa réponse tient en une ligne, mais dessine un plan d&apos;action :
+              </p>
+              <blockquote className="border-l-4 border-ambre pl-6 py-2 my-6 italic text-white">
+                «&nbsp;Créer des assistants RH, commerciaux, marketing. Travailler sur la feuille de route.&nbsp;»
+              </blockquote>
+              <p>
+                En trois mots : «&nbsp;dense, utile, enrichissant&nbsp;». Note globale : <strong>10 / 10</strong>. Recommandation : <strong>10 / 10</strong>.
+              </p>
+              <p>
+                Ce n&apos;est pas une réaction d&apos;enthousiasme convenue. C&apos;est une vision. Magali ne voit plus l&apos;IA comme un outil à maîtriser au futur, elle la voit comme un levier à déployer maintenant sur trois fonctions clés de son agence. La formation lui a donné la méthode pour le faire, et la feuille de route devient un sujet de direction, pas un sujet technique.
+              </p>
+
+              {/* Section 4 : Hallucinations */}
+              <h3 className="font-playfair text-2xl md:text-3xl font-bold text-white mt-16 mb-4 leading-tight">
+                «&nbsp;Je n&apos;ai pas envie de me faire piéger par des hallucinations&nbsp;»
+              </h3>
+              <p>
+                C&apos;est la peur la plus fréquente, et elle est légitime. L&apos;IA dit parfois n&apos;importe quoi avec aplomb. Elle peut inventer un chiffre, une citation, une source, une jurisprudence. Comment l&apos;utiliser sans se retrouver avec une information fausse dans un mail client, un contrat, un document officiel, une réponse à appel d&apos;offres ?
+              </p>
+              <p>
+                <strong>La méthode EvidencAI</strong> repose sur quatre réflexes simples, enseignés pendant les deux jours et pratiqués sur les dossiers réels des participants :
+              </p>
+              <ul className="space-y-3 my-6 text-text-primary">
+                <li className="pl-4 border-l-2 border-ambre">
+                  <strong className="text-white">Reformuler la demande</strong> au lieu de la subir. La plupart des mauvaises réponses de l&apos;IA viennent d&apos;une mauvaise question.
+                </li>
+                <li className="pl-4 border-l-2 border-ambre">
+                  <strong className="text-white">Donner le bon contexte</strong> à l&apos;IA avant d&apos;attendre une réponse juste. Un document, un exemple, un interdit, une cible : le contexte fait la précision.
+                </li>
+                <li className="pl-4 border-l-2 border-ambre">
+                  <strong className="text-white">Vérifier systématiquement</strong> ce qu&apos;elle produit, et savoir où ça peut clocher. Certaines zones sont plus risquées que d&apos;autres.
+                </li>
+                <li className="pl-4 border-l-2 border-ambre">
+                  <strong className="text-white">Corriger jusqu&apos;au résultat attendu.</strong> L&apos;IA ne délivre pas un produit fini du premier coup, c&apos;est un dialogue.
+                </li>
+              </ul>
+              <p>
+                Laurent Lefevre, président de l&apos;Agence Aréas Lefevre &amp; Chaumel, a trouvé le niveau de contenu «&nbsp;trop complexe&nbsp;». C&apos;est sa réponse honnête. Et pourtant, dans le même questionnaire, ses trois mots à la sortie sont «&nbsp;surprenante, intéressante, pointue&nbsp;» et il recommande la formation à 9 sur 10. Ce que dit cette tension ? Qu&apos;on ne survend pas. La formation ne cherche pas à faire facile. Elle cherche à faire juste, et à outiller durablement.
+              </p>
+
+              {/* Section 5 : Après la formation */}
+              <h3 className="font-playfair text-2xl md:text-3xl font-bold text-white mt-16 mb-4 leading-tight">
+                «&nbsp;Et après la formation, je fais quoi tout seul ?&nbsp;»
+              </h3>
+              <p>
+                C&apos;est la différence majeure de ce parcours. Chaque participant ne repart pas avec un manuel à ranger sur une étagère, mais avec <strong className="text-white">son propre assistant IA</strong>, construit pendant les deux jours sur le métier, le contexte, les documents de son entreprise. Cet assistant reste actif après la formation et continue de progresser au rythme de son utilisateur.
+              </p>
+              <p>
+                Sarah Carrier préside Holding Carrier, un groupe de location TP-bâtiment. Son usage envisagé : préparer ses assemblées générales. Un rendez-vous annuel, codifié, chronophage, stratégique. Elle en repart avec un assistant qui l&apos;aidera chaque année, nourri des documents propres à son groupe, formé à sa façon de travailler.
+              </p>
+              <p>
+                Laurent, Magali, Nicolas, Sarah, Sébastien, Alexandre : tous les six repartent avec le leur, calibré sur leur réalité, pas sur un cas d&apos;école. Cette pédagogie par l&apos;action, où le formateur humain est flanqué d&apos;une IA co-animatrice pendant les deux jours, c&apos;est ce qui distingue ce parcours d&apos;une formation IA générique.
+              </p>
+
+              {/* Clôture */}
+              <h3 className="font-playfair text-2xl md:text-3xl font-bold text-white mt-16 mb-4 leading-tight">
+                Ce qu&apos;on retient de cette session
+              </h3>
+              <p>
+                Six dirigeants. Six métiers. Quatre secteurs : assurance, cuisine équipée, location TP-bâtiment, électronique. Aucun n&apos;était développeur. Aucun n&apos;est reparti développeur. Tous sont repartis avec trois choses :
+              </p>
+              <ul className="space-y-3 my-6 text-text-primary">
+                <li className="pl-4 border-l-2 border-ambre">
+                  <strong className="text-white">Une méthode</strong>, la méthode EvidencAI, pour décider avec l&apos;IA sans s&apos;y perdre.
+                </li>
+                <li className="pl-4 border-l-2 border-ambre">
+                  <strong className="text-white">Un assistant IA personnel</strong>, calibré sur leur métier, actif après la formation.
+                </li>
+                <li className="pl-4 border-l-2 border-ambre">
+                  <strong className="text-white">Un projet concret</strong> à déployer dans leur entreprise dès la semaine suivante.
+                </li>
+              </ul>
+              <p>
+                Ce que cette session dit du moment que traversent les dirigeants de PME en 2026 : ils ne veulent plus être impressionnés par l&apos;IA, ils veulent s&apos;en servir. Ils n&apos;ont pas le temps de devenir ingénieurs, et n&apos;en ont pas l&apos;intention. Ils cherchent un passage de relais lucide entre la technologie et leur métier. Ceux qui sont venus à Valence en avril 2026 sont repartis avec ce passage. Les retours en chiffres comme en verbatims le disent : on peut former des chefs d&apos;entreprise à décider avec l&apos;IA en deux jours, à condition d&apos;ancrer chaque geste dans leur métier réel, et de leur laisser un outil qui continue de travailler pour eux après.
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
 
     </div>
   );

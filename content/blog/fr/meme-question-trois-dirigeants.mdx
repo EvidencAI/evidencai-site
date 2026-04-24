@@ -48,7 +48,7 @@ C'est tout. Deux lignes en plus, et la réponse change du tout au tout.
 
 ## Pourquoi ça marche
 
-Techniquement, l'IA prédit chaque mot en fonction du contexte qui précède. Le rôle que vous lui donnez ne change pas *un peu* les mots choisis. Il reconditionne **toute la distribution de probabilités** sur chaque mot. Et cet effet se compose à chaque mot suivant.
+Techniquement, l'IA prédit chaque mot en fonction du contexte qui précède. Le rôle que vous lui donnez ne change pas *un peu* les mots choisis. Il reconditionne **toute la distribution de probabilités** sur chaque mot. Et cet effet se compose à chaque mot suivant. C'est exactement le mécanisme décrit dans la documentation d'[Anthropic sur les rôles système](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts) et dans le [guide de prompt engineering d'OpenAI](https://platform.openai.com/docs/guides/prompt-engineering).
 
 Sur une réponse de 400 mots, vous obtenez trois textes qui n'ont plus rien en commun. Pas parce que l'IA est créative. Parce que le cadre de départ était radicalement différent.
 

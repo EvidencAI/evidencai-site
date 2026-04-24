@@ -3,6 +3,7 @@ import AtelierCard from '@/components/ateliers/AtelierCard';
 import { getDictionary } from '@/i18n/dictionaries';
 import { getAlternates } from '@/i18n/metadata';
 import { locales, type Locale } from '@/i18n/config';
+import { buildBreadcrumbSchema, buildFaqSchema, jsonLd } from '@/lib/schema';
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -151,26 +152,25 @@ export default async function AteliersPage({ params }: { params: Promise<{ local
     },
   ];
 
-  // Schema.org structured data for FAQ
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqItems.map((item) => ({
-      '@type': 'Question',
-      name: item.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: item.answer,
-      },
-    })),
-  };
+  // Schema.org structured data
+  const faqSchema = buildFaqSchema(faqItems);
+  const breadcrumbSchema = buildBreadcrumbSchema(locale, [
+    {
+      name: locale === 'fr' ? 'Ateliers' : 'Workshops',
+      url: `/${locale}/ateliers`,
+    },
+  ]);
 
   return (
     <>
       {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema) }}
       />
 
       <div className="bg-bleu-nuit">

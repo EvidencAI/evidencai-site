@@ -167,21 +167,21 @@
           "author": "Line T.",
           "role": "Présidente",
           "company": "ALIA Formation",
-          "context": "Formation DecidIA — Mars 2026"
+          "context": "Formation DecidIA · Mars 2026"
         },
         "lea": {
           "quote": "Stéphane a su comprendre nos contraintes métier et intégrer l'IA là où elle apporte vraiment de la valeur. L'équipe s'est approprié les outils naturellement, sans résistance au changement.",
           "author": "Léa S.",
           "role": "Directrice",
           "company": "Nature d'Eaux",
-          "context": "Implémentation IA — 2026"
+          "context": "Implémentation IA · 2026"
         },
         "nicolas": {
           "quote": "Le plugin pour le Tribunal de Commerce a transformé ma préparation des audiences. L'analyse des dossiers est plus rigoureuse et le gain de temps est considérable.",
           "author": "Nicolas C.",
           "role": "Président",
           "company": "Cuisine AVIVA Valence",
-          "context": "Plugin TC — 2026"
+          "context": "Plugin TC · 2026"
         }
       }
     }
@@ -314,9 +314,16 @@
       "deciderAvecIA": {
         "titre": "Décider avec l'IA",
         "soustitre": "De l'usage à la maîtrise stratégique",
-        "badge": "2 jours · Qualiopi",
+        "badge": "2 jours · Qualiopi · Débutant/Intermédiaire",
         "prix": "960€ HT",
-        "description": "Formation immersive avec trio pédagogique : formateur humain, IA co-animatrice, assistant personnel qui reste actif après la formation."
+        "description": "De « je n'ose pas m'en servir » à « je décide avec au quotidien ». Deux jours sur vos vrais dossiers, animés par un chef d'entreprise qui pratique l'IA chaque jour.\n\nChacun repart avec sa méthode et son assistant IA personnel, calibré sur son métier et actif après la formation."
+      },
+      "batirAvecClaude": {
+        "titre": "Bâtir avec Claude",
+        "soustitre": "Faire de Claude votre co-architecte",
+        "badge": "2 jours · Qualiopi · Avancé",
+        "prix": "960€ HT",
+        "description": "Décider, c'est s'en servir. Bâtir, c'est en faire un partenaire. Une méthode pour dialoguer, cinq piliers pour tenir l'édifice : mémoire, projet, skill, plugin, Claude Code.\n\nVous repartez avec votre atelier, pas des notes de cours."
       }
     }
   },
@@ -520,6 +527,18 @@
         {
           "dates": "23 et 30 juin 2026",
           "location": "Valence (26)"
+        },
+        {
+          "dates": "8 et 15 septembre 2026",
+          "location": "Valence (26)"
+        },
+        {
+          "dates": "6 et 13 octobre 2026",
+          "location": "Valence (26)"
+        },
+        {
+          "dates": "3 et 10 novembre 2026",
+          "location": "Valence (26)"
         }
       ]
     },
@@ -571,6 +590,233 @@
       "title": "Formateur et organisme de formation",
       "nom": "Stéphane Commenge",
       "bio": "Consultant en transformation numérique et intelligence artificielle.\nAccompagne les dirigeants de PME et ETI et leurs collaborateurs dans l'intégration opérationnelle de l'IA générative.",
+      "organisme": "Formation portée par",
+      "organismeNom": "ALIA Formation",
+      "organismeSuffix": ", organisme certifié Qualiopi."
+    }
+  },
+  "formationBatir": {
+    "metadata": {
+      "title": "Bâtir avec Claude - Formation avancée",
+      "description": "2 jours pour faire de Claude votre co-architecte. Méthode du dialogue qui challenge, maîtrise des 5 piliers : mémoire, projet, skill, plugin, Claude Code. Certifié Qualiopi via ALIA Formation.",
+      "ogTitle": "Bâtir avec Claude - EvidencAI",
+      "ogDescription": "Le jour où la seule limite devient votre imagination. 2 jours pour faire de Claude votre co-architecte, pas votre exécutant."
+    },
+    "hero": {
+      "badge": "Formation avancée · 2 jours",
+      "title": "Bâtir avec ",
+      "titleHighlight": "Claude",
+      "soustitre": "Structurer, automatiser, piloter",
+      "accroche": "Le jour où la seule limite devient votre imagination.\nEn deux jours, vous apprenez à faire de Claude votre co-architecte.",
+      "description": "Vous dirigez, vous arbitrez, vous tranchez. Souvent seul, sans pair qui challenge vraiment vos décisions.\nBâtir avec Claude (Anthropic) vous apprend à faire de l'IA ce partenaire de pensée que la structure ne vous a pas donné. Une méthode de dialogue qui éprouve, et cinq piliers pour que Claude tienne debout dans votre métier : mémoire, projet, skill, plugin, Claude Code.\nQuand la méthode est là et les piliers en main, votre seule limite devient votre imagination.",
+      "meta": {
+        "format": {
+          "label": "Format",
+          "value": "2 jours espacés d'1 semaine"
+        },
+        "groupe": {
+          "label": "Groupe",
+          "value": "8 participants max"
+        },
+        "niveau": {
+          "label": "Niveau",
+          "value": "Avancé"
+        },
+        "lieu": {
+          "label": "Lieu",
+          "value": "Présentiel · Valence (26)"
+        }
+      },
+      "cta": {
+        "primary": "Réserver ma place",
+        "secondary": "Comment ça se passe ?",
+        "download": "Télécharger le programme"
+      }
+    },
+    "inscription": {
+      "label": "Inscription",
+      "titre": "Prochaines sessions",
+      "form": {
+        "type": {
+          "label": "Je souhaite",
+          "inscription": "M'inscrire",
+          "information": "Recevoir une information"
+        },
+        "session": {
+          "label": "Session souhaitée",
+          "placeholder": "Sélectionner une session"
+        },
+        "nom": "Nom",
+        "prenom": "Prénom",
+        "email": "Email professionnel",
+        "telephone": "Téléphone",
+        "entreprise": "Entreprise",
+        "message": "Message (optionnel)",
+        "submit": "Envoyer ma demande",
+        "pending": "Envoi...",
+        "success": "Demande envoyée avec succès",
+        "error": "Une erreur est survenue"
+      }
+    },
+    "trio": {
+      "label": "L'atelier",
+      "title": "Vous ne bâtissez pas seul",
+      "cards": {
+        "formateur": {
+          "icon": "User",
+          "nom": "Stéphane",
+          "role": "Formateur · architecte IA",
+          "description": "Il ouvre son atelier en transparence totale. Son environnement réel, ses vrais plugins en production (Mon Greffier, Mnemos), sa méthode à l'œuvre devant vous. Vous n'assistez pas à une démo rodée, vous entrez dans son chantier."
+        },
+        "az": {
+          "icon": "Sparkles",
+          "nom": "Az",
+          "role": "IA co-architecte · espiègle",
+          "description": "Elle intervient en live, challenge vos choix, propose des angles que vous n'auriez pas vus, vous pousse à itérer. Le miroir qui éprouve vos réflexions, en temps réel, devant tout le monde."
+        },
+        "assistant": {
+          "icon": "MessageCircle",
+          "nom": "Votre Assistant",
+          "role": "IA personnelle · pendant et après",
+          "description": "Chaque participant co-construit son propre Assistant IA pendant la formation, calibré sur son métier. Les skills bâtis pendant la session restent actifs et continuent d'évoluer avec vous après J+2."
+        }
+      }
+    },
+    "promesse": {
+      "label": "La méthode",
+      "texte": "Penser avec Claude n'est pas un don, c'est une méthode. Quatre gestes structurent ce partenariat et en font un réflexe.\nLe plus important n'est pas technique. C'est la capacité à communiquer, explorer, penser à voix haute avec Claude comme avec un pair qui éprouve vos réflexions, pas un exécutant qui remplit des trous.",
+      "features": {
+        "structurer": {
+          "icon": "Monitor",
+          "titre": "Structurer",
+          "texte": "Faire que Claude vous connaisse. Mémoire, préférences, projet. Le jour où vous arrêtez de ré-expliquer qui vous êtes et ce que vous cherchez à chaque conversation."
+        },
+        "coconstruire": {
+          "icon": "RefreshCw",
+          "titre": "Co-construire",
+          "texte": "Le dialogue comme méthode. Vous gardez la pensée, Claude tient la plume, le miroir, le contre-argument. Itérer, challenger, éprouver : c'est là qu'il devient votre partenaire."
+        },
+        "automatiser": {
+          "icon": "ClipboardCheck",
+          "titre": "Automatiser",
+          "texte": "Capitaliser ce qui marche. Ce que vous refaisiez chaque vendredi tourne désormais toutes les nuits. Les skills deviennent des briques, les connecteurs font le lien avec votre vraie vie professionnelle."
+        },
+        "etendre": {
+          "icon": "Shield",
+          "titre": "Étendre",
+          "texte": "Votre outil parle votre métier, parce que vous l'avez façonné pour ça. Plugins, Claude Code : vous construisez ce qui n'existait nulle part ailleurs, parce que personne ne l'avait construit pour vous."
+        }
+      },
+      "title1": "Vous restez l'architecte.",
+      "title2": "Claude tient les outils."
+    },
+    "apres": {
+      "label": "Ce qui continue",
+      "title": "La formation s'arrête. Votre atelier ",
+      "titleHighlight": "continue.",
+      "items": {
+        "supports": {
+          "titre": "Skills et workflows actifs",
+          "texte": "Les skills que vous avez bâtis, les workflows que vous avez automatisés restent opérationnels dans votre environnement réel. Ils travaillent pour vous, pas dans un bac à sable."
+        },
+        "assistant": {
+          "titre": "Votre Assistant enrichi",
+          "texte": "L'Assistant IA personnel avec lequel vous avez co-construit la formation continue d'évoluer au rythme de vos usages. Même contexte, même méthode, même partenariat."
+        },
+        "ressources": {
+          "titre": "Bibliothèque vivante",
+          "texte": "Vos prompts capitalisés, vos connecteurs configurés, vos skills affinés : un atelier qui grossit avec vous, pas un classeur qui prend la poussière."
+        },
+        "evaluation": {
+          "titre": "Évaluation à J+30",
+          "texte": "Un mois après, on mesure l'impact réel : quels skills utilisez-vous ? Quelles automatisations tournent ? Qu'est-ce qui reste à bâtir ? La méthode continue au-delà de la formation."
+        }
+      }
+    },
+    "programme": {
+      "label": "En deux jours",
+      "title": "De l'utilisateur au pilote, du pilote à l'architecte",
+      "jours": {
+        "jour1": {
+          "titre": "Jour 1",
+          "soustitre": "Structurer son intelligence",
+          "tags": [
+            "Cowork et projets",
+            "Co-construction itérative",
+            "Skills personnalisés",
+            "Artifacts et bibliothèques"
+          ]
+        },
+        "jour2": {
+          "titre": "Jour 2",
+          "soustitre": "Automatiser son intelligence",
+          "tags": [
+            "Connecteurs métier",
+            "Tâches programmées",
+            "Plugins et écosystème",
+            "Claude Code : le champ du possible"
+          ]
+        }
+      },
+      "piliers": {
+        "titre": "Les 5 piliers du bâtisseur",
+        "soustitre": "Cinq outils Claude à maîtriser. Ensemble, ils font tenir l'édifice. Aucun ne vous rend développeur. Tous vous rendent autonome.",
+        "items": {
+          "memoire": {
+            "lettre": "01",
+            "titre": "Mémoire",
+            "texte": "Claude vous reconnaît. Préférences, contexte, historique utile : vous ne repartez plus de zéro à chaque conversation."
+          },
+          "projet": {
+            "lettre": "02",
+            "titre": "Projet",
+            "texte": "Claude habite un espace. Cowork, base de connaissances, consignes : un atelier structuré où le travail s'accumule au lieu de s'évaporer."
+          },
+          "skill": {
+            "lettre": "03",
+            "titre": "Skill",
+            "texte": "Claude fait sans que vous y pensiez. Chaque processus métier récurrent devient une brique, réactivable par un mot, adaptable au cas réel."
+          },
+          "plugin": {
+            "lettre": "04",
+            "titre": "Plugin",
+            "texte": "Claude devient un outil métier. Vous assemblez vos briques en édifice, connecté à vos données, dédié à votre domaine."
+          },
+          "claudeCode": {
+            "lettre": "05",
+            "titre": "Claude Code",
+            "texte": "Claude construit avec vous. Pas besoin de coder : vous savez ce que ça rend possible et comment le demander. La seule limite devient votre imagination."
+          }
+        }
+      },
+      "certif": "Finançable. Formation portée par ALIA Formation, organisme certifié Qualiopi. Programme détaillé au format PDF téléchargeable en haut de page, ou envoyé sur simple demande."
+    },
+    "sessions": {
+      "titre": "Prochaines sessions",
+      "items": [
+        {
+          "dates": "15 et 22 octobre 2026",
+          "location": "Valence (26)"
+        },
+        {
+          "dates": "1er et 8 décembre 2026",
+          "location": "Valence (26)"
+        }
+      ]
+    },
+    "prerequis": {
+      "title": "Prérequis",
+      "items": [
+        "Utiliser Claude régulièrement depuis au moins 1 mois (conversations, projets)",
+        "Disposer d'un abonnement Claude Pro ou Team actif",
+        "Ordinateur portable",
+        "Avoir répondu au questionnaire de pré-formation"
+      ]
+    },
+    "formateur": {
+      "title": "Formateur et organisme de formation",
+      "nom": "Stéphane Commenge",
+      "bio": "Consultant en transformation numérique et intelligence artificielle, architecte IA.\nCo-créateur de plugins et d'applications avec Claude (Anthropic) : Mnemos (mémoire contextuelle), Mon Greffier (assistant du juge consulaire).\nPendant la formation, il ouvre son propre atelier en transparence totale : environnement réel, plugins en production, méthode à l'œuvre. Pas de démo édulcorée, le chantier tel qu'il est.",
       "organisme": "Formation portée par",
       "organismeNom": "ALIA Formation",
       "organismeSuffix": ", organisme certifié Qualiopi."
