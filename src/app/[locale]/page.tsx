@@ -46,7 +46,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '200 impasse Cheyssans',
+      streetAddress: '9000 chemin des Communaux',
       addressLocality: 'Châteauneuf-sur-Isère',
       postalCode: '26300',
       addressCountry: 'FR',
@@ -87,7 +87,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     image: 'https://www.evidencai.com/logo-evidencai.png',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '200 impasse Cheyssans',
+      streetAddress: '9000 chemin des Communaux',
       addressLocality: 'Châteauneuf-sur-Isère',
       postalCode: '26300',
       addressRegion: 'Auvergne-Rhône-Alpes',
@@ -95,8 +95,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 44.9833,
-      longitude: 4.9333,
+      latitude: 45.00297,
+      longitude: 4.89837,
     },
     priceRange: '€€',
     areaServed: {

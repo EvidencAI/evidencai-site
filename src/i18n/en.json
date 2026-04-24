@@ -821,7 +821,7 @@
       },
       "adresse": {
         "label": "Address",
-        "value": "200 impasse Cheyssans\n26300 Châteauneuf-sur-Isère, France"
+        "value": "9000 chemin des Communaux\n26300 Châteauneuf-sur-Isère, France"
       },
       "linkedin": {
         "label": "LinkedIn",
@@ -842,7 +842,7 @@
       "forme": "Legal form:",
       "formeValue": "SAS with capital of €180,000",
       "siege": "Registered office:",
-      "siegeValue": "200 impasse Cheyssans, 26300 Châteauneuf-sur-Isère, France",
+      "siegeValue": "9000 chemin des Communaux, 26300 Châteauneuf-sur-Isère, France",
       "siret": "SIRET:",
       "siretValue": "103 591 806 00015",
       "directeur": "Publication director:",

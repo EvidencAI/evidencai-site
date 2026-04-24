@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const post = getPostBySlug(slug, locale as Locale);
   if (!post) return {};
 
-  const url = `https://evidencai.com/${locale}/blog/${slug}`;
+  const url = `https://www.evidencai.com/${locale}/blog/${slug}`;
   return {
     title: post.title,
     description: post.description,
