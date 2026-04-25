@@ -323,7 +323,7 @@
         "titre": "Bâtir avec Claude",
         "soustitre": "Faire de Claude votre co-architecte",
         "badge": "2 jours · Qualiopi · Avancé",
-        "prix": "960€ HT",
+        "prix": "1 490€ HT",
         "description": "Décider, c'est s'en servir. Bâtir, c'est en faire un partenaire. Une méthode pour dialoguer, cinq piliers pour tenir l'édifice : mémoire, projet, skill, plugin, Claude Code.\n\nPas un assistant. Un partenaire opérationnel, et des outils qui tiennent."
       }
     }
@@ -349,7 +349,7 @@
         },
         "groupe": {
           "label": "Groupe",
-          "value": "12 participants maximum"
+          "value": "10 participants maximum"
         },
         "niveau": {
           "label": "Niveau",

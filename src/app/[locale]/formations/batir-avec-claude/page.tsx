@@ -75,7 +75,7 @@ export default async function FormationBatirPage({ params }: { params: Promise<{
       : 'Regular use of Claude for at least 1 month. Active Claude Pro or Team subscription.',
     offers: {
       '@type': 'Offer',
-      price: '960',
+      price: '1490',
       priceCurrency: 'EUR',
       availability: 'https://schema.org/InStock',
       category: locale === 'fr' ? 'Formation professionnelle' : 'Professional training',

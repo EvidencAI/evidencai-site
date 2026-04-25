@@ -189,7 +189,7 @@ story.append(info_row("Pr\u00e9requis", "Utiliser Claude r\u00e9guli\u00e8rement
 story.append(info_row("Lieu", "En pr\u00e9sentiel (Valence, 26)"))
 story.append(info_row("Effectif", "8 participants maximum"))
 story.append(info_row("Formateur", "St\u00e9phane Commenge"))
-story.append(info_row("Tarif", "960 \u20ac HT par participant"))
+story.append(info_row("Tarif", "1 490 \u20ac HT par participant"))
 story.append(info_row("Certification", "Formation certifi\u00e9e Qualiopi via ALIA Formation"))
 
 story.append(Spacer(1, 14))

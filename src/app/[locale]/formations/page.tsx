@@ -59,7 +59,7 @@ export default async function FormationsPage({ params }: { params: Promise<{ loc
           {
             question: 'Quel est le prix d\'une formation IA pour dirigeant ?',
             answer:
-              'Chaque formation (Décider avec l\'IA comme Bâtir avec Claude) est à 960 euros HT pour 2 jours (14h). Tarif incluant le formateur humain, la co-animation par une IA dédiée, et un Mentor IA qui reste actif après la formation. Financement OPCO possible selon votre branche.',
+              '« Décider avec l\'IA » est à 960 euros HT pour 2 jours (14h). « Bâtir avec Claude », formation avancée à effectif réduit (8 places maximum), est à 1 490 euros HT pour 2 jours. Tarif incluant le formateur humain, la co-animation par une IA dédiée, et un Mentor IA qui reste actif après la formation. Financement OPCO possible selon votre branche.',
           },
           {
             question: 'Les formations EvidencAI sont-elles certifiées Qualiopi ?',
@@ -96,7 +96,7 @@ export default async function FormationsPage({ params }: { params: Promise<{ loc
           {
             question: 'What is the price of AI training for executives?',
             answer:
-              'Each training (Deciding with AI as well as Building with Claude) is 960 euros excl. VAT for 2 days (14 hours). Includes the human trainer, AI co-facilitation, and an AI Mentor that stays active after training. OPCO funding available depending on sector.',
+              '"Deciding with AI" is 960 euros excl. VAT for 2 days (14 hours). "Building with Claude", an advanced small-group training (8 seats maximum), is 1,490 euros excl. VAT for 2 days. Includes the human trainer, AI co-facilitation, and an AI Mentor that stays active after training. OPCO funding available depending on sector.',
           },
           {
             question: 'Are EvidencAI trainings Qualiopi-certified?',
