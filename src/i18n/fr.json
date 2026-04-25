@@ -308,8 +308,32 @@
     },
     "hero": {
       "title": "Formations IA",
-      "subtitle": "Des parcours structurés pour passer de la curiosité à la compétence.",
-      "mentor": "Chaque participant repart avec son <span class=\"text-ambre\">Mentor IA</span>, actif bien après la formation."
+      "subtitle": "Une pédagogie immersive unique.",
+      "mentor": "Vous repartez avec votre <span class=\"text-ambre\">Mentor IA</span>, installé sur votre ordinateur."
+    },
+    "trio": {
+      "label": "Une pédagogie immersive",
+      "title": "Un trio pour vous accompagner",
+      "cards": {
+        "formateur": {
+          "icon": "User",
+          "nom": "Stéphane",
+          "role": "Le formateur qui pratique ce qu'il enseigne",
+          "description": "16 ans en formation, chef d'entreprise, et utilisateur intensif de Claude. La plupart des formateurs IA ont une ou deux de ces casquettes ; il a les trois."
+        },
+        "az": {
+          "icon": "Sparkles",
+          "nom": "Az",
+          "role": "Co-animatrice IA · espiègle",
+          "description": "Elle intervient en direct et commente les slides aux côtés du formateur."
+        },
+        "assistant": {
+          "icon": "MessageCircle",
+          "nom": "Votre Mentor IA",
+          "role": "Installé sur votre ordinateur",
+          "description": "Il vous guide pendant les deux jours et reste actif après la formation."
+        }
+      }
     },
     "catalogue": {
       "deciderAvecIA": {
@@ -393,27 +417,7 @@
     },
     "trio": {
       "label": "Ce qui change tout",
-      "title": "Vous n'êtes pas seul face à un écran",
-      "cards": {
-        "formateur": {
-          "icon": "User",
-          "nom": "Stéphane",
-          "role": "Formateur humain",
-          "description": "Il cadre, contextualise, adapte le rythme au groupe et à vos questions. C'est lui qui fait le lien entre la théorie et votre réalité."
-        },
-        "az": {
-          "icon": "Sparkles",
-          "nom": "Az",
-          "role": "Co-animatrice IA · espiègle",
-          "description": "Elle intervient en direct pendant la formation. Elle reformule, challenge, propose des angles différents. Elle n'est pas là pour faire joli. Elle co-anime vraiment."
-        },
-        "assistant": {
-          "icon": "MessageCircle",
-          "nom": "Votre Mentor IA",
-          "role": "Pendant et après la formation",
-          "description": "Chaque participant reçoit son propre Mentor IA, expert en intelligence artificielle. Il reste actif après la formation. Vous repartez avec un outil qui continue à vous accompagner sur vos usages de l'IA."
-        }
-      }
+      "title": "Vous n'êtes pas seul face à un écran"
     },
     "promesse": {
       "label": "La promesse",
@@ -661,27 +665,7 @@
     },
     "trio": {
       "label": "L'atelier",
-      "title": "Vous ne bâtissez pas seul",
-      "cards": {
-        "formateur": {
-          "icon": "User",
-          "nom": "Stéphane",
-          "role": "Formateur · architecte IA",
-          "description": "Il ouvre son atelier en transparence totale. Son environnement réel, ses vrais plugins en production (Mon Greffier, Mnemos), sa méthode à l'œuvre devant vous. Vous n'assistez pas à une démo rodée, vous entrez dans son chantier."
-        },
-        "az": {
-          "icon": "Sparkles",
-          "nom": "Az",
-          "role": "IA co-architecte · espiègle",
-          "description": "Elle intervient en live, challenge vos choix, propose des angles que vous n'auriez pas vus, vous pousse à itérer. Le miroir qui éprouve vos réflexions, en temps réel, devant tout le monde."
-        },
-        "assistant": {
-          "icon": "MessageCircle",
-          "nom": "Votre Mentor IA",
-          "role": "Pendant et après la formation",
-          "description": "Un outil IA préparé pour la session, livré à chaque participant dès l'ouverture. Il embarque tous les cours et la méthode, vous assiste pendant la formation et reste avec vous après. Durant les deux jours, vous apprenez à en construire d'autres, calibrés sur vos propres besoins métier."
-        }
-      }
+      "title": "Vous ne bâtissez pas seul"
     },
     "promesse": {
       "label": "La méthode",

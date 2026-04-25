@@ -308,8 +308,32 @@
     },
     "hero": {
       "title": "AI Training",
-      "subtitle": "Structured paths to move from curiosity to competence.",
-      "mentor": "Every participant leaves with their own <span class=\"text-ambre\">AI Mentor</span>, active long after the training."
+      "subtitle": "A unique immersive pedagogy.",
+      "mentor": "You leave with your <span class=\"text-ambre\">AI Mentor</span>, installed on your computer."
+    },
+    "trio": {
+      "label": "An immersive pedagogy",
+      "title": "A trio to support you",
+      "cards": {
+        "formateur": {
+          "icon": "User",
+          "nom": "Stéphane",
+          "role": "The trainer who practices what he teaches",
+          "description": "16 years in training, business owner, intensive Claude user. Most AI trainers wear one or two of these hats; he wears all three."
+        },
+        "az": {
+          "icon": "Sparkles",
+          "nom": "Az",
+          "role": "AI co-host · playful",
+          "description": "She speaks up live and comments on the slides alongside the trainer."
+        },
+        "assistant": {
+          "icon": "MessageCircle",
+          "nom": "Your AI Mentor",
+          "role": "Installed on your computer",
+          "description": "It guides you through the two days and stays active long after the training."
+        }
+      }
     },
     "catalogue": {
       "deciderAvecIA": {
@@ -393,27 +417,7 @@
     },
     "trio": {
       "label": "What changes everything",
-      "title": "You're not alone facing a screen",
-      "cards": {
-        "formateur": {
-          "icon": "User",
-          "nom": "Stéphane",
-          "role": "Human trainer",
-          "description": "He frames, contextualizes, adapts the pace to the group and your questions. He's the one who makes the connection between theory and your reality."
-        },
-        "az": {
-          "icon": "Sparkles",
-          "nom": "Az",
-          "role": "AI co-facilitator · playful",
-          "description": "She intervenes live during the training. She reformulates, challenges, proposes different angles. She's not there to look pretty. She really co-facilitates."
-        },
-        "assistant": {
-          "icon": "MessageCircle",
-          "nom": "Your AI Mentor",
-          "role": "During and after the training",
-          "description": "Each participant gets their own AI Mentor, an AI expert. It stays active after the training. You leave with a tool that keeps helping you with your AI usage."
-        }
-      }
+      "title": "You're not alone facing a screen"
     },
     "promesse": {
       "label": "The promise",
@@ -661,27 +665,7 @@
     },
     "trio": {
       "label": "The atelier",
-      "title": "You don't build alone",
-      "cards": {
-        "formateur": {
-          "icon": "User",
-          "nom": "Stéphane",
-          "role": "Trainer · AI architect",
-          "description": "He opens his atelier in full transparency. His real environment, his actual production plugins (Mon Greffier, Mnemos), his method at work right in front of you. You're not watching a polished demo. You're stepping onto his construction site."
-        },
-        "az": {
-          "icon": "Sparkles",
-          "nom": "Az",
-          "role": "AI co-architect · playful",
-          "description": "She intervenes live, challenges your choices, proposes angles you wouldn't have seen, pushes you to iterate. The mirror that tests your thinking, in real time, in front of everyone."
-        },
-        "assistant": {
-          "icon": "MessageCircle",
-          "nom": "Your AI Mentor",
-          "role": "During and after the training",
-          "description": "An AI tool prepared for the session, delivered to every participant from day one. It carries all the course content and method, supports you during the training, and stays with you afterwards. Over the two days, you learn to build others, calibrated to your own work needs."
-        }
-      }
+      "title": "You don't build alone"
     },
     "promesse": {
       "label": "The method",

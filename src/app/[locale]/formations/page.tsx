@@ -1,9 +1,16 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { User, Sparkles, MessageCircle } from 'lucide-react';
 import { getDictionary } from '@/i18n/dictionaries';
 import { getAlternates } from '@/i18n/metadata';
 import { locales, type Locale } from '@/i18n/config';
 import { buildBreadcrumbSchema, buildFaqSchema, jsonLd } from '@/lib/schema';
+
+const iconMap = {
+  User,
+  Sparkles,
+  MessageCircle,
+};
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -167,7 +174,43 @@ export default async function FormationsPage({ params }: { params: Promise<{ loc
       </section>
 
       {/* ================================ */}
-      {/* Section 2 — Cards Catalogue (Décider + Bâtir) */}
+      {/* Section 2 — Trio immersif */}
+      {/* ================================ */}
+      <section id="trio" className="pb-16 md:pb-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="font-mono text-xs uppercase tracking-wider text-ambre mb-3">
+              {dict.formations.trio.label}
+            </div>
+            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-white">
+              {dict.formations.trio.title}
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {Object.values(dict.formations.trio.cards).map((card, i) => {
+              const IconComponent = iconMap[card.icon as keyof typeof iconMap];
+              return (
+                <div
+                  key={i}
+                  className="relative bg-fond-surface border border-bleu-subtil rounded-2xl p-9 hover:border-ambre hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
+                >
+                  <div className="mb-4">
+                    <IconComponent className="w-8 h-8 text-ambre" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="font-playfair text-xl font-semibold text-white mb-2">{card.nom}</h3>
+                  <div className="font-mono text-xs uppercase tracking-wide text-ambre mb-4">{card.role}</div>
+                  <p className="text-text-secondary text-sm leading-relaxed">{card.description}</p>
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-ambre scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ================================ */}
+      {/* Section 3 — Cards Catalogue (Décider + Bâtir) */}
       {/* ================================ */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">

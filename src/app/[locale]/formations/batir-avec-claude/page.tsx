@@ -229,7 +229,7 @@ export default async function FormationBatirPage({ params }: { params: Promise<{
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {Object.values(dict.formationBatir.trio.cards).map((card, i) => {
+            {Object.values(dict.formations.trio.cards).map((card, i) => {
               const IconComponent = iconMap[card.icon as keyof typeof iconMap];
               return (
                 <div
