@@ -701,12 +701,12 @@
       "titleHighlight": "continue.",
       "items": {
         "supports": {
-          "titre": "Skills et workflows actifs",
+          "titre": "Les outils que vous avez bâtis",
           "texte": "Les skills que vous avez bâtis, les workflows que vous avez automatisés restent opérationnels dans votre environnement réel. Ils travaillent pour vous, pas dans un bac à sable."
         },
         "assistant": {
-          "titre": "Votre Mentor IA enrichi",
-          "texte": "Le Mentor IA avec lequel vous avez co-construit la formation continue d'évoluer au rythme de vos usages. Même contexte, même méthode, même partenariat."
+          "titre": "Votre Mentor IA, livré et façonné",
+          "texte": "Livré dès l'ouverture, façonné par vos usages pendant les deux jours, il reste actif après. Même contexte, même méthode, même partenariat."
         },
         "ressources": {
           "titre": "Bibliothèque vivante",

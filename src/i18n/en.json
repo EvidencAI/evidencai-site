@@ -701,12 +701,12 @@
       "titleHighlight": "continues.",
       "items": {
         "supports": {
-          "titre": "Active skills and workflows",
+          "titre": "The tools you have built",
           "texte": "The skills you built and the workflows you automated remain operational in your real environment. They work for you, not in a sandbox."
         },
         "assistant": {
-          "titre": "Your enriched AI Mentor",
-          "texte": "The AI Mentor you co-built the training with keeps evolving at the pace of your usage. Same context, same method, same partnership."
+          "titre": "Your AI Mentor, delivered and shaped",
+          "texte": "Delivered on day one, shaped by your usage over the two days, it stays active afterwards. Same context, same method, same partnership."
         },
         "ressources": {
           "titre": "Living library",
