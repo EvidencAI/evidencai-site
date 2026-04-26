@@ -251,18 +251,20 @@ const autresOutils = [
     icon: Scale,
     install: 'Plugin Claude Cowork',
     installIcon: Puzzle,
-    status: 'En cours de développement',
-    statusColor: 'bg-purple-100 text-purple-800',
-    href: null,
-    external: false,
-    description: 'Mon Greffier accompagne les juges consulaires de l\'analyse du dossier jusqu\'au jugement rédigé. L\'IA ne juge pas : elle analyse, structure et propose. Chaque étape requiert la validation du magistrat avant de passer à la suivante.',
+    status: 'En test',
+    statusColor: 'bg-amber-100 text-amber-800',
+    href: 'https://mongreffier.evidencai.com',
+    external: true,
+    cta: 'Accéder à Mon Greffier',
+    description: 'Mon Greffier accompagne les juges consulaires de l\'analyse du dossier jusqu\'au jugement rédigé. L\'IA ne juge pas : elle analyse, structure et propose. Chaque étape requiert la validation du magistrat avant de passer à la suivante.\n\nLe juge garde la main sur chaque décision, sur chaque mot.',
     features: [
       'Cadrage du dossier : parties, fins de non-recevoir, articles cités, pièces clés',
       'Points de décision soumis au juge avec indicateurs de fiabilité — le magistrat tranche, l\'IA exécute',
       'Rédaction du jugement structuré avec motivation obligatoire de chaque montant',
+      'Vérification automatique des références juridiques (articles, jurisprudence) via Légifrance et Judilibre',
       'Analyse de robustesse : angles morts, simulation de mémoire d\'appel, risque de réformation',
     ],
-    tech: ['Next.js', 'Supabase', 'API Anthropic (Sonnet, Opus)', 'Tavily', 'API Legifrance'],
+    tech: ['Next.js', 'Supabase self-hosted (Scaleway PAR1)', 'API Anthropic (Sonnet, Opus, Haiku)', 'API PISTE (Légifrance + Judilibre)'],
     marche: 'Juges consulaires des tribunaux de commerce. Marché France.',
   },
   {
@@ -397,10 +399,41 @@ export default async function OutilsPage({ params }: { params: Promise<{ locale:
                       )}
 
                       {outil.id === 'mongreffier' && (
-                        <div className="flex justify-end mt-2">
+                        <div className="mb-6 bg-amber-50/60 border border-amber-200 rounded-lg p-5">
+                          <h3 className="font-semibold text-bleu-nuit mb-3 flex items-center gap-2">
+                            <ShieldCheck className="w-5 h-5 text-ambre" />
+                            Souveraineté et sécurité des données
+                          </h3>
+                          <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
+                            <p>
+                              <strong className="text-bleu-nuit">Souveraineté.</strong> Mon Greffier est hébergé chez Scaleway, opérateur cloud français (groupe Iliad), dans le datacenter <strong>PAR1 à Paris</strong>. Vos données restent en France, sous droit français, hors du périmètre du Cloud Act américain.
+                            </p>
+                            <p>
+                              <strong className="text-bleu-nuit">RGPD natif.</strong> L&apos;hébergement en France chez un opérateur français place vos données directement sous le régime du RGPD, sans recours aux Standard Contractual Clauses nécessaires pour les hébergeurs extra-européens. La conformité est structurelle, pas contractuelle.
+                            </p>
+                            <p>
+                              <strong className="text-bleu-nuit">Sécurité.</strong> Datacenters certifiés ISO&nbsp;27001, ISO&nbsp;27701, HDS et SOC&nbsp;2. Scaleway est engagé dans la qualification SecNumCloud de l&apos;ANSSI. Supabase auto-hébergé sur cette infrastructure&nbsp;: aucune donnée ne transite par un service tiers non maîtrisé.
+                            </p>
+                            <p>
+                              <strong className="text-bleu-nuit">Traçabilité.</strong> Chaque accès à la base est journalisé, les sauvegardes sont chiffrées, et la politique de rétention (60&nbsp;jours actifs, 180&nbsp;jours archivés) est appliquée automatiquement.
+                            </p>
+                          </div>
+                        </div>
+                      )}
+
+                      {outil.id === 'mongreffier' && (
+                        <div className="flex flex-wrap items-center justify-between gap-4 mt-2">
+                          <a
+                            href={outil.href!}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-5 py-2.5 bg-bleu-nuit text-white font-semibold rounded-lg hover:bg-bleu-nuit-light transition-colors"
+                          >
+                            {outil.cta || dict.outils.common.cta.decouvrir}
+                            <ExternalLink className="w-4 h-4" />
+                          </a>
                           <DownloadButton
                             files={[
-                              { name: 'Mon Greffier v3.3.0 (plugin Cowork)', url: '/downloads/mon-greffier-v3.3.0.zip' },
                               { name: 'Assistant TC (skill Claude)', url: '/downloads/assistant-tc-0426.zip' },
                             ]}
                             accessCode="TC26Romans"
@@ -408,7 +441,7 @@ export default async function OutilsPage({ params }: { params: Promise<{ locale:
                         </div>
                       )}
 
-                      {outil.href && !outil.betaCta && (
+                      {outil.id !== 'mongreffier' && outil.href && !outil.betaCta && (
                         <a
                           href={outil.href}
                           target={outil.external ? '_blank' : undefined}
